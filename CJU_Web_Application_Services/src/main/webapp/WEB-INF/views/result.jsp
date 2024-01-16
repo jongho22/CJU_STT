@@ -14,6 +14,14 @@
 	
 	<title>청주대학교 STT 서비스</title>
 	
+	<style>
+		#typed-text {
+		white-space:nowrap;
+		overflow:hidden;
+		border-right:2px solid #000;
+		padding-right: 8px;
+		}
+	</style>
 </head>
 
 <body class="d-flex h-100 text-center text-bg-dark">
@@ -34,7 +42,7 @@
 
   <main class="px-3">
     <h1>변환 결과</h1>
-    <p>${message}</p>
+    <p id="typed-text">${message}</p>
   </main>
 
 	
@@ -42,6 +50,29 @@
     <p>청주대학교 인공지능소프트웨어 <a href="http://acin.cju.ac.kr/" class="text-white">ACIN연구실</a>, Developed by 신종호.</p>
   </footer>
 </div>
+
+<script>
+	function typeEffect(element, speed){
+	 const text = element.innerHTML;
+	 element.innerHTML = '';
+	 
+	 let i = 0;
+	 const typingInterval = setInterval(function() {
+		 element.innerHTML += text.charAt(i);
+		 i++;
+		 
+		 if (i> text.lenght) {
+			 clearInterval(typingInterval);
+		 }
+	 }, speed);
+	}
+	
+	window.onload = function() {
+		const typedTextElement = document.getElementById('typed-text');
+		typeEffect(typedTextElement,50);
+	};
+	
+</script>
 <script type="text/javascript" src="js/bootstrap.bundle.min.js" ></script> 
 
 </body>
