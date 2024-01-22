@@ -31,11 +31,9 @@ public class FileService {
 			    
 			    while ((line = br.readLine()) != null) {
 			    	return line;
-			       //System.out.println(line);
 	     	    }
-		        
+			     // 오류 발생 
 			    if(exitval !=0){
-			        //비정상종료
 			       System.out.println("문제가 발생하였습니다.");
 			       return "문제가 발생하였습니다.";
 			     }
@@ -52,8 +50,5 @@ public class FileService {
 			e.printStackTrace();
 			return null;
 		}
-
-		// String result = audioFile.getOriginalFilename();
-	
 	}
 }

@@ -36,11 +36,12 @@ public class HomeController {
 	public String home() {
 		System.out.println("[HomeController] home()");
 		
-		String nextPage = "base";
+		String nextPage = "mainPage";
 		
 		return nextPage;
 	}
 	
+	// 서비스 페이지 요청 
 	@GetMapping("/service")
 	public String service() {
 		System.out.println("[HomeController] service()");
@@ -50,7 +51,8 @@ public class HomeController {
 		return nextPage;
 	}
 	
-	@RequestMapping(value = "/upload", produces = "application/text; charset=utf8")
+	// 파일 업로드 및 변환 작업 
+	@RequestMapping(value = "/upload", method = {RequestMethod.POST}, produces = "application/text; charset=utf8")
 	@ResponseBody
 	public String fileUpload(@RequestParam(value="file") MultipartFile file, RedirectAttributes redirectAttributes) {
 		System.out.println("[HomeController] fileUpload()");
@@ -59,17 +61,5 @@ public class HomeController {
 		System.out.println("[HomeController] " + result);
 		
 		return "{ \"result\": \" " + result + " \" }";	
-	}
-	
-	@GetMapping("/result")
-	public String resultPage(@ModelAttribute("message") String result, Model model) {
-		System.out.println("[HomeController] loading()");
-		System.out.println("Result data : " + result);
-		
-		String nextPage = "result";
-		
-		model.addAttribute("message", result);
-		
-		return nextPage;
 	}
 }
