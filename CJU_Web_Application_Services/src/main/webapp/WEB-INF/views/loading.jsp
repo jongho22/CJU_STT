@@ -14,6 +14,14 @@
 	
 	<title>청주대학교 STT 서비스</title>
 	
+	<style>
+		#typed-text {
+		white-space:nowrap;
+		overflow:hidden;
+		border-right:2px solid #000;
+		padding-right: 8px;
+		}
+	</style>
 </head>
 
 <body class="d-flex h-100 text-center text-bg-dark">
@@ -23,7 +31,7 @@
     <div>
       <h3 class="float-md-start mb-0">청주대학교 STT 서비스</h3>
       <nav class="nav nav-masthead justify-content-center float-md-end">
-        <a class="nav-link fw-bold py-1 px-0 active" style="color:white" href="#">Home</a>
+        <a class="nav-link fw-bold py-1 px-0 active" style="color:white" href="/cju_stt">Home</a>
         &nbsp; &nbsp;
         <a class="nav-link fw-bold py-1 px-0" style="color:white" href="https://www.cju.ac.kr/www/index.do">청주대학교</a>
         &nbsp; &nbsp;
@@ -33,11 +41,8 @@
   </header>
 
   <main class="px-3">
-    <h1>회의 음성기록 텍스트 변환</h1>
-    <p class="lead">간편한 사용법과 정확한 변환 기술로, 음성메모나 파일을 텍스트 변환하여 필요한 정보를 빠르게 얻을 수 있습니다.</p>
-    <p class="lead">
-      <a href="service" class="btn btn-lg btn-light fw-bold border-white bg-white">텍스트 변환</a>
-    </p>
+    <h1>변환 결과</h1>
+    <p id="typed-text">${message}</p>
   </main>
 
 	
@@ -45,6 +50,29 @@
     <p>청주대학교 인공지능소프트웨어 <a href="http://acin.cju.ac.kr/" class="text-white">ACIN연구실</a>, Developed by 신종호.</p>
   </footer>
 </div>
+
+<script>
+	function typeEffect(element, speed){
+	 const text = element.innerHTML;
+	 element.innerHTML = '';
+	 
+	 let i = 0;
+	 const typingInterval = setInterval(function() {
+		 element.innerHTML += text.charAt(i);
+		 i++;
+		 
+		 if (i> text.lenght) {
+			 clearInterval(typingInterval);
+		 }
+	 }, speed);
+	}
+	
+	window.onload = function() {
+		const typedTextElement = document.getElementById('typed-text');
+		typeEffect(typedTextElement,50);
+	};
+	
+</script>
 <script type="text/javascript" src="js/bootstrap.bundle.min.js" ></script> 
 
 </body>

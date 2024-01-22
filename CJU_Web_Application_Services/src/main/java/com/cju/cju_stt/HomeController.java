@@ -3,7 +3,9 @@ package com.cju.cju_stt;
 import java.io.IOException;
 import java.text.DateFormat;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.Locale;
+import java.util.Map;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -16,6 +18,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
@@ -47,26 +50,25 @@ public class HomeController {
 		return nextPage;
 	}
 	
-	@PostMapping("/upload")
+	@RequestMapping(value = "/upload", produces = "application/text; charset=utf8")
+	@ResponseBody
 	public String fileUpload(@RequestParam(value="file") MultipartFile file, RedirectAttributes redirectAttributes) {
 		System.out.println("[HomeController] fileUpload()");
 		
 		String result = fileService.convertAudioToText(file);
-		System.out.println(result);
-		redirectAttributes.addFlashAttribute("message", result);
+		System.out.println("[HomeController] " + result);
 		
-		String nextPage = "redirect:/result";
-		
-		return nextPage;
+		return "{ \"result\": \" " + result + " \" }";	
 	}
 	
-	@GetMapping("result")
-	public String loading(@ModelAttribute("message") String message, Model model) {
-		System.out.println("[HomeController] result()");
+	@GetMapping("/result")
+	public String resultPage(@ModelAttribute("message") String result, Model model) {
+		System.out.println("[HomeController] loading()");
+		System.out.println("Result data : " + result);
 		
 		String nextPage = "result";
 		
-		model.addAttribute("message", message);
+		model.addAttribute("message", result);
 		
 		return nextPage;
 	}
