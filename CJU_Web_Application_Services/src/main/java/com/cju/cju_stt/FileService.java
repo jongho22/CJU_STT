@@ -17,7 +17,7 @@ public class FileService {
 		String fileName = audioFile.getOriginalFilename();
 		String line;
 		
-		ProcessBuilder processBuilder = new ProcessBuilder("python3", "/home/jongho/바탕화면/test2.py");
+		ProcessBuilder processBuilder = new ProcessBuilder("python3", "/home/jongho/바탕화면/test2.py", fileName);
 		Process process;
 		
 		try {
@@ -31,13 +31,13 @@ public class FileService {
 			    
 			    while ((line = br.readLine()) != null) {
 			    	return line;
-			       //System.out.println(line); // 표준출력에 쓴다
+			       //System.out.println(line);
 	     	    }
 		        
 			    if(exitval !=0){
 			        //비정상종료
-			       System.out.println("비정상종료");
-			       return "비정상 종료";
+			       System.out.println("문제가 발생하였습니다.");
+			       return "문제가 발생하였습니다.";
 			     }
 			    
 			    String result  = fileName + "결과 입니다. \n" + line;

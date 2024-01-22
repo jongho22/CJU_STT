@@ -1,12 +1,16 @@
 import whisper
+import sys
 
-model = whisper.load_model("base")
-result = model.transcribe("광화문자생한방병원_1.mp3", fp16=False)
 
-try {
-    result = model.transcribe("광화문자생한방병원_1.mp3", fp16=False)
-    print(result)
-} except {
-    print("error")
-}
+if __name__ == "__main__":
+    file_name = sys.argv[0]
+    model = whisper.load_model("base")
+    #result = model.transcribe(file_name, fp16=False)
+
+    try {
+        result = model.transcribe(file_name, fp16=False)
+        print(result)
+    } except {
+        print("error")
+    }
 
