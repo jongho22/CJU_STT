@@ -17,11 +17,11 @@
     <hr>
     <form id="uploadForm" method="post" enctype="multipart/form-data">
      <div class="container" style="width:40%">
-		<label for="formFile" class="form-label">변환하실 음성파일을 넣어주세요.</label>
+		<label id="explan_text" for="formFile" class="form-label">변환하실 음성파일을 넣어주세요.</label>
 		<input class="form-control" type="file" name="file">
 	  </div>
 	  </br>
-     <input type="submit" class="btn btn-lg btn-light fw-bold border-white bg-white" value="변환 시작" />
+     <input id="submit_button" type="submit" class="btn btn-lg btn-light fw-bold border-white bg-white" value="변환 시작" />
     </form>
     
     <textarea class="form-control" id="typed-text" rows="3" style="display: none;"></textarea>
@@ -51,11 +51,14 @@
 		$('#uploadForm').remove();
 		$('#typed-text').show();
 	}
-	
 	$(document).ready(function () {
 		$("#uploadForm").submit(function (event) {
-			event.preventDefault();
-			 console.log("check");
+			 event.preventDefault();
+			 $('#submit_button').remove();
+			 $('#service_title').text("작업 진행중...");
+			 $('#explan_text').text("파일 용량이 크면 오래걸리니 기다려주세요.");
+			 
+			 
 	        var formData = new FormData(this);
 
 	        $.ajax({
@@ -71,7 +74,7 @@
 		            console.log("변환 성공!!");
 	            },
 	            error: function (jqXHR, textStatus, errorThrown) {
-	            	console.log("AJAX 호출 실패");
+	            	  console.log("AJAX 호출 실패");
 	                console.log("상태 코드: " + jqXHR.status);
 	                console.log("에러 타입: " + textStatus);
 	                console.log("에러 내용: " + errorThrown);
