@@ -58,7 +58,7 @@ public class HomeController {
 		System.out.println("[HomeController] fileUpload()");
 		
 		String result = fileService.convertAudioToText(file);
-		System.out.println("[HomeController] " + result);
+		// System.out.println("[HomeController] " + result);
 		
 		return "{ \"result\": \" " + result + " \" }";	
 	}
