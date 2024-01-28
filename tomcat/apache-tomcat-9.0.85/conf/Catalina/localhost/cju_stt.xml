@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context docBase="/home/jongho/바탕화면/tomcat/apache-tomcat-9.0.85/wtpwebapps/CJU_Web_Application_Services" path="/cju_stt" reloadable="true" source="org.eclipse.jst.jee.server:CJU_Web_Application_Services"/>

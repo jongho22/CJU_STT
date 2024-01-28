@@ -1,0 +1,1194 @@
+28-Jan-2024 15:34:36.364 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 서버 버전 이름:    Apache Tomcat/9.0.85
+28-Jan-2024 15:34:36.367 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log Server 빌드 시각:  Jan 5 2024 08:28:07 UTC
+28-Jan-2024 15:34:36.367 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log Server 버전 번호:  9.0.85.0
+28-Jan-2024 15:34:36.367 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 운영체제 이름:     Linux
+28-Jan-2024 15:34:36.368 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 운영체제 버전:     5.15.0-89-generic
+28-Jan-2024 15:34:36.368 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 아키텍처:          amd64
+28-Jan-2024 15:34:36.368 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 자바 홈:           /usr/lib/jvm/java-11-openjdk-amd64
+28-Jan-2024 15:34:36.368 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log JVM 버전:          11.0.20.1+1-post-Ubuntu-0ubuntu120.04
+28-Jan-2024 15:34:36.368 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log JVM 벤더:          Ubuntu
+28-Jan-2024 15:34:36.368 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:     /home/jongho/Spring_project/CJU_STT/CJU_Web_Application_Services/tomcat/apache-tomcat-9.0.85
+28-Jan-2024 15:34:36.368 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:     /home/jongho/Spring_project/CJU_STT/CJU_Web_Application_Services/tomcat/apache-tomcat-9.0.85
+28-Jan-2024 15:34:36.375 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  --add-opens=java.base/java.lang=ALL-UNNAMED
+28-Jan-2024 15:34:36.375 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  --add-opens=java.base/java.io=ALL-UNNAMED
+28-Jan-2024 15:34:36.375 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  --add-opens=java.base/java.util=ALL-UNNAMED
+28-Jan-2024 15:34:36.375 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+28-Jan-2024 15:34:36.375 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+28-Jan-2024 15:34:36.375 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djava.util.logging.config.file=/home/jongho/Spring_project/CJU_STT/CJU_Web_Application_Services/tomcat/apache-tomcat-9.0.85/conf/logging.properties
+28-Jan-2024 15:34:36.376 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+28-Jan-2024 15:34:36.376 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djdk.tls.ephemeralDHKeySize=2048
+28-Jan-2024 15:34:36.376 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+28-Jan-2024 15:34:36.376 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+28-Jan-2024 15:34:36.376 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Dignore.endorsed.dirs=
+28-Jan-2024 15:34:36.376 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Dcatalina.base=/home/jongho/Spring_project/CJU_STT/CJU_Web_Application_Services/tomcat/apache-tomcat-9.0.85
+28-Jan-2024 15:34:36.377 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Dcatalina.home=/home/jongho/Spring_project/CJU_STT/CJU_Web_Application_Services/tomcat/apache-tomcat-9.0.85
+28-Jan-2024 15:34:36.377 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djava.io.tmpdir=/home/jongho/Spring_project/CJU_STT/CJU_Web_Application_Services/tomcat/apache-tomcat-9.0.85/temp
+28-Jan-2024 15:34:36.378 정보 [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent 프로덕션 환경들에서 최적의 성능을 제공하는, APR 기반 Apache Tomcat Native 라이브러리가, 다음 java.library.path에서 발견되지 않습니다: [/usr/java/packages/lib:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib]
+28-Jan-2024 15:34:36.611 정보 [main] org.apache.coyote.AbstractProtocol.init 프로토콜 핸들러 ["http-nio-8090"]을(를) 초기화합니다.
+28-Jan-2024 15:34:36.626 정보 [main] org.apache.catalina.startup.Catalina.load [389] 밀리초 내에 서버가 초기화되었습니다.
+28-Jan-2024 15:34:36.659 정보 [main] org.apache.catalina.core.StandardService.startInternal 서비스 [Catalina]을(를) 시작합니다.
+28-Jan-2024 15:34:36.659 정보 [main] org.apache.catalina.core.StandardEngine.startInternal 서버 엔진을 시작합니다: [Apache Tomcat/9.0.85]
+28-Jan-2024 15:34:36.663 정보 [main] org.apache.catalina.startup.HostConfig.deployDescriptor 배치 descriptor [/home/jongho/Spring_project/CJU_STT/CJU_Web_Application_Services/tomcat/apache-tomcat-9.0.85/conf/Catalina/localhost/cju_stt.xml]을(를) 배치합니다.
+28-Jan-2024 15:34:36.671 경고 [main] org.apache.catalina.startup.HostConfig.deployDescriptor 배치 descriptor [/home/jongho/Spring_project/CJU_STT/CJU_Web_Application_Services/tomcat/apache-tomcat-9.0.85/conf/Catalina/localhost/cju_stt.xml] 내에서, [/cju_stt] 값을 가진 path 속성은 무시됩니다.
+28-Jan-2024 15:34:37.306 정보 [main] org.apache.jasper.servlet.TldScanner.scanJars 적어도 하나의 JAR가 TLD들을 찾기 위해 스캔되었으나 아무 것도 찾지 못했습니다. 스캔했으나 TLD가 없는 JAR들의 전체 목록을 보시려면, 로그 레벨을 디버그 레벨로 설정하십시오. 스캔 과정에서 불필요한 JAR들을 건너뛰면, 시스템 시작 시간과 JSP 컴파일 시간을 단축시킬 수 있습니다.
+28-Jan-2024 15:34:37.938 정보 [main] org.apache.catalina.startup.HostConfig.deployDescriptor 배치 descriptor [/home/jongho/Spring_project/CJU_STT/CJU_Web_Application_Services/tomcat/apache-tomcat-9.0.85/conf/Catalina/localhost/cju_stt.xml]의 배치가 [1,274] 밀리초 내에 완료되었습니다.
+28-Jan-2024 15:34:37.939 정보 [main] org.apache.catalina.startup.HostConfig.deployWAR 웹 애플리케이션 아카이브 [/home/jongho/Spring_project/CJU_STT/CJU_Web_Application_Services/tomcat/apache-tomcat-9.0.85/webapps/CJU_Web_Application_Services.war]을(를) 배치합니다.
+28-Jan-2024 15:34:38.260 정보 [main] org.apache.jasper.servlet.TldScanner.scanJars 적어도 하나의 JAR가 TLD들을 찾기 위해 스캔되었으나 아무 것도 찾지 못했습니다. 스캔했으나 TLD가 없는 JAR들의 전체 목록을 보시려면, 로그 레벨을 디버그 레벨로 설정하십시오. 스캔 과정에서 불필요한 JAR들을 건너뛰면, 시스템 시작 시간과 JSP 컴파일 시간을 단축시킬 수 있습니다.
+28-Jan-2024 15:34:38.710 정보 [main] org.apache.catalina.startup.HostConfig.deployWAR 웹 애플리케이션 아카이브 [/home/jongho/Spring_project/CJU_STT/CJU_Web_Application_Services/tomcat/apache-tomcat-9.0.85/webapps/CJU_Web_Application_Services.war]의 배치가 [771] 밀리초에 완료되었습니다.
+28-Jan-2024 15:34:38.710 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/CJU_Web_Application_Services/tomcat/apache-tomcat-9.0.85/webapps/manager]을(를) 배치합니다.
+28-Jan-2024 15:34:38.729 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/CJU_Web_Application_Services/tomcat/apache-tomcat-9.0.85/webapps/manager]에 대한 배치가 [19] 밀리초에 완료되었습니다.
+28-Jan-2024 15:34:38.729 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/CJU_Web_Application_Services/tomcat/apache-tomcat-9.0.85/webapps/host-manager]을(를) 배치합니다.
+28-Jan-2024 15:34:38.744 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/CJU_Web_Application_Services/tomcat/apache-tomcat-9.0.85/webapps/host-manager]에 대한 배치가 [15] 밀리초에 완료되었습니다.
+28-Jan-2024 15:34:38.744 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/CJU_Web_Application_Services/tomcat/apache-tomcat-9.0.85/webapps/examples]을(를) 배치합니다.
+28-Jan-2024 15:34:38.833 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/CJU_Web_Application_Services/tomcat/apache-tomcat-9.0.85/webapps/examples]에 대한 배치가 [89] 밀리초에 완료되었습니다.
+28-Jan-2024 15:34:38.833 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/CJU_Web_Application_Services/tomcat/apache-tomcat-9.0.85/webapps/docs]을(를) 배치합니다.
+28-Jan-2024 15:34:38.842 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/CJU_Web_Application_Services/tomcat/apache-tomcat-9.0.85/webapps/docs]에 대한 배치가 [9] 밀리초에 완료되었습니다.
+28-Jan-2024 15:34:38.842 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/CJU_Web_Application_Services/tomcat/apache-tomcat-9.0.85/webapps/ROOT]을(를) 배치합니다.
+28-Jan-2024 15:34:38.850 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/CJU_Web_Application_Services/tomcat/apache-tomcat-9.0.85/webapps/ROOT]에 대한 배치가 [7] 밀리초에 완료되었습니다.
+28-Jan-2024 15:34:38.853 정보 [main] org.apache.coyote.AbstractProtocol.start 프로토콜 핸들러 ["http-nio-8090"]을(를) 시작합니다.
+28-Jan-2024 15:34:38.860 정보 [main] org.apache.catalina.startup.Catalina.start 서버가 [2233] 밀리초 내에 시작되었습니다.
+28-Jan-2024 15:56:56.871 정보 [http-nio-8090-exec-9] org.apache.coyote.http11.Http11Processor.service HTTP 요청 헤더를 파싱하는 중 오류 발생
+ 비고: HTTP 요청 파싱 오류들이 더 발생하는 경우 DEBUG 레벨 로그로 기록될 것입니다.
+	java.lang.IllegalArgumentException: 메소드 이름에 유효하지 않은 문자가 발견되었습니다. HTTP 메소드 이름은 유효한 토큰이어야 합니다.
+		at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:407)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:263)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1794)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:829)
+28-Jan-2024 16:05:51.243 정보 [http-nio-8090-exec-1] org.apache.coyote.http11.Http11Processor.service HTTP 요청 헤더를 파싱하는 중 오류 발생
+ 비고: HTTP 요청 파싱 오류들이 더 발생하는 경우 DEBUG 레벨 로그로 기록될 것입니다.
+	java.lang.IllegalArgumentException: 메소드 이름에 유효하지 않은 문자가 발견되었습니다. HTTP 메소드 이름은 유효한 토큰이어야 합니다.
+		at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:407)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:263)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1794)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:829)
+28-Jan-2024 16:07:29.346 정보 [main] org.apache.catalina.core.StandardServer.await 셧다운 포트를 통해 유효한 셧다운 명령을 받았습니다. 서버 인스턴스를 중지시킵니다.
+28-Jan-2024 16:07:29.346 정보 [main] org.apache.coyote.AbstractProtocol.pause 프로토콜 핸들러 ["http-nio-8090"]을(를) 일시 정지 중
+28-Jan-2024 16:07:29.348 정보 [main] org.apache.catalina.core.StandardService.stopInternal 서비스 [Catalina]을(를) 중지시킵니다.
+28-Jan-2024 16:07:29.364 정보 [main] org.apache.coyote.AbstractProtocol.stop 프로토콜 핸들러 ["http-nio-8090"]을(를) 중지시킵니다.
+28-Jan-2024 16:07:29.372 정보 [main] org.apache.coyote.AbstractProtocol.destroy 프로토콜 핸들러 ["http-nio-8090"]을(를) 소멸시킵니다.
+28-Jan-2024 16:07:51.785 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 서버 버전 이름:    Apache Tomcat/9.0.85
+28-Jan-2024 16:07:51.788 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log Server 빌드 시각:  Jan 5 2024 08:28:07 UTC
+28-Jan-2024 16:07:51.788 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log Server 버전 번호:  9.0.85.0
+28-Jan-2024 16:07:51.788 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 운영체제 이름:     Linux
+28-Jan-2024 16:07:51.788 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 운영체제 버전:     5.15.0-89-generic
+28-Jan-2024 16:07:51.788 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 아키텍처:          amd64
+28-Jan-2024 16:07:51.788 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 자바 홈:           /usr/lib/jvm/java-11-openjdk-amd64
+28-Jan-2024 16:07:51.788 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log JVM 버전:          11.0.20.1+1-post-Ubuntu-0ubuntu120.04
+28-Jan-2024 16:07:51.788 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log JVM 벤더:          Ubuntu
+28-Jan-2024 16:07:51.788 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:     /home/jongho/Spring_project/CJU_STT/CJU_Web_Application_Services/tomcat/apache-tomcat-9.0.85
+28-Jan-2024 16:07:51.788 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:     /home/jongho/Spring_project/CJU_STT/CJU_Web_Application_Services/tomcat/apache-tomcat-9.0.85
+28-Jan-2024 16:07:51.796 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  --add-opens=java.base/java.lang=ALL-UNNAMED
+28-Jan-2024 16:07:51.797 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  --add-opens=java.base/java.io=ALL-UNNAMED
+28-Jan-2024 16:07:51.797 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  --add-opens=java.base/java.util=ALL-UNNAMED
+28-Jan-2024 16:07:51.797 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+28-Jan-2024 16:07:51.797 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+28-Jan-2024 16:07:51.797 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djava.util.logging.config.file=/home/jongho/Spring_project/CJU_STT/CJU_Web_Application_Services/tomcat/apache-tomcat-9.0.85/conf/logging.properties
+28-Jan-2024 16:07:51.797 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+28-Jan-2024 16:07:51.798 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djdk.tls.ephemeralDHKeySize=2048
+28-Jan-2024 16:07:51.798 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+28-Jan-2024 16:07:51.798 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+28-Jan-2024 16:07:51.798 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Dignore.endorsed.dirs=
+28-Jan-2024 16:07:51.799 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Dcatalina.base=/home/jongho/Spring_project/CJU_STT/CJU_Web_Application_Services/tomcat/apache-tomcat-9.0.85
+28-Jan-2024 16:07:51.799 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Dcatalina.home=/home/jongho/Spring_project/CJU_STT/CJU_Web_Application_Services/tomcat/apache-tomcat-9.0.85
+28-Jan-2024 16:07:51.799 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djava.io.tmpdir=/home/jongho/Spring_project/CJU_STT/CJU_Web_Application_Services/tomcat/apache-tomcat-9.0.85/temp
+28-Jan-2024 16:07:51.801 정보 [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent 프로덕션 환경들에서 최적의 성능을 제공하는, APR 기반 Apache Tomcat Native 라이브러리가, 다음 java.library.path에서 발견되지 않습니다: [/usr/java/packages/lib:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib]
+28-Jan-2024 16:07:52.020 정보 [main] org.apache.coyote.AbstractProtocol.init 프로토콜 핸들러 ["http-nio-8090"]을(를) 초기화합니다.
+28-Jan-2024 16:07:52.038 정보 [main] org.apache.catalina.startup.Catalina.load [381] 밀리초 내에 서버가 초기화되었습니다.
+28-Jan-2024 16:07:52.071 정보 [main] org.apache.catalina.core.StandardService.startInternal 서비스 [Catalina]을(를) 시작합니다.
+28-Jan-2024 16:07:52.072 정보 [main] org.apache.catalina.core.StandardEngine.startInternal 서버 엔진을 시작합니다: [Apache Tomcat/9.0.85]
+28-Jan-2024 16:07:52.076 정보 [main] org.apache.catalina.startup.HostConfig.deployDescriptor 배치 descriptor [/home/jongho/Spring_project/CJU_STT/CJU_Web_Application_Services/tomcat/apache-tomcat-9.0.85/conf/Catalina/localhost/cju_stt.xml]을(를) 배치합니다.
+28-Jan-2024 16:07:52.084 경고 [main] org.apache.catalina.startup.HostConfig.deployDescriptor 배치 descriptor [/home/jongho/Spring_project/CJU_STT/CJU_Web_Application_Services/tomcat/apache-tomcat-9.0.85/conf/Catalina/localhost/cju_stt.xml] 내에서, [/cju_stt] 값을 가진 path 속성은 무시됩니다.
+28-Jan-2024 16:07:52.725 정보 [main] org.apache.jasper.servlet.TldScanner.scanJars 적어도 하나의 JAR가 TLD들을 찾기 위해 스캔되었으나 아무 것도 찾지 못했습니다. 스캔했으나 TLD가 없는 JAR들의 전체 목록을 보시려면, 로그 레벨을 디버그 레벨로 설정하십시오. 스캔 과정에서 불필요한 JAR들을 건너뛰면, 시스템 시작 시간과 JSP 컴파일 시간을 단축시킬 수 있습니다.
+28-Jan-2024 16:07:53.350 정보 [main] org.apache.catalina.startup.HostConfig.deployDescriptor 배치 descriptor [/home/jongho/Spring_project/CJU_STT/CJU_Web_Application_Services/tomcat/apache-tomcat-9.0.85/conf/Catalina/localhost/cju_stt.xml]의 배치가 [1,272] 밀리초 내에 완료되었습니다.
+28-Jan-2024 16:07:53.350 정보 [main] org.apache.catalina.startup.HostConfig.deployWAR 웹 애플리케이션 아카이브 [/home/jongho/Spring_project/CJU_STT/CJU_Web_Application_Services/tomcat/apache-tomcat-9.0.85/webapps/CJU_Web_Application_Services.war]을(를) 배치합니다.
+28-Jan-2024 16:07:53.679 정보 [main] org.apache.jasper.servlet.TldScanner.scanJars 적어도 하나의 JAR가 TLD들을 찾기 위해 스캔되었으나 아무 것도 찾지 못했습니다. 스캔했으나 TLD가 없는 JAR들의 전체 목록을 보시려면, 로그 레벨을 디버그 레벨로 설정하십시오. 스캔 과정에서 불필요한 JAR들을 건너뛰면, 시스템 시작 시간과 JSP 컴파일 시간을 단축시킬 수 있습니다.
+28-Jan-2024 16:07:54.164 정보 [main] org.apache.catalina.startup.HostConfig.deployWAR 웹 애플리케이션 아카이브 [/home/jongho/Spring_project/CJU_STT/CJU_Web_Application_Services/tomcat/apache-tomcat-9.0.85/webapps/CJU_Web_Application_Services.war]의 배치가 [814] 밀리초에 완료되었습니다.
+28-Jan-2024 16:07:54.165 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/CJU_Web_Application_Services/tomcat/apache-tomcat-9.0.85/webapps/manager]을(를) 배치합니다.
+28-Jan-2024 16:07:54.182 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/CJU_Web_Application_Services/tomcat/apache-tomcat-9.0.85/webapps/manager]에 대한 배치가 [17] 밀리초에 완료되었습니다.
+28-Jan-2024 16:07:54.182 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/CJU_Web_Application_Services/tomcat/apache-tomcat-9.0.85/webapps/host-manager]을(를) 배치합니다.
+28-Jan-2024 16:07:54.197 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/CJU_Web_Application_Services/tomcat/apache-tomcat-9.0.85/webapps/host-manager]에 대한 배치가 [15] 밀리초에 완료되었습니다.
+28-Jan-2024 16:07:54.197 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/CJU_Web_Application_Services/tomcat/apache-tomcat-9.0.85/webapps/examples]을(를) 배치합니다.
+28-Jan-2024 16:07:54.295 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/CJU_Web_Application_Services/tomcat/apache-tomcat-9.0.85/webapps/examples]에 대한 배치가 [98] 밀리초에 완료되었습니다.
+28-Jan-2024 16:07:54.295 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/CJU_Web_Application_Services/tomcat/apache-tomcat-9.0.85/webapps/docs]을(를) 배치합니다.
+28-Jan-2024 16:07:54.305 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/CJU_Web_Application_Services/tomcat/apache-tomcat-9.0.85/webapps/docs]에 대한 배치가 [10] 밀리초에 완료되었습니다.
+28-Jan-2024 16:07:54.305 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/CJU_Web_Application_Services/tomcat/apache-tomcat-9.0.85/webapps/ROOT]을(를) 배치합니다.
+28-Jan-2024 16:07:54.314 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/CJU_Web_Application_Services/tomcat/apache-tomcat-9.0.85/webapps/ROOT]에 대한 배치가 [9] 밀리초에 완료되었습니다.
+28-Jan-2024 16:07:54.318 정보 [main] org.apache.coyote.AbstractProtocol.start 프로토콜 핸들러 ["http-nio-8090"]을(를) 시작합니다.
+28-Jan-2024 16:07:54.325 정보 [main] org.apache.catalina.startup.Catalina.start 서버가 [2286] 밀리초 내에 시작되었습니다.
+28-Jan-2024 16:18:33.106 정보 [Catalina-utility-1] org.apache.catalina.core.StandardContext.reload 이름이 [/cju_stt]인 컨텍스트를 다시 로드하는 작업이 시작되었습니다.
+28-Jan-2024 16:18:33.415 정보 [Catalina-utility-1] org.apache.jasper.servlet.TldScanner.scanJars 적어도 하나의 JAR가 TLD들을 찾기 위해 스캔되었으나 아무 것도 찾지 못했습니다. 스캔했으나 TLD가 없는 JAR들의 전체 목록을 보시려면, 로그 레벨을 디버그 레벨로 설정하십시오. 스캔 과정에서 불필요한 JAR들을 건너뛰면, 시스템 시작 시간과 JSP 컴파일 시간을 단축시킬 수 있습니다.
+28-Jan-2024 16:18:33.796 정보 [Catalina-utility-1] org.apache.catalina.core.StandardContext.reload 이름이 [/cju_stt]인 컨텍스트를 다시 로드하는 것을 완료했습니다.
+28-Jan-2024 16:20:29.456 정보 [main] org.apache.catalina.core.StandardServer.await 셧다운 포트를 통해 유효한 셧다운 명령을 받았습니다. 서버 인스턴스를 중지시킵니다.
+28-Jan-2024 16:20:29.457 정보 [main] org.apache.coyote.AbstractProtocol.pause 프로토콜 핸들러 ["http-nio-8090"]을(를) 일시 정지 중
+28-Jan-2024 16:20:29.458 정보 [main] org.apache.catalina.core.StandardService.stopInternal 서비스 [Catalina]을(를) 중지시킵니다.
+28-Jan-2024 16:20:29.473 정보 [main] org.apache.coyote.AbstractProtocol.stop 프로토콜 핸들러 ["http-nio-8090"]을(를) 중지시킵니다.
+28-Jan-2024 16:20:29.481 정보 [main] org.apache.coyote.AbstractProtocol.destroy 프로토콜 핸들러 ["http-nio-8090"]을(를) 소멸시킵니다.
+28-Jan-2024 16:21:21.543 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 서버 버전 이름:    Apache Tomcat/9.0.85
+28-Jan-2024 16:21:21.546 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log Server 빌드 시각:  Jan 5 2024 08:28:07 UTC
+28-Jan-2024 16:21:21.546 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log Server 버전 번호:  9.0.85.0
+28-Jan-2024 16:21:21.547 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 운영체제 이름:     Linux
+28-Jan-2024 16:21:21.547 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 운영체제 버전:     5.15.0-89-generic
+28-Jan-2024 16:21:21.547 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 아키텍처:          amd64
+28-Jan-2024 16:21:21.547 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 자바 홈:           /usr/lib/jvm/java-11-openjdk-amd64
+28-Jan-2024 16:21:21.547 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log JVM 버전:          11.0.20.1+1-post-Ubuntu-0ubuntu120.04
+28-Jan-2024 16:21:21.547 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log JVM 벤더:          Ubuntu
+28-Jan-2024 16:21:21.547 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:     /home/jongho/Spring_project/CJU_STT/CJU_Web_Application_Services/tomcat/apache-tomcat-9.0.85
+28-Jan-2024 16:21:21.547 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:     /home/jongho/Spring_project/CJU_STT/CJU_Web_Application_Services/tomcat/apache-tomcat-9.0.85
+28-Jan-2024 16:21:21.555 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  --add-opens=java.base/java.lang=ALL-UNNAMED
+28-Jan-2024 16:21:21.555 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  --add-opens=java.base/java.io=ALL-UNNAMED
+28-Jan-2024 16:21:21.555 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  --add-opens=java.base/java.util=ALL-UNNAMED
+28-Jan-2024 16:21:21.555 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+28-Jan-2024 16:21:21.555 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+28-Jan-2024 16:21:21.556 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djava.util.logging.config.file=/home/jongho/Spring_project/CJU_STT/CJU_Web_Application_Services/tomcat/apache-tomcat-9.0.85/conf/logging.properties
+28-Jan-2024 16:21:21.556 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+28-Jan-2024 16:21:21.556 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djdk.tls.ephemeralDHKeySize=2048
+28-Jan-2024 16:21:21.556 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+28-Jan-2024 16:21:21.556 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+28-Jan-2024 16:21:21.557 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Dignore.endorsed.dirs=
+28-Jan-2024 16:21:21.557 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Dcatalina.base=/home/jongho/Spring_project/CJU_STT/CJU_Web_Application_Services/tomcat/apache-tomcat-9.0.85
+28-Jan-2024 16:21:21.557 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Dcatalina.home=/home/jongho/Spring_project/CJU_STT/CJU_Web_Application_Services/tomcat/apache-tomcat-9.0.85
+28-Jan-2024 16:21:21.557 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djava.io.tmpdir=/home/jongho/Spring_project/CJU_STT/CJU_Web_Application_Services/tomcat/apache-tomcat-9.0.85/temp
+28-Jan-2024 16:21:21.558 정보 [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent 프로덕션 환경들에서 최적의 성능을 제공하는, APR 기반 Apache Tomcat Native 라이브러리가, 다음 java.library.path에서 발견되지 않습니다: [/usr/java/packages/lib:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib]
+28-Jan-2024 16:21:21.771 정보 [main] org.apache.coyote.AbstractProtocol.init 프로토콜 핸들러 ["http-nio-8090"]을(를) 초기화합니다.
+28-Jan-2024 16:21:21.784 정보 [main] org.apache.catalina.startup.Catalina.load [368] 밀리초 내에 서버가 초기화되었습니다.
+28-Jan-2024 16:21:21.817 정보 [main] org.apache.catalina.core.StandardService.startInternal 서비스 [Catalina]을(를) 시작합니다.
+28-Jan-2024 16:21:21.817 정보 [main] org.apache.catalina.core.StandardEngine.startInternal 서버 엔진을 시작합니다: [Apache Tomcat/9.0.85]
+28-Jan-2024 16:21:21.822 정보 [main] org.apache.catalina.startup.HostConfig.deployDescriptor 배치 descriptor [/home/jongho/Spring_project/CJU_STT/CJU_Web_Application_Services/tomcat/apache-tomcat-9.0.85/conf/Catalina/localhost/cju_stt.xml]을(를) 배치합니다.
+28-Jan-2024 16:21:21.831 경고 [main] org.apache.catalina.startup.HostConfig.deployDescriptor 배치 descriptor [/home/jongho/Spring_project/CJU_STT/CJU_Web_Application_Services/tomcat/apache-tomcat-9.0.85/conf/Catalina/localhost/cju_stt.xml] 내에서, [/cju_stt] 값을 가진 path 속성은 무시됩니다.
+28-Jan-2024 16:21:22.428 정보 [main] org.apache.jasper.servlet.TldScanner.scanJars 적어도 하나의 JAR가 TLD들을 찾기 위해 스캔되었으나 아무 것도 찾지 못했습니다. 스캔했으나 TLD가 없는 JAR들의 전체 목록을 보시려면, 로그 레벨을 디버그 레벨로 설정하십시오. 스캔 과정에서 불필요한 JAR들을 건너뛰면, 시스템 시작 시간과 JSP 컴파일 시간을 단축시킬 수 있습니다.
+28-Jan-2024 16:21:23.001 정보 [main] org.apache.catalina.startup.HostConfig.deployDescriptor 배치 descriptor [/home/jongho/Spring_project/CJU_STT/CJU_Web_Application_Services/tomcat/apache-tomcat-9.0.85/conf/Catalina/localhost/cju_stt.xml]의 배치가 [1,178] 밀리초 내에 완료되었습니다.
+28-Jan-2024 16:21:23.002 정보 [main] org.apache.catalina.startup.HostConfig.deployWAR 웹 애플리케이션 아카이브 [/home/jongho/Spring_project/CJU_STT/CJU_Web_Application_Services/tomcat/apache-tomcat-9.0.85/webapps/cju_stt-1.0.0-BUILD-SNAPSHOT.war]을(를) 배치합니다.
+28-Jan-2024 16:21:23.366 정보 [main] org.apache.jasper.servlet.TldScanner.scanJars 적어도 하나의 JAR가 TLD들을 찾기 위해 스캔되었으나 아무 것도 찾지 못했습니다. 스캔했으나 TLD가 없는 JAR들의 전체 목록을 보시려면, 로그 레벨을 디버그 레벨로 설정하십시오. 스캔 과정에서 불필요한 JAR들을 건너뛰면, 시스템 시작 시간과 JSP 컴파일 시간을 단축시킬 수 있습니다.
+28-Jan-2024 16:21:23.868 정보 [main] org.apache.catalina.startup.HostConfig.deployWAR 웹 애플리케이션 아카이브 [/home/jongho/Spring_project/CJU_STT/CJU_Web_Application_Services/tomcat/apache-tomcat-9.0.85/webapps/cju_stt-1.0.0-BUILD-SNAPSHOT.war]의 배치가 [866] 밀리초에 완료되었습니다.
+28-Jan-2024 16:21:23.868 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/CJU_Web_Application_Services/tomcat/apache-tomcat-9.0.85/webapps/manager]을(를) 배치합니다.
+28-Jan-2024 16:21:23.886 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/CJU_Web_Application_Services/tomcat/apache-tomcat-9.0.85/webapps/manager]에 대한 배치가 [17] 밀리초에 완료되었습니다.
+28-Jan-2024 16:21:23.886 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/CJU_Web_Application_Services/tomcat/apache-tomcat-9.0.85/webapps/host-manager]을(를) 배치합니다.
+28-Jan-2024 16:21:23.896 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/CJU_Web_Application_Services/tomcat/apache-tomcat-9.0.85/webapps/host-manager]에 대한 배치가 [10] 밀리초에 완료되었습니다.
+28-Jan-2024 16:21:23.896 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/CJU_Web_Application_Services/tomcat/apache-tomcat-9.0.85/webapps/examples]을(를) 배치합니다.
+28-Jan-2024 16:21:23.990 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/CJU_Web_Application_Services/tomcat/apache-tomcat-9.0.85/webapps/examples]에 대한 배치가 [94] 밀리초에 완료되었습니다.
+28-Jan-2024 16:21:23.990 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/CJU_Web_Application_Services/tomcat/apache-tomcat-9.0.85/webapps/docs]을(를) 배치합니다.
+28-Jan-2024 16:21:23.999 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/CJU_Web_Application_Services/tomcat/apache-tomcat-9.0.85/webapps/docs]에 대한 배치가 [9] 밀리초에 완료되었습니다.
+28-Jan-2024 16:21:23.999 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/CJU_Web_Application_Services/tomcat/apache-tomcat-9.0.85/webapps/ROOT]을(를) 배치합니다.
+28-Jan-2024 16:21:24.007 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/CJU_Web_Application_Services/tomcat/apache-tomcat-9.0.85/webapps/ROOT]에 대한 배치가 [8] 밀리초에 완료되었습니다.
+28-Jan-2024 16:21:24.011 정보 [main] org.apache.coyote.AbstractProtocol.start 프로토콜 핸들러 ["http-nio-8090"]을(를) 시작합니다.
+28-Jan-2024 16:21:24.017 정보 [main] org.apache.catalina.startup.Catalina.start 서버가 [2232] 밀리초 내에 시작되었습니다.
+28-Jan-2024 16:22:56.273 정보 [main] org.apache.catalina.core.StandardServer.await 셧다운 포트를 통해 유효한 셧다운 명령을 받았습니다. 서버 인스턴스를 중지시킵니다.
+28-Jan-2024 16:22:56.274 정보 [main] org.apache.coyote.AbstractProtocol.pause 프로토콜 핸들러 ["http-nio-8090"]을(를) 일시 정지 중
+28-Jan-2024 16:22:56.276 정보 [main] org.apache.catalina.core.StandardService.stopInternal 서비스 [Catalina]을(를) 중지시킵니다.
+28-Jan-2024 16:22:56.310 정보 [main] org.apache.coyote.AbstractProtocol.stop 프로토콜 핸들러 ["http-nio-8090"]을(를) 중지시킵니다.
+28-Jan-2024 16:22:56.315 정보 [main] org.apache.coyote.AbstractProtocol.destroy 프로토콜 핸들러 ["http-nio-8090"]을(를) 소멸시킵니다.
+28-Jan-2024 16:23:52.616 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 서버 버전 이름:    Apache Tomcat/9.0.85
+28-Jan-2024 16:23:52.619 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log Server 빌드 시각:  Jan 5 2024 08:28:07 UTC
+28-Jan-2024 16:23:52.619 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log Server 버전 번호:  9.0.85.0
+28-Jan-2024 16:23:52.619 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 운영체제 이름:     Linux
+28-Jan-2024 16:23:52.619 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 운영체제 버전:     5.15.0-89-generic
+28-Jan-2024 16:23:52.619 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 아키텍처:          amd64
+28-Jan-2024 16:23:52.619 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 자바 홈:           /usr/lib/jvm/java-11-openjdk-amd64
+28-Jan-2024 16:23:52.620 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log JVM 버전:          11.0.20.1+1-post-Ubuntu-0ubuntu120.04
+28-Jan-2024 16:23:52.620 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log JVM 벤더:          Ubuntu
+28-Jan-2024 16:23:52.620 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:     /home/jongho/Spring_project/CJU_STT/CJU_Web_Application_Services/tomcat/apache-tomcat-9.0.85
+28-Jan-2024 16:23:52.620 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:     /home/jongho/Spring_project/CJU_STT/CJU_Web_Application_Services/tomcat/apache-tomcat-9.0.85
+28-Jan-2024 16:23:52.626 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  --add-opens=java.base/java.lang=ALL-UNNAMED
+28-Jan-2024 16:23:52.626 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  --add-opens=java.base/java.io=ALL-UNNAMED
+28-Jan-2024 16:23:52.626 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  --add-opens=java.base/java.util=ALL-UNNAMED
+28-Jan-2024 16:23:52.626 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+28-Jan-2024 16:23:52.627 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+28-Jan-2024 16:23:52.627 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djava.util.logging.config.file=/home/jongho/Spring_project/CJU_STT/CJU_Web_Application_Services/tomcat/apache-tomcat-9.0.85/conf/logging.properties
+28-Jan-2024 16:23:52.627 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+28-Jan-2024 16:23:52.627 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djdk.tls.ephemeralDHKeySize=2048
+28-Jan-2024 16:23:52.627 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+28-Jan-2024 16:23:52.627 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+28-Jan-2024 16:23:52.627 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Dignore.endorsed.dirs=
+28-Jan-2024 16:23:52.627 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Dcatalina.base=/home/jongho/Spring_project/CJU_STT/CJU_Web_Application_Services/tomcat/apache-tomcat-9.0.85
+28-Jan-2024 16:23:52.627 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Dcatalina.home=/home/jongho/Spring_project/CJU_STT/CJU_Web_Application_Services/tomcat/apache-tomcat-9.0.85
+28-Jan-2024 16:23:52.627 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djava.io.tmpdir=/home/jongho/Spring_project/CJU_STT/CJU_Web_Application_Services/tomcat/apache-tomcat-9.0.85/temp
+28-Jan-2024 16:23:52.628 정보 [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent 프로덕션 환경들에서 최적의 성능을 제공하는, APR 기반 Apache Tomcat Native 라이브러리가, 다음 java.library.path에서 발견되지 않습니다: [/usr/java/packages/lib:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib]
+28-Jan-2024 16:23:52.819 정보 [main] org.apache.coyote.AbstractProtocol.init 프로토콜 핸들러 ["http-nio-8090"]을(를) 초기화합니다.
+28-Jan-2024 16:23:52.835 정보 [main] org.apache.catalina.startup.Catalina.load [343] 밀리초 내에 서버가 초기화되었습니다.
+28-Jan-2024 16:23:52.872 정보 [main] org.apache.catalina.core.StandardService.startInternal 서비스 [Catalina]을(를) 시작합니다.
+28-Jan-2024 16:23:52.873 정보 [main] org.apache.catalina.core.StandardEngine.startInternal 서버 엔진을 시작합니다: [Apache Tomcat/9.0.85]
+28-Jan-2024 16:23:52.877 정보 [main] org.apache.catalina.startup.HostConfig.deployDescriptor 배치 descriptor [/home/jongho/Spring_project/CJU_STT/CJU_Web_Application_Services/tomcat/apache-tomcat-9.0.85/conf/Catalina/localhost/cju_stt.xml]을(를) 배치합니다.
+28-Jan-2024 16:23:52.886 경고 [main] org.apache.catalina.startup.HostConfig.deployDescriptor 배치 descriptor [/home/jongho/Spring_project/CJU_STT/CJU_Web_Application_Services/tomcat/apache-tomcat-9.0.85/conf/Catalina/localhost/cju_stt.xml] 내에서, [/cju_stt] 값을 가진 path 속성은 무시됩니다.
+28-Jan-2024 16:23:53.509 정보 [main] org.apache.jasper.servlet.TldScanner.scanJars 적어도 하나의 JAR가 TLD들을 찾기 위해 스캔되었으나 아무 것도 찾지 못했습니다. 스캔했으나 TLD가 없는 JAR들의 전체 목록을 보시려면, 로그 레벨을 디버그 레벨로 설정하십시오. 스캔 과정에서 불필요한 JAR들을 건너뛰면, 시스템 시작 시간과 JSP 컴파일 시간을 단축시킬 수 있습니다.
+28-Jan-2024 16:23:54.097 정보 [main] org.apache.catalina.startup.HostConfig.deployDescriptor 배치 descriptor [/home/jongho/Spring_project/CJU_STT/CJU_Web_Application_Services/tomcat/apache-tomcat-9.0.85/conf/Catalina/localhost/cju_stt.xml]의 배치가 [1,219] 밀리초 내에 완료되었습니다.
+28-Jan-2024 16:23:54.098 정보 [main] org.apache.catalina.startup.HostConfig.deployWAR 웹 애플리케이션 아카이브 [/home/jongho/Spring_project/CJU_STT/CJU_Web_Application_Services/tomcat/apache-tomcat-9.0.85/webapps/cju_stt-1.0.0-BUILD-SNAPSHOT.war]을(를) 배치합니다.
+28-Jan-2024 16:23:54.421 정보 [main] org.apache.jasper.servlet.TldScanner.scanJars 적어도 하나의 JAR가 TLD들을 찾기 위해 스캔되었으나 아무 것도 찾지 못했습니다. 스캔했으나 TLD가 없는 JAR들의 전체 목록을 보시려면, 로그 레벨을 디버그 레벨로 설정하십시오. 스캔 과정에서 불필요한 JAR들을 건너뛰면, 시스템 시작 시간과 JSP 컴파일 시간을 단축시킬 수 있습니다.
+28-Jan-2024 16:23:54.878 정보 [main] org.apache.catalina.startup.HostConfig.deployWAR 웹 애플리케이션 아카이브 [/home/jongho/Spring_project/CJU_STT/CJU_Web_Application_Services/tomcat/apache-tomcat-9.0.85/webapps/cju_stt-1.0.0-BUILD-SNAPSHOT.war]의 배치가 [780] 밀리초에 완료되었습니다.
+28-Jan-2024 16:23:54.878 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/CJU_Web_Application_Services/tomcat/apache-tomcat-9.0.85/webapps/manager]을(를) 배치합니다.
+28-Jan-2024 16:23:54.900 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/CJU_Web_Application_Services/tomcat/apache-tomcat-9.0.85/webapps/manager]에 대한 배치가 [22] 밀리초에 완료되었습니다.
+28-Jan-2024 16:23:54.901 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/CJU_Web_Application_Services/tomcat/apache-tomcat-9.0.85/webapps/host-manager]을(를) 배치합니다.
+28-Jan-2024 16:23:54.913 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/CJU_Web_Application_Services/tomcat/apache-tomcat-9.0.85/webapps/host-manager]에 대한 배치가 [12] 밀리초에 완료되었습니다.
+28-Jan-2024 16:23:54.913 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/CJU_Web_Application_Services/tomcat/apache-tomcat-9.0.85/webapps/examples]을(를) 배치합니다.
+28-Jan-2024 16:23:55.002 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/CJU_Web_Application_Services/tomcat/apache-tomcat-9.0.85/webapps/examples]에 대한 배치가 [89] 밀리초에 완료되었습니다.
+28-Jan-2024 16:23:55.002 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/CJU_Web_Application_Services/tomcat/apache-tomcat-9.0.85/webapps/docs]을(를) 배치합니다.
+28-Jan-2024 16:23:55.012 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/CJU_Web_Application_Services/tomcat/apache-tomcat-9.0.85/webapps/docs]에 대한 배치가 [10] 밀리초에 완료되었습니다.
+28-Jan-2024 16:23:55.013 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/CJU_Web_Application_Services/tomcat/apache-tomcat-9.0.85/webapps/ROOT]을(를) 배치합니다.
+28-Jan-2024 16:23:55.021 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/CJU_Web_Application_Services/tomcat/apache-tomcat-9.0.85/webapps/ROOT]에 대한 배치가 [8] 밀리초에 완료되었습니다.
+28-Jan-2024 16:23:55.025 정보 [main] org.apache.coyote.AbstractProtocol.start 프로토콜 핸들러 ["http-nio-8090"]을(를) 시작합니다.
+28-Jan-2024 16:23:55.031 정보 [main] org.apache.catalina.startup.Catalina.start 서버가 [2195] 밀리초 내에 시작되었습니다.
+28-Jan-2024 16:25:21.590 정보 [main] org.apache.catalina.core.StandardServer.await 셧다운 포트를 통해 유효한 셧다운 명령을 받았습니다. 서버 인스턴스를 중지시킵니다.
+28-Jan-2024 16:25:21.591 정보 [main] org.apache.coyote.AbstractProtocol.pause 프로토콜 핸들러 ["http-nio-8090"]을(를) 일시 정지 중
+28-Jan-2024 16:25:21.592 정보 [main] org.apache.catalina.core.StandardService.stopInternal 서비스 [Catalina]을(를) 중지시킵니다.
+28-Jan-2024 16:25:21.614 정보 [main] org.apache.coyote.AbstractProtocol.stop 프로토콜 핸들러 ["http-nio-8090"]을(를) 중지시킵니다.
+28-Jan-2024 16:25:21.625 정보 [main] org.apache.coyote.AbstractProtocol.destroy 프로토콜 핸들러 ["http-nio-8090"]을(를) 소멸시킵니다.
+28-Jan-2024 16:43:32.305 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 서버 버전 이름:    Apache Tomcat/9.0.85
+28-Jan-2024 16:43:32.308 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log Server 빌드 시각:  Jan 5 2024 08:28:07 UTC
+28-Jan-2024 16:43:32.308 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log Server 버전 번호:  9.0.85.0
+28-Jan-2024 16:43:32.308 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 운영체제 이름:     Linux
+28-Jan-2024 16:43:32.308 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 운영체제 버전:     5.15.0-89-generic
+28-Jan-2024 16:43:32.308 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 아키텍처:          amd64
+28-Jan-2024 16:43:32.308 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 자바 홈:           /usr/lib/jvm/java-11-openjdk-amd64
+28-Jan-2024 16:43:32.308 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log JVM 버전:          11.0.20.1+1-post-Ubuntu-0ubuntu120.04
+28-Jan-2024 16:43:32.308 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log JVM 벤더:          Ubuntu
+28-Jan-2024 16:43:32.309 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:     /home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85
+28-Jan-2024 16:43:32.309 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:     /home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85
+28-Jan-2024 16:43:32.316 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  --add-opens=java.base/java.lang=ALL-UNNAMED
+28-Jan-2024 16:43:32.316 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  --add-opens=java.base/java.io=ALL-UNNAMED
+28-Jan-2024 16:43:32.316 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  --add-opens=java.base/java.util=ALL-UNNAMED
+28-Jan-2024 16:43:32.316 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+28-Jan-2024 16:43:32.316 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+28-Jan-2024 16:43:32.316 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djava.util.logging.config.file=/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/conf/logging.properties
+28-Jan-2024 16:43:32.316 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+28-Jan-2024 16:43:32.316 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djdk.tls.ephemeralDHKeySize=2048
+28-Jan-2024 16:43:32.317 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+28-Jan-2024 16:43:32.317 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+28-Jan-2024 16:43:32.317 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Dignore.endorsed.dirs=
+28-Jan-2024 16:43:32.317 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Dcatalina.base=/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85
+28-Jan-2024 16:43:32.317 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Dcatalina.home=/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85
+28-Jan-2024 16:43:32.317 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djava.io.tmpdir=/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/temp
+28-Jan-2024 16:43:32.318 정보 [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent 프로덕션 환경들에서 최적의 성능을 제공하는, APR 기반 Apache Tomcat Native 라이브러리가, 다음 java.library.path에서 발견되지 않습니다: [/usr/java/packages/lib:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib]
+28-Jan-2024 16:43:32.506 정보 [main] org.apache.coyote.AbstractProtocol.init 프로토콜 핸들러 ["http-nio-8090"]을(를) 초기화합니다.
+28-Jan-2024 16:43:32.518 정보 [main] org.apache.catalina.startup.Catalina.load [334] 밀리초 내에 서버가 초기화되었습니다.
+28-Jan-2024 16:43:32.551 정보 [main] org.apache.catalina.core.StandardService.startInternal 서비스 [Catalina]을(를) 시작합니다.
+28-Jan-2024 16:43:32.551 정보 [main] org.apache.catalina.core.StandardEngine.startInternal 서버 엔진을 시작합니다: [Apache Tomcat/9.0.85]
+28-Jan-2024 16:43:32.555 정보 [main] org.apache.catalina.startup.HostConfig.deployDescriptor 배치 descriptor [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/conf/Catalina/localhost/cju_stt.xml]을(를) 배치합니다.
+28-Jan-2024 16:43:32.563 경고 [main] org.apache.catalina.startup.HostConfig.deployDescriptor 배치 descriptor [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/conf/Catalina/localhost/cju_stt.xml] 내에서, [/cju_stt] 값을 가진 path 속성은 무시됩니다.
+28-Jan-2024 16:43:33.148 정보 [main] org.apache.jasper.servlet.TldScanner.scanJars 적어도 하나의 JAR가 TLD들을 찾기 위해 스캔되었으나 아무 것도 찾지 못했습니다. 스캔했으나 TLD가 없는 JAR들의 전체 목록을 보시려면, 로그 레벨을 디버그 레벨로 설정하십시오. 스캔 과정에서 불필요한 JAR들을 건너뛰면, 시스템 시작 시간과 JSP 컴파일 시간을 단축시킬 수 있습니다.
+28-Jan-2024 16:43:33.743 정보 [main] org.apache.catalina.startup.HostConfig.deployDescriptor 배치 descriptor [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/conf/Catalina/localhost/cju_stt.xml]의 배치가 [1,187] 밀리초 내에 완료되었습니다.
+28-Jan-2024 16:43:33.743 정보 [main] org.apache.catalina.startup.HostConfig.deployWAR 웹 애플리케이션 아카이브 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/cju_stt-1.0.0-BUILD-SNAPSHOT.war]을(를) 배치합니다.
+28-Jan-2024 16:43:34.042 정보 [main] org.apache.jasper.servlet.TldScanner.scanJars 적어도 하나의 JAR가 TLD들을 찾기 위해 스캔되었으나 아무 것도 찾지 못했습니다. 스캔했으나 TLD가 없는 JAR들의 전체 목록을 보시려면, 로그 레벨을 디버그 레벨로 설정하십시오. 스캔 과정에서 불필요한 JAR들을 건너뛰면, 시스템 시작 시간과 JSP 컴파일 시간을 단축시킬 수 있습니다.
+28-Jan-2024 16:43:34.505 정보 [main] org.apache.catalina.startup.HostConfig.deployWAR 웹 애플리케이션 아카이브 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/cju_stt-1.0.0-BUILD-SNAPSHOT.war]의 배치가 [762] 밀리초에 완료되었습니다.
+28-Jan-2024 16:43:34.505 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/manager]을(를) 배치합니다.
+28-Jan-2024 16:43:34.521 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/manager]에 대한 배치가 [16] 밀리초에 완료되었습니다.
+28-Jan-2024 16:43:34.521 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/host-manager]을(를) 배치합니다.
+28-Jan-2024 16:43:34.531 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/host-manager]에 대한 배치가 [10] 밀리초에 완료되었습니다.
+28-Jan-2024 16:43:34.532 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/examples]을(를) 배치합니다.
+28-Jan-2024 16:43:34.606 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/examples]에 대한 배치가 [74] 밀리초에 완료되었습니다.
+28-Jan-2024 16:43:34.606 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/docs]을(를) 배치합니다.
+28-Jan-2024 16:43:34.614 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/docs]에 대한 배치가 [8] 밀리초에 완료되었습니다.
+28-Jan-2024 16:43:34.614 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/ROOT]을(를) 배치합니다.
+28-Jan-2024 16:43:34.622 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/ROOT]에 대한 배치가 [8] 밀리초에 완료되었습니다.
+28-Jan-2024 16:43:34.626 정보 [main] org.apache.coyote.AbstractProtocol.start 프로토콜 핸들러 ["http-nio-8090"]을(를) 시작합니다.
+28-Jan-2024 16:43:34.632 정보 [main] org.apache.catalina.startup.Catalina.start 서버가 [2113] 밀리초 내에 시작되었습니다.
+28-Jan-2024 16:52:52.535 정보 [Catalina-utility-1] org.apache.catalina.startup.HostConfig.undeploy 컨텍스트 [/cju_stt-1.0.0-BUILD-SNAPSHOT]의 배치를 제거합니다.
+28-Jan-2024 16:52:52.580 정보 [Catalina-utility-1] org.apache.catalina.startup.HostConfig.deployWAR 웹 애플리케이션 아카이브 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/cju_stt-1.0.0-BUILD-SNAPSHOT.war]을(를) 배치합니다.
+28-Jan-2024 16:52:52.893 정보 [Catalina-utility-1] org.apache.jasper.servlet.TldScanner.scanJars 적어도 하나의 JAR가 TLD들을 찾기 위해 스캔되었으나 아무 것도 찾지 못했습니다. 스캔했으나 TLD가 없는 JAR들의 전체 목록을 보시려면, 로그 레벨을 디버그 레벨로 설정하십시오. 스캔 과정에서 불필요한 JAR들을 건너뛰면, 시스템 시작 시간과 JSP 컴파일 시간을 단축시킬 수 있습니다.
+28-Jan-2024 16:52:53.292 정보 [Catalina-utility-1] org.apache.catalina.startup.HostConfig.deployWAR 웹 애플리케이션 아카이브 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/cju_stt-1.0.0-BUILD-SNAPSHOT.war]의 배치가 [712] 밀리초에 완료되었습니다.
+28-Jan-2024 16:52:59.905 정보 [main] org.apache.catalina.core.StandardServer.await 셧다운 포트를 통해 유효한 셧다운 명령을 받았습니다. 서버 인스턴스를 중지시킵니다.
+28-Jan-2024 16:52:59.905 정보 [main] org.apache.coyote.AbstractProtocol.pause 프로토콜 핸들러 ["http-nio-8090"]을(를) 일시 정지 중
+28-Jan-2024 16:52:59.907 정보 [main] org.apache.catalina.core.StandardService.stopInternal 서비스 [Catalina]을(를) 중지시킵니다.
+28-Jan-2024 16:52:59.924 정보 [main] org.apache.coyote.AbstractProtocol.stop 프로토콜 핸들러 ["http-nio-8090"]을(를) 중지시킵니다.
+28-Jan-2024 16:52:59.930 정보 [main] org.apache.coyote.AbstractProtocol.destroy 프로토콜 핸들러 ["http-nio-8090"]을(를) 소멸시킵니다.
+28-Jan-2024 16:53:02.232 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 서버 버전 이름:    Apache Tomcat/9.0.85
+28-Jan-2024 16:53:02.235 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log Server 빌드 시각:  Jan 5 2024 08:28:07 UTC
+28-Jan-2024 16:53:02.235 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log Server 버전 번호:  9.0.85.0
+28-Jan-2024 16:53:02.235 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 운영체제 이름:     Linux
+28-Jan-2024 16:53:02.235 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 운영체제 버전:     5.15.0-89-generic
+28-Jan-2024 16:53:02.235 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 아키텍처:          amd64
+28-Jan-2024 16:53:02.235 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 자바 홈:           /usr/lib/jvm/java-11-openjdk-amd64
+28-Jan-2024 16:53:02.235 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log JVM 버전:          11.0.20.1+1-post-Ubuntu-0ubuntu120.04
+28-Jan-2024 16:53:02.235 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log JVM 벤더:          Ubuntu
+28-Jan-2024 16:53:02.236 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:     /home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85
+28-Jan-2024 16:53:02.236 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:     /home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85
+28-Jan-2024 16:53:02.242 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  --add-opens=java.base/java.lang=ALL-UNNAMED
+28-Jan-2024 16:53:02.243 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  --add-opens=java.base/java.io=ALL-UNNAMED
+28-Jan-2024 16:53:02.243 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  --add-opens=java.base/java.util=ALL-UNNAMED
+28-Jan-2024 16:53:02.243 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+28-Jan-2024 16:53:02.243 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+28-Jan-2024 16:53:02.243 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djava.util.logging.config.file=/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/conf/logging.properties
+28-Jan-2024 16:53:02.243 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+28-Jan-2024 16:53:02.243 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djdk.tls.ephemeralDHKeySize=2048
+28-Jan-2024 16:53:02.243 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+28-Jan-2024 16:53:02.244 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+28-Jan-2024 16:53:02.244 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Dignore.endorsed.dirs=
+28-Jan-2024 16:53:02.244 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Dcatalina.base=/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85
+28-Jan-2024 16:53:02.244 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Dcatalina.home=/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85
+28-Jan-2024 16:53:02.244 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djava.io.tmpdir=/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/temp
+28-Jan-2024 16:53:02.245 정보 [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent 프로덕션 환경들에서 최적의 성능을 제공하는, APR 기반 Apache Tomcat Native 라이브러리가, 다음 java.library.path에서 발견되지 않습니다: [/usr/java/packages/lib:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib]
+28-Jan-2024 16:53:02.437 정보 [main] org.apache.coyote.AbstractProtocol.init 프로토콜 핸들러 ["http-nio-8090"]을(를) 초기화합니다.
+28-Jan-2024 16:53:02.451 정보 [main] org.apache.catalina.startup.Catalina.load [343] 밀리초 내에 서버가 초기화되었습니다.
+28-Jan-2024 16:53:02.484 정보 [main] org.apache.catalina.core.StandardService.startInternal 서비스 [Catalina]을(를) 시작합니다.
+28-Jan-2024 16:53:02.484 정보 [main] org.apache.catalina.core.StandardEngine.startInternal 서버 엔진을 시작합니다: [Apache Tomcat/9.0.85]
+28-Jan-2024 16:53:02.488 정보 [main] org.apache.catalina.startup.HostConfig.deployDescriptor 배치 descriptor [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/conf/Catalina/localhost/cju_stt.xml]을(를) 배치합니다.
+28-Jan-2024 16:53:02.496 경고 [main] org.apache.catalina.startup.HostConfig.deployDescriptor 배치 descriptor [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/conf/Catalina/localhost/cju_stt.xml] 내에서, [/cju_stt] 값을 가진 path 속성은 무시됩니다.
+28-Jan-2024 16:53:03.090 정보 [main] org.apache.jasper.servlet.TldScanner.scanJars 적어도 하나의 JAR가 TLD들을 찾기 위해 스캔되었으나 아무 것도 찾지 못했습니다. 스캔했으나 TLD가 없는 JAR들의 전체 목록을 보시려면, 로그 레벨을 디버그 레벨로 설정하십시오. 스캔 과정에서 불필요한 JAR들을 건너뛰면, 시스템 시작 시간과 JSP 컴파일 시간을 단축시킬 수 있습니다.
+28-Jan-2024 16:53:03.720 정보 [main] org.apache.catalina.startup.HostConfig.deployDescriptor 배치 descriptor [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/conf/Catalina/localhost/cju_stt.xml]의 배치가 [1,231] 밀리초 내에 완료되었습니다.
+28-Jan-2024 16:53:03.720 정보 [main] org.apache.catalina.startup.HostConfig.deployWAR 웹 애플리케이션 아카이브 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/cju_stt-1.0.0-BUILD-SNAPSHOT.war]을(를) 배치합니다.
+28-Jan-2024 16:53:04.045 정보 [main] org.apache.jasper.servlet.TldScanner.scanJars 적어도 하나의 JAR가 TLD들을 찾기 위해 스캔되었으나 아무 것도 찾지 못했습니다. 스캔했으나 TLD가 없는 JAR들의 전체 목록을 보시려면, 로그 레벨을 디버그 레벨로 설정하십시오. 스캔 과정에서 불필요한 JAR들을 건너뛰면, 시스템 시작 시간과 JSP 컴파일 시간을 단축시킬 수 있습니다.
+28-Jan-2024 16:53:04.495 정보 [main] org.apache.catalina.startup.HostConfig.deployWAR 웹 애플리케이션 아카이브 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/cju_stt-1.0.0-BUILD-SNAPSHOT.war]의 배치가 [775] 밀리초에 완료되었습니다.
+28-Jan-2024 16:53:04.496 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/manager]을(를) 배치합니다.
+28-Jan-2024 16:53:04.512 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/manager]에 대한 배치가 [17] 밀리초에 완료되었습니다.
+28-Jan-2024 16:53:04.512 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/host-manager]을(를) 배치합니다.
+28-Jan-2024 16:53:04.522 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/host-manager]에 대한 배치가 [10] 밀리초에 완료되었습니다.
+28-Jan-2024 16:53:04.522 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/examples]을(를) 배치합니다.
+28-Jan-2024 16:53:04.590 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/examples]에 대한 배치가 [68] 밀리초에 완료되었습니다.
+28-Jan-2024 16:53:04.590 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/docs]을(를) 배치합니다.
+28-Jan-2024 16:53:04.599 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/docs]에 대한 배치가 [9] 밀리초에 완료되었습니다.
+28-Jan-2024 16:53:04.599 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/ROOT]을(를) 배치합니다.
+28-Jan-2024 16:53:04.606 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/ROOT]에 대한 배치가 [7] 밀리초에 완료되었습니다.
+28-Jan-2024 16:53:04.609 정보 [main] org.apache.coyote.AbstractProtocol.start 프로토콜 핸들러 ["http-nio-8090"]을(를) 시작합니다.
+28-Jan-2024 16:53:04.616 정보 [main] org.apache.catalina.startup.Catalina.start 서버가 [2165] 밀리초 내에 시작되었습니다.
+28-Jan-2024 16:53:24.486 정보 [main] org.apache.catalina.core.StandardServer.await 셧다운 포트를 통해 유효한 셧다운 명령을 받았습니다. 서버 인스턴스를 중지시킵니다.
+28-Jan-2024 16:53:24.487 정보 [main] org.apache.coyote.AbstractProtocol.pause 프로토콜 핸들러 ["http-nio-8090"]을(를) 일시 정지 중
+28-Jan-2024 16:53:24.488 정보 [main] org.apache.catalina.core.StandardService.stopInternal 서비스 [Catalina]을(를) 중지시킵니다.
+28-Jan-2024 16:53:24.513 정보 [main] org.apache.coyote.AbstractProtocol.stop 프로토콜 핸들러 ["http-nio-8090"]을(를) 중지시킵니다.
+28-Jan-2024 16:53:24.521 정보 [main] org.apache.coyote.AbstractProtocol.destroy 프로토콜 핸들러 ["http-nio-8090"]을(를) 소멸시킵니다.
+28-Jan-2024 16:54:09.033 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 서버 버전 이름:    Apache Tomcat/9.0.85
+28-Jan-2024 16:54:09.036 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log Server 빌드 시각:  Jan 5 2024 08:28:07 UTC
+28-Jan-2024 16:54:09.036 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log Server 버전 번호:  9.0.85.0
+28-Jan-2024 16:54:09.036 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 운영체제 이름:     Linux
+28-Jan-2024 16:54:09.037 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 운영체제 버전:     5.15.0-89-generic
+28-Jan-2024 16:54:09.037 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 아키텍처:          amd64
+28-Jan-2024 16:54:09.037 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 자바 홈:           /usr/lib/jvm/java-11-openjdk-amd64
+28-Jan-2024 16:54:09.037 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log JVM 버전:          11.0.20.1+1-post-Ubuntu-0ubuntu120.04
+28-Jan-2024 16:54:09.037 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log JVM 벤더:          Ubuntu
+28-Jan-2024 16:54:09.037 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:     /home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85
+28-Jan-2024 16:54:09.037 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:     /home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85
+28-Jan-2024 16:54:09.046 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  --add-opens=java.base/java.lang=ALL-UNNAMED
+28-Jan-2024 16:54:09.046 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  --add-opens=java.base/java.io=ALL-UNNAMED
+28-Jan-2024 16:54:09.046 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  --add-opens=java.base/java.util=ALL-UNNAMED
+28-Jan-2024 16:54:09.046 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+28-Jan-2024 16:54:09.046 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+28-Jan-2024 16:54:09.046 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djava.util.logging.config.file=/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/conf/logging.properties
+28-Jan-2024 16:54:09.046 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+28-Jan-2024 16:54:09.046 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djdk.tls.ephemeralDHKeySize=2048
+28-Jan-2024 16:54:09.046 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+28-Jan-2024 16:54:09.046 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+28-Jan-2024 16:54:09.047 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Dignore.endorsed.dirs=
+28-Jan-2024 16:54:09.047 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Dcatalina.base=/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85
+28-Jan-2024 16:54:09.047 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Dcatalina.home=/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85
+28-Jan-2024 16:54:09.047 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djava.io.tmpdir=/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/temp
+28-Jan-2024 16:54:09.048 정보 [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent 프로덕션 환경들에서 최적의 성능을 제공하는, APR 기반 Apache Tomcat Native 라이브러리가, 다음 java.library.path에서 발견되지 않습니다: [/usr/java/packages/lib:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib]
+28-Jan-2024 16:54:09.257 정보 [main] org.apache.coyote.AbstractProtocol.init 프로토콜 핸들러 ["http-nio-8090"]을(를) 초기화합니다.
+28-Jan-2024 16:54:09.270 정보 [main] org.apache.catalina.startup.Catalina.load [361] 밀리초 내에 서버가 초기화되었습니다.
+28-Jan-2024 16:54:09.304 정보 [main] org.apache.catalina.core.StandardService.startInternal 서비스 [Catalina]을(를) 시작합니다.
+28-Jan-2024 16:54:09.304 정보 [main] org.apache.catalina.core.StandardEngine.startInternal 서버 엔진을 시작합니다: [Apache Tomcat/9.0.85]
+28-Jan-2024 16:54:09.308 정보 [main] org.apache.catalina.startup.HostConfig.deployDescriptor 배치 descriptor [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/conf/Catalina/localhost/cju_stt.xml]을(를) 배치합니다.
+28-Jan-2024 16:54:09.317 경고 [main] org.apache.catalina.startup.HostConfig.deployDescriptor 배치 descriptor [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/conf/Catalina/localhost/cju_stt.xml] 내에서, [/cju_stt] 값을 가진 path 속성은 무시됩니다.
+28-Jan-2024 16:54:09.939 정보 [main] org.apache.jasper.servlet.TldScanner.scanJars 적어도 하나의 JAR가 TLD들을 찾기 위해 스캔되었으나 아무 것도 찾지 못했습니다. 스캔했으나 TLD가 없는 JAR들의 전체 목록을 보시려면, 로그 레벨을 디버그 레벨로 설정하십시오. 스캔 과정에서 불필요한 JAR들을 건너뛰면, 시스템 시작 시간과 JSP 컴파일 시간을 단축시킬 수 있습니다.
+28-Jan-2024 16:54:10.572 정보 [main] org.apache.catalina.startup.HostConfig.deployDescriptor 배치 descriptor [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/conf/Catalina/localhost/cju_stt.xml]의 배치가 [1,263] 밀리초 내에 완료되었습니다.
+28-Jan-2024 16:54:10.572 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/manager]을(를) 배치합니다.
+28-Jan-2024 16:54:10.589 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/manager]에 대한 배치가 [17] 밀리초에 완료되었습니다.
+28-Jan-2024 16:54:10.589 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/host-manager]을(를) 배치합니다.
+28-Jan-2024 16:54:10.599 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/host-manager]에 대한 배치가 [10] 밀리초에 완료되었습니다.
+28-Jan-2024 16:54:10.600 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/examples]을(를) 배치합니다.
+28-Jan-2024 16:54:10.681 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/examples]에 대한 배치가 [81] 밀리초에 완료되었습니다.
+28-Jan-2024 16:54:10.682 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/docs]을(를) 배치합니다.
+28-Jan-2024 16:54:10.691 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/docs]에 대한 배치가 [8] 밀리초에 완료되었습니다.
+28-Jan-2024 16:54:10.691 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/ROOT]을(를) 배치합니다.
+28-Jan-2024 16:54:10.701 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/ROOT]에 대한 배치가 [10] 밀리초에 완료되었습니다.
+28-Jan-2024 16:54:10.705 정보 [main] org.apache.coyote.AbstractProtocol.start 프로토콜 핸들러 ["http-nio-8090"]을(를) 시작합니다.
+28-Jan-2024 16:54:10.713 정보 [main] org.apache.catalina.startup.Catalina.start 서버가 [1443] 밀리초 내에 시작되었습니다.
+28-Jan-2024 16:54:29.401 정보 [main] org.apache.catalina.core.StandardServer.await 셧다운 포트를 통해 유효한 셧다운 명령을 받았습니다. 서버 인스턴스를 중지시킵니다.
+28-Jan-2024 16:54:29.401 정보 [main] org.apache.coyote.AbstractProtocol.pause 프로토콜 핸들러 ["http-nio-8090"]을(를) 일시 정지 중
+28-Jan-2024 16:54:29.403 정보 [main] org.apache.catalina.core.StandardService.stopInternal 서비스 [Catalina]을(를) 중지시킵니다.
+28-Jan-2024 16:54:29.425 정보 [main] org.apache.coyote.AbstractProtocol.stop 프로토콜 핸들러 ["http-nio-8090"]을(를) 중지시킵니다.
+28-Jan-2024 16:54:29.437 정보 [main] org.apache.coyote.AbstractProtocol.destroy 프로토콜 핸들러 ["http-nio-8090"]을(를) 소멸시킵니다.
+28-Jan-2024 21:21:16.753 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 서버 버전 이름:    Apache Tomcat/9.0.85
+28-Jan-2024 21:21:16.756 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log Server 빌드 시각:  Jan 5 2024 08:28:07 UTC
+28-Jan-2024 21:21:16.756 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log Server 버전 번호:  9.0.85.0
+28-Jan-2024 21:21:16.756 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 운영체제 이름:     Linux
+28-Jan-2024 21:21:16.756 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 운영체제 버전:     5.15.0-89-generic
+28-Jan-2024 21:21:16.756 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 아키텍처:          amd64
+28-Jan-2024 21:21:16.756 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 자바 홈:           /usr/lib/jvm/java-11-openjdk-amd64
+28-Jan-2024 21:21:16.756 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log JVM 버전:          11.0.20.1+1-post-Ubuntu-0ubuntu120.04
+28-Jan-2024 21:21:16.756 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log JVM 벤더:          Ubuntu
+28-Jan-2024 21:21:16.756 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:     /home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85
+28-Jan-2024 21:21:16.756 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:     /home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85
+28-Jan-2024 21:21:16.763 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  --add-opens=java.base/java.lang=ALL-UNNAMED
+28-Jan-2024 21:21:16.764 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  --add-opens=java.base/java.io=ALL-UNNAMED
+28-Jan-2024 21:21:16.764 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  --add-opens=java.base/java.util=ALL-UNNAMED
+28-Jan-2024 21:21:16.764 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+28-Jan-2024 21:21:16.764 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+28-Jan-2024 21:21:16.764 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djava.util.logging.config.file=/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/conf/logging.properties
+28-Jan-2024 21:21:16.764 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+28-Jan-2024 21:21:16.764 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djdk.tls.ephemeralDHKeySize=2048
+28-Jan-2024 21:21:16.764 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+28-Jan-2024 21:21:16.765 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+28-Jan-2024 21:21:16.765 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Dignore.endorsed.dirs=
+28-Jan-2024 21:21:16.765 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Dcatalina.base=/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85
+28-Jan-2024 21:21:16.765 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Dcatalina.home=/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85
+28-Jan-2024 21:21:16.765 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djava.io.tmpdir=/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/temp
+28-Jan-2024 21:21:16.766 정보 [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent 프로덕션 환경들에서 최적의 성능을 제공하는, APR 기반 Apache Tomcat Native 라이브러리가, 다음 java.library.path에서 발견되지 않습니다: [/usr/java/packages/lib:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib]
+28-Jan-2024 21:21:16.953 정보 [main] org.apache.coyote.AbstractProtocol.init 프로토콜 핸들러 ["http-nio-8090"]을(를) 초기화합니다.
+28-Jan-2024 21:21:16.966 정보 [main] org.apache.catalina.startup.Catalina.load [345] 밀리초 내에 서버가 초기화되었습니다.
+28-Jan-2024 21:21:16.999 정보 [main] org.apache.catalina.core.StandardService.startInternal 서비스 [Catalina]을(를) 시작합니다.
+28-Jan-2024 21:21:16.999 정보 [main] org.apache.catalina.core.StandardEngine.startInternal 서버 엔진을 시작합니다: [Apache Tomcat/9.0.85]
+28-Jan-2024 21:21:17.003 정보 [main] org.apache.catalina.startup.HostConfig.deployDescriptor 배치 descriptor [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/conf/Catalina/localhost/cju_stt.xml]을(를) 배치합니다.
+28-Jan-2024 21:21:17.011 경고 [main] org.apache.catalina.startup.HostConfig.deployDescriptor 배치 descriptor [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/conf/Catalina/localhost/cju_stt.xml] 내에서, [/cju_stt] 값을 가진 path 속성은 무시됩니다.
+28-Jan-2024 21:21:17.624 정보 [main] org.apache.jasper.servlet.TldScanner.scanJars 적어도 하나의 JAR가 TLD들을 찾기 위해 스캔되었으나 아무 것도 찾지 못했습니다. 스캔했으나 TLD가 없는 JAR들의 전체 목록을 보시려면, 로그 레벨을 디버그 레벨로 설정하십시오. 스캔 과정에서 불필요한 JAR들을 건너뛰면, 시스템 시작 시간과 JSP 컴파일 시간을 단축시킬 수 있습니다.
+28-Jan-2024 21:21:18.216 정보 [main] org.apache.catalina.startup.HostConfig.deployDescriptor 배치 descriptor [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/conf/Catalina/localhost/cju_stt.xml]의 배치가 [1,212] 밀리초 내에 완료되었습니다.
+28-Jan-2024 21:21:18.217 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/manager]을(를) 배치합니다.
+28-Jan-2024 21:21:18.233 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/manager]에 대한 배치가 [16] 밀리초에 완료되었습니다.
+28-Jan-2024 21:21:18.233 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/host-manager]을(를) 배치합니다.
+28-Jan-2024 21:21:18.243 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/host-manager]에 대한 배치가 [10] 밀리초에 완료되었습니다.
+28-Jan-2024 21:21:18.243 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/examples]을(를) 배치합니다.
+28-Jan-2024 21:21:18.329 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/examples]에 대한 배치가 [85] 밀리초에 완료되었습니다.
+28-Jan-2024 21:21:18.329 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/docs]을(를) 배치합니다.
+28-Jan-2024 21:21:18.338 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/docs]에 대한 배치가 [8] 밀리초에 완료되었습니다.
+28-Jan-2024 21:21:18.338 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/ROOT]을(를) 배치합니다.
+28-Jan-2024 21:21:18.346 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/ROOT]에 대한 배치가 [7] 밀리초에 완료되었습니다.
+28-Jan-2024 21:21:18.349 정보 [main] org.apache.coyote.AbstractProtocol.start 프로토콜 핸들러 ["http-nio-8090"]을(를) 시작합니다.
+28-Jan-2024 21:21:18.355 정보 [main] org.apache.catalina.startup.Catalina.start 서버가 [1388] 밀리초 내에 시작되었습니다.
+28-Jan-2024 21:25:52.506 정보 [main] org.apache.catalina.core.StandardServer.await 셧다운 포트를 통해 유효한 셧다운 명령을 받았습니다. 서버 인스턴스를 중지시킵니다.
+28-Jan-2024 21:25:52.506 정보 [main] org.apache.coyote.AbstractProtocol.pause 프로토콜 핸들러 ["http-nio-8090"]을(를) 일시 정지 중
+28-Jan-2024 21:25:52.508 정보 [main] org.apache.catalina.core.StandardService.stopInternal 서비스 [Catalina]을(를) 중지시킵니다.
+28-Jan-2024 21:25:52.529 정보 [main] org.apache.coyote.AbstractProtocol.stop 프로토콜 핸들러 ["http-nio-8090"]을(를) 중지시킵니다.
+28-Jan-2024 21:25:52.541 정보 [main] org.apache.coyote.AbstractProtocol.destroy 프로토콜 핸들러 ["http-nio-8090"]을(를) 소멸시킵니다.
+28-Jan-2024 21:25:55.626 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 서버 버전 이름:    Apache Tomcat/9.0.85
+28-Jan-2024 21:25:55.629 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log Server 빌드 시각:  Jan 5 2024 08:28:07 UTC
+28-Jan-2024 21:25:55.629 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log Server 버전 번호:  9.0.85.0
+28-Jan-2024 21:25:55.629 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 운영체제 이름:     Linux
+28-Jan-2024 21:25:55.629 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 운영체제 버전:     5.15.0-89-generic
+28-Jan-2024 21:25:55.629 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 아키텍처:          amd64
+28-Jan-2024 21:25:55.629 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 자바 홈:           /usr/lib/jvm/java-11-openjdk-amd64
+28-Jan-2024 21:25:55.629 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log JVM 버전:          11.0.20.1+1-post-Ubuntu-0ubuntu120.04
+28-Jan-2024 21:25:55.629 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log JVM 벤더:          Ubuntu
+28-Jan-2024 21:25:55.630 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:     /home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85
+28-Jan-2024 21:25:55.630 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:     /home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85
+28-Jan-2024 21:25:55.637 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  --add-opens=java.base/java.lang=ALL-UNNAMED
+28-Jan-2024 21:25:55.637 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  --add-opens=java.base/java.io=ALL-UNNAMED
+28-Jan-2024 21:25:55.637 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  --add-opens=java.base/java.util=ALL-UNNAMED
+28-Jan-2024 21:25:55.637 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+28-Jan-2024 21:25:55.638 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+28-Jan-2024 21:25:55.638 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djava.util.logging.config.file=/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/conf/logging.properties
+28-Jan-2024 21:25:55.638 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+28-Jan-2024 21:25:55.638 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djdk.tls.ephemeralDHKeySize=2048
+28-Jan-2024 21:25:55.638 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+28-Jan-2024 21:25:55.638 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+28-Jan-2024 21:25:55.638 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Dignore.endorsed.dirs=
+28-Jan-2024 21:25:55.638 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Dcatalina.base=/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85
+28-Jan-2024 21:25:55.638 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Dcatalina.home=/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85
+28-Jan-2024 21:25:55.638 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djava.io.tmpdir=/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/temp
+28-Jan-2024 21:25:55.639 정보 [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent 프로덕션 환경들에서 최적의 성능을 제공하는, APR 기반 Apache Tomcat Native 라이브러리가, 다음 java.library.path에서 발견되지 않습니다: [/usr/java/packages/lib:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib]
+28-Jan-2024 21:25:55.822 정보 [main] org.apache.coyote.AbstractProtocol.init 프로토콜 핸들러 ["http-nio-8090"]을(를) 초기화합니다.
+28-Jan-2024 21:25:55.835 정보 [main] org.apache.catalina.startup.Catalina.load [328] 밀리초 내에 서버가 초기화되었습니다.
+28-Jan-2024 21:25:55.866 정보 [main] org.apache.catalina.core.StandardService.startInternal 서비스 [Catalina]을(를) 시작합니다.
+28-Jan-2024 21:25:55.866 정보 [main] org.apache.catalina.core.StandardEngine.startInternal 서버 엔진을 시작합니다: [Apache Tomcat/9.0.85]
+28-Jan-2024 21:25:55.870 정보 [main] org.apache.catalina.startup.HostConfig.deployDescriptor 배치 descriptor [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/conf/Catalina/localhost/cju_stt.xml]을(를) 배치합니다.
+28-Jan-2024 21:25:55.878 경고 [main] org.apache.catalina.startup.HostConfig.deployDescriptor 배치 descriptor [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/conf/Catalina/localhost/cju_stt.xml] 내에서, [/cju_stt] 값을 가진 path 속성은 무시됩니다.
+28-Jan-2024 21:25:56.476 정보 [main] org.apache.jasper.servlet.TldScanner.scanJars 적어도 하나의 JAR가 TLD들을 찾기 위해 스캔되었으나 아무 것도 찾지 못했습니다. 스캔했으나 TLD가 없는 JAR들의 전체 목록을 보시려면, 로그 레벨을 디버그 레벨로 설정하십시오. 스캔 과정에서 불필요한 JAR들을 건너뛰면, 시스템 시작 시간과 JSP 컴파일 시간을 단축시킬 수 있습니다.
+28-Jan-2024 21:25:57.049 정보 [main] org.apache.catalina.startup.HostConfig.deployDescriptor 배치 descriptor [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/conf/Catalina/localhost/cju_stt.xml]의 배치가 [1,178] 밀리초 내에 완료되었습니다.
+28-Jan-2024 21:25:57.049 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/manager]을(를) 배치합니다.
+28-Jan-2024 21:25:57.066 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/manager]에 대한 배치가 [17] 밀리초에 완료되었습니다.
+28-Jan-2024 21:25:57.066 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/host-manager]을(를) 배치합니다.
+28-Jan-2024 21:25:57.077 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/host-manager]에 대한 배치가 [10] 밀리초에 완료되었습니다.
+28-Jan-2024 21:25:57.077 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/examples]을(를) 배치합니다.
+28-Jan-2024 21:25:57.153 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/examples]에 대한 배치가 [76] 밀리초에 완료되었습니다.
+28-Jan-2024 21:25:57.153 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/docs]을(를) 배치합니다.
+28-Jan-2024 21:25:57.161 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/docs]에 대한 배치가 [8] 밀리초에 완료되었습니다.
+28-Jan-2024 21:25:57.162 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/ROOT]을(를) 배치합니다.
+28-Jan-2024 21:25:57.170 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/ROOT]에 대한 배치가 [8] 밀리초에 완료되었습니다.
+28-Jan-2024 21:25:57.173 정보 [main] org.apache.coyote.AbstractProtocol.start 프로토콜 핸들러 ["http-nio-8090"]을(를) 시작합니다.
+28-Jan-2024 21:25:57.179 정보 [main] org.apache.catalina.startup.Catalina.start 서버가 [1343] 밀리초 내에 시작되었습니다.
+28-Jan-2024 21:33:54.549 정보 [main] org.apache.catalina.core.StandardServer.await 셧다운 포트를 통해 유효한 셧다운 명령을 받았습니다. 서버 인스턴스를 중지시킵니다.
+28-Jan-2024 21:33:54.549 정보 [main] org.apache.coyote.AbstractProtocol.pause 프로토콜 핸들러 ["http-nio-8090"]을(를) 일시 정지 중
+28-Jan-2024 21:33:54.551 정보 [main] org.apache.catalina.core.StandardService.stopInternal 서비스 [Catalina]을(를) 중지시킵니다.
+28-Jan-2024 21:33:54.565 정보 [main] org.apache.coyote.AbstractProtocol.stop 프로토콜 핸들러 ["http-nio-8090"]을(를) 중지시킵니다.
+28-Jan-2024 21:33:54.574 정보 [main] org.apache.coyote.AbstractProtocol.destroy 프로토콜 핸들러 ["http-nio-8090"]을(를) 소멸시킵니다.
+28-Jan-2024 21:35:25.455 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 서버 버전 이름:    Apache Tomcat/9.0.85
+28-Jan-2024 21:35:25.458 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log Server 빌드 시각:  Jan 5 2024 08:28:07 UTC
+28-Jan-2024 21:35:25.458 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log Server 버전 번호:  9.0.85.0
+28-Jan-2024 21:35:25.458 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 운영체제 이름:     Linux
+28-Jan-2024 21:35:25.458 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 운영체제 버전:     5.15.0-89-generic
+28-Jan-2024 21:35:25.458 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 아키텍처:          amd64
+28-Jan-2024 21:35:25.458 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 자바 홈:           /usr/lib/jvm/java-11-openjdk-amd64
+28-Jan-2024 21:35:25.458 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log JVM 버전:          11.0.20.1+1-post-Ubuntu-0ubuntu120.04
+28-Jan-2024 21:35:25.459 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log JVM 벤더:          Ubuntu
+28-Jan-2024 21:35:25.459 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:     /home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85
+28-Jan-2024 21:35:25.459 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:     /home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85
+28-Jan-2024 21:35:25.466 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  --add-opens=java.base/java.lang=ALL-UNNAMED
+28-Jan-2024 21:35:25.466 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  --add-opens=java.base/java.io=ALL-UNNAMED
+28-Jan-2024 21:35:25.466 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  --add-opens=java.base/java.util=ALL-UNNAMED
+28-Jan-2024 21:35:25.466 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+28-Jan-2024 21:35:25.466 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+28-Jan-2024 21:35:25.466 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djava.util.logging.config.file=/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/conf/logging.properties
+28-Jan-2024 21:35:25.467 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+28-Jan-2024 21:35:25.467 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djdk.tls.ephemeralDHKeySize=2048
+28-Jan-2024 21:35:25.467 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+28-Jan-2024 21:35:25.467 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+28-Jan-2024 21:35:25.467 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Dignore.endorsed.dirs=
+28-Jan-2024 21:35:25.467 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Dcatalina.base=/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85
+28-Jan-2024 21:35:25.467 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Dcatalina.home=/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85
+28-Jan-2024 21:35:25.468 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djava.io.tmpdir=/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/temp
+28-Jan-2024 21:35:25.469 정보 [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent 프로덕션 환경들에서 최적의 성능을 제공하는, APR 기반 Apache Tomcat Native 라이브러리가, 다음 java.library.path에서 발견되지 않습니다: [/usr/java/packages/lib:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib]
+28-Jan-2024 21:35:25.684 정보 [main] org.apache.coyote.AbstractProtocol.init 프로토콜 핸들러 ["http-nio-8090"]을(를) 초기화합니다.
+28-Jan-2024 21:35:25.697 정보 [main] org.apache.catalina.startup.Catalina.load [370] 밀리초 내에 서버가 초기화되었습니다.
+28-Jan-2024 21:35:25.730 정보 [main] org.apache.catalina.core.StandardService.startInternal 서비스 [Catalina]을(를) 시작합니다.
+28-Jan-2024 21:35:25.730 정보 [main] org.apache.catalina.core.StandardEngine.startInternal 서버 엔진을 시작합니다: [Apache Tomcat/9.0.85]
+28-Jan-2024 21:35:25.734 정보 [main] org.apache.catalina.startup.HostConfig.deployDescriptor 배치 descriptor [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/conf/Catalina/localhost/cju_stt.xml]을(를) 배치합니다.
+28-Jan-2024 21:35:25.743 경고 [main] org.apache.catalina.startup.HostConfig.deployDescriptor 배치 descriptor [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/conf/Catalina/localhost/cju_stt.xml] 내에서, [/cju_stt] 값을 가진 path 속성은 무시됩니다.
+28-Jan-2024 21:35:26.341 정보 [main] org.apache.jasper.servlet.TldScanner.scanJars 적어도 하나의 JAR가 TLD들을 찾기 위해 스캔되었으나 아무 것도 찾지 못했습니다. 스캔했으나 TLD가 없는 JAR들의 전체 목록을 보시려면, 로그 레벨을 디버그 레벨로 설정하십시오. 스캔 과정에서 불필요한 JAR들을 건너뛰면, 시스템 시작 시간과 JSP 컴파일 시간을 단축시킬 수 있습니다.
+28-Jan-2024 21:35:26.945 정보 [main] org.apache.catalina.startup.HostConfig.deployDescriptor 배치 descriptor [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/conf/Catalina/localhost/cju_stt.xml]의 배치가 [1,210] 밀리초 내에 완료되었습니다.
+28-Jan-2024 21:35:26.946 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/manager]을(를) 배치합니다.
+28-Jan-2024 21:35:26.963 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/manager]에 대한 배치가 [17] 밀리초에 완료되었습니다.
+28-Jan-2024 21:35:26.963 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/host-manager]을(를) 배치합니다.
+28-Jan-2024 21:35:26.973 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/host-manager]에 대한 배치가 [10] 밀리초에 완료되었습니다.
+28-Jan-2024 21:35:26.973 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/examples]을(를) 배치합니다.
+28-Jan-2024 21:35:27.050 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/examples]에 대한 배치가 [77] 밀리초에 완료되었습니다.
+28-Jan-2024 21:35:27.051 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/docs]을(를) 배치합니다.
+28-Jan-2024 21:35:27.059 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/docs]에 대한 배치가 [8] 밀리초에 완료되었습니다.
+28-Jan-2024 21:35:27.059 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/ROOT]을(를) 배치합니다.
+28-Jan-2024 21:35:27.067 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/ROOT]에 대한 배치가 [8] 밀리초에 완료되었습니다.
+28-Jan-2024 21:35:27.070 정보 [main] org.apache.coyote.AbstractProtocol.start 프로토콜 핸들러 ["http-nio-8090"]을(를) 시작합니다.
+28-Jan-2024 21:35:27.077 정보 [main] org.apache.catalina.startup.Catalina.start 서버가 [1379] 밀리초 내에 시작되었습니다.
+28-Jan-2024 21:37:13.457 정보 [main] org.apache.catalina.core.StandardServer.await 셧다운 포트를 통해 유효한 셧다운 명령을 받았습니다. 서버 인스턴스를 중지시킵니다.
+28-Jan-2024 21:37:13.458 정보 [main] org.apache.coyote.AbstractProtocol.pause 프로토콜 핸들러 ["http-nio-8090"]을(를) 일시 정지 중
+28-Jan-2024 21:37:13.459 정보 [main] org.apache.catalina.core.StandardService.stopInternal 서비스 [Catalina]을(를) 중지시킵니다.
+28-Jan-2024 21:37:13.474 정보 [main] org.apache.coyote.AbstractProtocol.stop 프로토콜 핸들러 ["http-nio-8090"]을(를) 중지시킵니다.
+28-Jan-2024 21:37:13.483 정보 [main] org.apache.coyote.AbstractProtocol.destroy 프로토콜 핸들러 ["http-nio-8090"]을(를) 소멸시킵니다.
+28-Jan-2024 21:37:14.992 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 서버 버전 이름:    Apache Tomcat/9.0.85
+28-Jan-2024 21:37:14.995 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log Server 빌드 시각:  Jan 5 2024 08:28:07 UTC
+28-Jan-2024 21:37:14.995 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log Server 버전 번호:  9.0.85.0
+28-Jan-2024 21:37:14.995 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 운영체제 이름:     Linux
+28-Jan-2024 21:37:14.995 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 운영체제 버전:     5.15.0-89-generic
+28-Jan-2024 21:37:14.995 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 아키텍처:          amd64
+28-Jan-2024 21:37:14.995 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 자바 홈:           /usr/lib/jvm/java-11-openjdk-amd64
+28-Jan-2024 21:37:14.996 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log JVM 버전:          11.0.20.1+1-post-Ubuntu-0ubuntu120.04
+28-Jan-2024 21:37:14.996 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log JVM 벤더:          Ubuntu
+28-Jan-2024 21:37:14.996 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:     /home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85
+28-Jan-2024 21:37:14.996 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:     /home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85
+28-Jan-2024 21:37:15.003 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  --add-opens=java.base/java.lang=ALL-UNNAMED
+28-Jan-2024 21:37:15.003 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  --add-opens=java.base/java.io=ALL-UNNAMED
+28-Jan-2024 21:37:15.003 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  --add-opens=java.base/java.util=ALL-UNNAMED
+28-Jan-2024 21:37:15.004 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+28-Jan-2024 21:37:15.004 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+28-Jan-2024 21:37:15.004 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djava.util.logging.config.file=/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/conf/logging.properties
+28-Jan-2024 21:37:15.004 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+28-Jan-2024 21:37:15.004 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djdk.tls.ephemeralDHKeySize=2048
+28-Jan-2024 21:37:15.004 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+28-Jan-2024 21:37:15.004 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+28-Jan-2024 21:37:15.004 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Dignore.endorsed.dirs=
+28-Jan-2024 21:37:15.005 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Dcatalina.base=/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85
+28-Jan-2024 21:37:15.005 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Dcatalina.home=/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85
+28-Jan-2024 21:37:15.005 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djava.io.tmpdir=/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/temp
+28-Jan-2024 21:37:15.006 정보 [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent 프로덕션 환경들에서 최적의 성능을 제공하는, APR 기반 Apache Tomcat Native 라이브러리가, 다음 java.library.path에서 발견되지 않습니다: [/usr/java/packages/lib:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib]
+28-Jan-2024 21:37:15.199 정보 [main] org.apache.coyote.AbstractProtocol.init 프로토콜 핸들러 ["http-nio-8090"]을(를) 초기화합니다.
+28-Jan-2024 21:37:15.212 정보 [main] org.apache.catalina.startup.Catalina.load [352] 밀리초 내에 서버가 초기화되었습니다.
+28-Jan-2024 21:37:15.244 정보 [main] org.apache.catalina.core.StandardService.startInternal 서비스 [Catalina]을(를) 시작합니다.
+28-Jan-2024 21:37:15.244 정보 [main] org.apache.catalina.core.StandardEngine.startInternal 서버 엔진을 시작합니다: [Apache Tomcat/9.0.85]
+28-Jan-2024 21:37:15.249 정보 [main] org.apache.catalina.startup.HostConfig.deployDescriptor 배치 descriptor [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/conf/Catalina/localhost/cju_stt.xml]을(를) 배치합니다.
+28-Jan-2024 21:37:15.256 경고 [main] org.apache.catalina.startup.HostConfig.deployDescriptor 배치 descriptor [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/conf/Catalina/localhost/cju_stt.xml] 내에서, [/cju_stt] 값을 가진 path 속성은 무시됩니다.
+28-Jan-2024 21:37:15.851 정보 [main] org.apache.jasper.servlet.TldScanner.scanJars 적어도 하나의 JAR가 TLD들을 찾기 위해 스캔되었으나 아무 것도 찾지 못했습니다. 스캔했으나 TLD가 없는 JAR들의 전체 목록을 보시려면, 로그 레벨을 디버그 레벨로 설정하십시오. 스캔 과정에서 불필요한 JAR들을 건너뛰면, 시스템 시작 시간과 JSP 컴파일 시간을 단축시킬 수 있습니다.
+28-Jan-2024 21:37:16.470 정보 [main] org.apache.catalina.startup.HostConfig.deployDescriptor 배치 descriptor [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/conf/Catalina/localhost/cju_stt.xml]의 배치가 [1,220] 밀리초 내에 완료되었습니다.
+28-Jan-2024 21:37:16.470 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/manager]을(를) 배치합니다.
+28-Jan-2024 21:37:16.490 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/manager]에 대한 배치가 [20] 밀리초에 완료되었습니다.
+28-Jan-2024 21:37:16.490 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/host-manager]을(를) 배치합니다.
+28-Jan-2024 21:37:16.502 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/host-manager]에 대한 배치가 [12] 밀리초에 완료되었습니다.
+28-Jan-2024 21:37:16.502 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/examples]을(를) 배치합니다.
+28-Jan-2024 21:37:16.596 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/examples]에 대한 배치가 [94] 밀리초에 완료되었습니다.
+28-Jan-2024 21:37:16.596 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/docs]을(를) 배치합니다.
+28-Jan-2024 21:37:16.605 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/docs]에 대한 배치가 [9] 밀리초에 완료되었습니다.
+28-Jan-2024 21:37:16.605 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/ROOT]을(를) 배치합니다.
+28-Jan-2024 21:37:16.615 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/ROOT]에 대한 배치가 [10] 밀리초에 완료되었습니다.
+28-Jan-2024 21:37:16.618 정보 [main] org.apache.coyote.AbstractProtocol.start 프로토콜 핸들러 ["http-nio-8090"]을(를) 시작합니다.
+28-Jan-2024 21:37:16.624 정보 [main] org.apache.catalina.startup.Catalina.start 서버가 [1412] 밀리초 내에 시작되었습니다.
+28-Jan-2024 21:39:48.615 정보 [main] org.apache.catalina.core.StandardServer.await 셧다운 포트를 통해 유효한 셧다운 명령을 받았습니다. 서버 인스턴스를 중지시킵니다.
+28-Jan-2024 21:39:48.616 정보 [main] org.apache.coyote.AbstractProtocol.pause 프로토콜 핸들러 ["http-nio-8090"]을(를) 일시 정지 중
+28-Jan-2024 21:39:48.618 정보 [main] org.apache.catalina.core.StandardService.stopInternal 서비스 [Catalina]을(를) 중지시킵니다.
+28-Jan-2024 21:39:48.636 정보 [main] org.apache.coyote.AbstractProtocol.stop 프로토콜 핸들러 ["http-nio-8090"]을(를) 중지시킵니다.
+28-Jan-2024 21:39:48.642 정보 [main] org.apache.coyote.AbstractProtocol.destroy 프로토콜 핸들러 ["http-nio-8090"]을(를) 소멸시킵니다.
+28-Jan-2024 21:39:58.887 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 서버 버전 이름:    Apache Tomcat/9.0.85
+28-Jan-2024 21:39:58.890 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log Server 빌드 시각:  Jan 5 2024 08:28:07 UTC
+28-Jan-2024 21:39:58.890 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log Server 버전 번호:  9.0.85.0
+28-Jan-2024 21:39:58.890 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 운영체제 이름:     Linux
+28-Jan-2024 21:39:58.890 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 운영체제 버전:     5.15.0-89-generic
+28-Jan-2024 21:39:58.890 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 아키텍처:          amd64
+28-Jan-2024 21:39:58.890 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 자바 홈:           /usr/lib/jvm/java-11-openjdk-amd64
+28-Jan-2024 21:39:58.890 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log JVM 버전:          11.0.20.1+1-post-Ubuntu-0ubuntu120.04
+28-Jan-2024 21:39:58.890 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log JVM 벤더:          Ubuntu
+28-Jan-2024 21:39:58.890 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:     /home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85
+28-Jan-2024 21:39:58.890 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:     /home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85
+28-Jan-2024 21:39:58.897 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  --add-opens=java.base/java.lang=ALL-UNNAMED
+28-Jan-2024 21:39:58.898 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  --add-opens=java.base/java.io=ALL-UNNAMED
+28-Jan-2024 21:39:58.898 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  --add-opens=java.base/java.util=ALL-UNNAMED
+28-Jan-2024 21:39:58.898 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+28-Jan-2024 21:39:58.898 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+28-Jan-2024 21:39:58.898 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djava.util.logging.config.file=/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/conf/logging.properties
+28-Jan-2024 21:39:58.898 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+28-Jan-2024 21:39:58.899 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djdk.tls.ephemeralDHKeySize=2048
+28-Jan-2024 21:39:58.899 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+28-Jan-2024 21:39:58.899 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+28-Jan-2024 21:39:58.899 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Dignore.endorsed.dirs=
+28-Jan-2024 21:39:58.899 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Dcatalina.base=/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85
+28-Jan-2024 21:39:58.899 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Dcatalina.home=/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85
+28-Jan-2024 21:39:58.900 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djava.io.tmpdir=/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/temp
+28-Jan-2024 21:39:58.901 정보 [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent 프로덕션 환경들에서 최적의 성능을 제공하는, APR 기반 Apache Tomcat Native 라이브러리가, 다음 java.library.path에서 발견되지 않습니다: [/usr/java/packages/lib:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib]
+28-Jan-2024 21:39:59.091 정보 [main] org.apache.coyote.AbstractProtocol.init 프로토콜 핸들러 ["http-nio-8090"]을(를) 초기화합니다.
+28-Jan-2024 21:39:59.104 정보 [main] org.apache.catalina.startup.Catalina.load [341] 밀리초 내에 서버가 초기화되었습니다.
+28-Jan-2024 21:39:59.146 정보 [main] org.apache.catalina.core.StandardService.startInternal 서비스 [Catalina]을(를) 시작합니다.
+28-Jan-2024 21:39:59.146 정보 [main] org.apache.catalina.core.StandardEngine.startInternal 서버 엔진을 시작합니다: [Apache Tomcat/9.0.85]
+28-Jan-2024 21:39:59.151 정보 [main] org.apache.catalina.startup.HostConfig.deployDescriptor 배치 descriptor [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/conf/Catalina/localhost/cju_stt.xml]을(를) 배치합니다.
+28-Jan-2024 21:39:59.159 경고 [main] org.apache.catalina.startup.HostConfig.deployDescriptor 배치 descriptor [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/conf/Catalina/localhost/cju_stt.xml] 내에서, [/cju_stt] 값을 가진 path 속성은 무시됩니다.
+28-Jan-2024 21:39:59.796 정보 [main] org.apache.jasper.servlet.TldScanner.scanJars 적어도 하나의 JAR가 TLD들을 찾기 위해 스캔되었으나 아무 것도 찾지 못했습니다. 스캔했으나 TLD가 없는 JAR들의 전체 목록을 보시려면, 로그 레벨을 디버그 레벨로 설정하십시오. 스캔 과정에서 불필요한 JAR들을 건너뛰면, 시스템 시작 시간과 JSP 컴파일 시간을 단축시킬 수 있습니다.
+28-Jan-2024 21:40:00.441 정보 [main] org.apache.catalina.startup.HostConfig.deployDescriptor 배치 descriptor [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/conf/Catalina/localhost/cju_stt.xml]의 배치가 [1,288] 밀리초 내에 완료되었습니다.
+28-Jan-2024 21:40:00.441 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/manager]을(를) 배치합니다.
+28-Jan-2024 21:40:00.461 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/manager]에 대한 배치가 [20] 밀리초에 완료되었습니다.
+28-Jan-2024 21:40:00.462 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/host-manager]을(를) 배치합니다.
+28-Jan-2024 21:40:00.474 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/host-manager]에 대한 배치가 [13] 밀리초에 완료되었습니다.
+28-Jan-2024 21:40:00.474 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/examples]을(를) 배치합니다.
+28-Jan-2024 21:40:00.554 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/examples]에 대한 배치가 [80] 밀리초에 완료되었습니다.
+28-Jan-2024 21:40:00.554 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/docs]을(를) 배치합니다.
+28-Jan-2024 21:40:00.564 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/docs]에 대한 배치가 [10] 밀리초에 완료되었습니다.
+28-Jan-2024 21:40:00.564 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/ROOT]을(를) 배치합니다.
+28-Jan-2024 21:40:00.572 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/ROOT]에 대한 배치가 [8] 밀리초에 완료되었습니다.
+28-Jan-2024 21:40:00.575 정보 [main] org.apache.coyote.AbstractProtocol.start 프로토콜 핸들러 ["http-nio-8090"]을(를) 시작합니다.
+28-Jan-2024 21:40:00.581 정보 [main] org.apache.catalina.startup.Catalina.start 서버가 [1476] 밀리초 내에 시작되었습니다.
+28-Jan-2024 21:41:07.655 정보 [main] org.apache.catalina.core.StandardServer.await 셧다운 포트를 통해 유효한 셧다운 명령을 받았습니다. 서버 인스턴스를 중지시킵니다.
+28-Jan-2024 21:41:07.656 정보 [main] org.apache.coyote.AbstractProtocol.pause 프로토콜 핸들러 ["http-nio-8090"]을(를) 일시 정지 중
+28-Jan-2024 21:41:07.658 정보 [main] org.apache.catalina.core.StandardService.stopInternal 서비스 [Catalina]을(를) 중지시킵니다.
+28-Jan-2024 21:41:07.680 정보 [main] org.apache.coyote.AbstractProtocol.stop 프로토콜 핸들러 ["http-nio-8090"]을(를) 중지시킵니다.
+28-Jan-2024 21:41:07.691 정보 [main] org.apache.coyote.AbstractProtocol.destroy 프로토콜 핸들러 ["http-nio-8090"]을(를) 소멸시킵니다.
+28-Jan-2024 21:41:09.065 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 서버 버전 이름:    Apache Tomcat/9.0.85
+28-Jan-2024 21:41:09.067 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log Server 빌드 시각:  Jan 5 2024 08:28:07 UTC
+28-Jan-2024 21:41:09.068 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log Server 버전 번호:  9.0.85.0
+28-Jan-2024 21:41:09.068 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 운영체제 이름:     Linux
+28-Jan-2024 21:41:09.068 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 운영체제 버전:     5.15.0-89-generic
+28-Jan-2024 21:41:09.068 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 아키텍처:          amd64
+28-Jan-2024 21:41:09.068 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 자바 홈:           /usr/lib/jvm/java-11-openjdk-amd64
+28-Jan-2024 21:41:09.068 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log JVM 버전:          11.0.20.1+1-post-Ubuntu-0ubuntu120.04
+28-Jan-2024 21:41:09.068 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log JVM 벤더:          Ubuntu
+28-Jan-2024 21:41:09.068 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:     /home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85
+28-Jan-2024 21:41:09.068 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:     /home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85
+28-Jan-2024 21:41:09.076 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  --add-opens=java.base/java.lang=ALL-UNNAMED
+28-Jan-2024 21:41:09.076 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  --add-opens=java.base/java.io=ALL-UNNAMED
+28-Jan-2024 21:41:09.076 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  --add-opens=java.base/java.util=ALL-UNNAMED
+28-Jan-2024 21:41:09.076 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+28-Jan-2024 21:41:09.076 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+28-Jan-2024 21:41:09.076 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djava.util.logging.config.file=/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/conf/logging.properties
+28-Jan-2024 21:41:09.076 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+28-Jan-2024 21:41:09.076 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djdk.tls.ephemeralDHKeySize=2048
+28-Jan-2024 21:41:09.077 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+28-Jan-2024 21:41:09.077 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+28-Jan-2024 21:41:09.077 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Dignore.endorsed.dirs=
+28-Jan-2024 21:41:09.077 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Dcatalina.base=/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85
+28-Jan-2024 21:41:09.077 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Dcatalina.home=/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85
+28-Jan-2024 21:41:09.077 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djava.io.tmpdir=/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/temp
+28-Jan-2024 21:41:09.078 정보 [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent 프로덕션 환경들에서 최적의 성능을 제공하는, APR 기반 Apache Tomcat Native 라이브러리가, 다음 java.library.path에서 발견되지 않습니다: [/usr/java/packages/lib:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib]
+28-Jan-2024 21:41:09.261 정보 [main] org.apache.coyote.AbstractProtocol.init 프로토콜 핸들러 ["http-nio-8090"]을(를) 초기화합니다.
+28-Jan-2024 21:41:09.274 정보 [main] org.apache.catalina.startup.Catalina.load [331] 밀리초 내에 서버가 초기화되었습니다.
+28-Jan-2024 21:41:09.311 정보 [main] org.apache.catalina.core.StandardService.startInternal 서비스 [Catalina]을(를) 시작합니다.
+28-Jan-2024 21:41:09.311 정보 [main] org.apache.catalina.core.StandardEngine.startInternal 서버 엔진을 시작합니다: [Apache Tomcat/9.0.85]
+28-Jan-2024 21:41:09.315 정보 [main] org.apache.catalina.startup.HostConfig.deployDescriptor 배치 descriptor [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/conf/Catalina/localhost/cju_stt.xml]을(를) 배치합니다.
+28-Jan-2024 21:41:09.324 경고 [main] org.apache.catalina.startup.HostConfig.deployDescriptor 배치 descriptor [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/conf/Catalina/localhost/cju_stt.xml] 내에서, [/cju_stt] 값을 가진 path 속성은 무시됩니다.
+28-Jan-2024 21:41:09.923 정보 [main] org.apache.jasper.servlet.TldScanner.scanJars 적어도 하나의 JAR가 TLD들을 찾기 위해 스캔되었으나 아무 것도 찾지 못했습니다. 스캔했으나 TLD가 없는 JAR들의 전체 목록을 보시려면, 로그 레벨을 디버그 레벨로 설정하십시오. 스캔 과정에서 불필요한 JAR들을 건너뛰면, 시스템 시작 시간과 JSP 컴파일 시간을 단축시킬 수 있습니다.
+28-Jan-2024 21:41:10.568 정보 [main] org.apache.catalina.startup.HostConfig.deployDescriptor 배치 descriptor [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/conf/Catalina/localhost/cju_stt.xml]의 배치가 [1,252] 밀리초 내에 완료되었습니다.
+28-Jan-2024 21:41:10.569 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/manager]을(를) 배치합니다.
+28-Jan-2024 21:41:10.596 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/manager]에 대한 배치가 [28] 밀리초에 완료되었습니다.
+28-Jan-2024 21:41:10.596 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/host-manager]을(를) 배치합니다.
+28-Jan-2024 21:41:10.609 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/host-manager]에 대한 배치가 [13] 밀리초에 완료되었습니다.
+28-Jan-2024 21:41:10.609 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/examples]을(를) 배치합니다.
+28-Jan-2024 21:41:10.697 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/examples]에 대한 배치가 [88] 밀리초에 완료되었습니다.
+28-Jan-2024 21:41:10.697 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/docs]을(를) 배치합니다.
+28-Jan-2024 21:41:10.708 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/docs]에 대한 배치가 [11] 밀리초에 완료되었습니다.
+28-Jan-2024 21:41:10.708 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/ROOT]을(를) 배치합니다.
+28-Jan-2024 21:41:10.716 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/ROOT]에 대한 배치가 [8] 밀리초에 완료되었습니다.
+28-Jan-2024 21:41:10.723 정보 [main] org.apache.coyote.AbstractProtocol.start 프로토콜 핸들러 ["http-nio-8090"]을(를) 시작합니다.
+28-Jan-2024 21:41:10.729 정보 [main] org.apache.catalina.startup.Catalina.start 서버가 [1455] 밀리초 내에 시작되었습니다.
+28-Jan-2024 21:42:11.762 정보 [main] org.apache.catalina.core.StandardServer.await 셧다운 포트를 통해 유효한 셧다운 명령을 받았습니다. 서버 인스턴스를 중지시킵니다.
+28-Jan-2024 21:42:11.762 정보 [main] org.apache.coyote.AbstractProtocol.pause 프로토콜 핸들러 ["http-nio-8090"]을(를) 일시 정지 중
+28-Jan-2024 21:42:11.764 정보 [main] org.apache.catalina.core.StandardService.stopInternal 서비스 [Catalina]을(를) 중지시킵니다.
+28-Jan-2024 21:42:11.780 정보 [main] org.apache.coyote.AbstractProtocol.stop 프로토콜 핸들러 ["http-nio-8090"]을(를) 중지시킵니다.
+28-Jan-2024 21:42:11.787 정보 [main] org.apache.coyote.AbstractProtocol.destroy 프로토콜 핸들러 ["http-nio-8090"]을(를) 소멸시킵니다.
+28-Jan-2024 21:42:57.351 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 서버 버전 이름:    Apache Tomcat/9.0.85
+28-Jan-2024 21:42:57.354 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log Server 빌드 시각:  Jan 5 2024 08:28:07 UTC
+28-Jan-2024 21:42:57.354 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log Server 버전 번호:  9.0.85.0
+28-Jan-2024 21:42:57.354 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 운영체제 이름:     Linux
+28-Jan-2024 21:42:57.354 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 운영체제 버전:     5.15.0-89-generic
+28-Jan-2024 21:42:57.355 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 아키텍처:          amd64
+28-Jan-2024 21:42:57.355 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 자바 홈:           /usr/lib/jvm/java-11-openjdk-amd64
+28-Jan-2024 21:42:57.355 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log JVM 버전:          11.0.20.1+1-post-Ubuntu-0ubuntu120.04
+28-Jan-2024 21:42:57.355 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log JVM 벤더:          Ubuntu
+28-Jan-2024 21:42:57.355 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:     /home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85
+28-Jan-2024 21:42:57.355 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:     /home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85
+28-Jan-2024 21:42:57.364 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  --add-opens=java.base/java.lang=ALL-UNNAMED
+28-Jan-2024 21:42:57.364 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  --add-opens=java.base/java.io=ALL-UNNAMED
+28-Jan-2024 21:42:57.364 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  --add-opens=java.base/java.util=ALL-UNNAMED
+28-Jan-2024 21:42:57.364 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+28-Jan-2024 21:42:57.364 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+28-Jan-2024 21:42:57.364 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djava.util.logging.config.file=/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/conf/logging.properties
+28-Jan-2024 21:42:57.365 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+28-Jan-2024 21:42:57.365 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djdk.tls.ephemeralDHKeySize=2048
+28-Jan-2024 21:42:57.365 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+28-Jan-2024 21:42:57.365 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+28-Jan-2024 21:42:57.365 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Dignore.endorsed.dirs=
+28-Jan-2024 21:42:57.365 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Dcatalina.base=/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85
+28-Jan-2024 21:42:57.365 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Dcatalina.home=/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85
+28-Jan-2024 21:42:57.365 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djava.io.tmpdir=/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/temp
+28-Jan-2024 21:42:57.367 정보 [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent 프로덕션 환경들에서 최적의 성능을 제공하는, APR 기반 Apache Tomcat Native 라이브러리가, 다음 java.library.path에서 발견되지 않습니다: [/usr/java/packages/lib:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib]
+28-Jan-2024 21:42:57.558 정보 [main] org.apache.coyote.AbstractProtocol.init 프로토콜 핸들러 ["http-nio-8090"]을(를) 초기화합니다.
+28-Jan-2024 21:42:57.571 정보 [main] org.apache.catalina.startup.Catalina.load [343] 밀리초 내에 서버가 초기화되었습니다.
+28-Jan-2024 21:42:57.603 정보 [main] org.apache.catalina.core.StandardService.startInternal 서비스 [Catalina]을(를) 시작합니다.
+28-Jan-2024 21:42:57.603 정보 [main] org.apache.catalina.core.StandardEngine.startInternal 서버 엔진을 시작합니다: [Apache Tomcat/9.0.85]
+28-Jan-2024 21:42:57.607 정보 [main] org.apache.catalina.startup.HostConfig.deployDescriptor 배치 descriptor [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/conf/Catalina/localhost/cju_stt.xml]을(를) 배치합니다.
+28-Jan-2024 21:42:57.615 경고 [main] org.apache.catalina.startup.HostConfig.deployDescriptor 배치 descriptor [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/conf/Catalina/localhost/cju_stt.xml] 내에서, [/cju_stt] 값을 가진 path 속성은 무시됩니다.
+28-Jan-2024 21:42:58.218 정보 [main] org.apache.jasper.servlet.TldScanner.scanJars 적어도 하나의 JAR가 TLD들을 찾기 위해 스캔되었으나 아무 것도 찾지 못했습니다. 스캔했으나 TLD가 없는 JAR들의 전체 목록을 보시려면, 로그 레벨을 디버그 레벨로 설정하십시오. 스캔 과정에서 불필요한 JAR들을 건너뛰면, 시스템 시작 시간과 JSP 컴파일 시간을 단축시킬 수 있습니다.
+28-Jan-2024 21:42:58.816 정보 [main] org.apache.catalina.startup.HostConfig.deployDescriptor 배치 descriptor [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/conf/Catalina/localhost/cju_stt.xml]의 배치가 [1,208] 밀리초 내에 완료되었습니다.
+28-Jan-2024 21:42:58.817 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/manager]을(를) 배치합니다.
+28-Jan-2024 21:42:58.834 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/manager]에 대한 배치가 [18] 밀리초에 완료되었습니다.
+28-Jan-2024 21:42:58.835 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/host-manager]을(를) 배치합니다.
+28-Jan-2024 21:42:58.849 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/host-manager]에 대한 배치가 [15] 밀리초에 완료되었습니다.
+28-Jan-2024 21:42:58.849 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/examples]을(를) 배치합니다.
+28-Jan-2024 21:42:58.936 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/examples]에 대한 배치가 [86] 밀리초에 완료되었습니다.
+28-Jan-2024 21:42:58.936 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/docs]을(를) 배치합니다.
+28-Jan-2024 21:42:58.944 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/docs]에 대한 배치가 [8] 밀리초에 완료되었습니다.
+28-Jan-2024 21:42:58.945 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/ROOT]을(를) 배치합니다.
+28-Jan-2024 21:42:58.953 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/ROOT]에 대한 배치가 [8] 밀리초에 완료되었습니다.
+28-Jan-2024 21:42:58.956 정보 [main] org.apache.coyote.AbstractProtocol.start 프로토콜 핸들러 ["http-nio-8090"]을(를) 시작합니다.
+28-Jan-2024 21:42:58.963 정보 [main] org.apache.catalina.startup.Catalina.start 서버가 [1391] 밀리초 내에 시작되었습니다.
+28-Jan-2024 21:43:51.203 정보 [main] org.apache.catalina.core.StandardServer.await 셧다운 포트를 통해 유효한 셧다운 명령을 받았습니다. 서버 인스턴스를 중지시킵니다.
+28-Jan-2024 21:43:51.203 정보 [main] org.apache.coyote.AbstractProtocol.pause 프로토콜 핸들러 ["http-nio-8090"]을(를) 일시 정지 중
+28-Jan-2024 21:43:51.205 정보 [main] org.apache.catalina.core.StandardService.stopInternal 서비스 [Catalina]을(를) 중지시킵니다.
+28-Jan-2024 21:43:51.221 정보 [main] org.apache.coyote.AbstractProtocol.stop 프로토콜 핸들러 ["http-nio-8090"]을(를) 중지시킵니다.
+28-Jan-2024 21:43:51.229 정보 [main] org.apache.coyote.AbstractProtocol.destroy 프로토콜 핸들러 ["http-nio-8090"]을(를) 소멸시킵니다.
+28-Jan-2024 21:43:52.248 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 서버 버전 이름:    Apache Tomcat/9.0.85
+28-Jan-2024 21:43:52.251 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log Server 빌드 시각:  Jan 5 2024 08:28:07 UTC
+28-Jan-2024 21:43:52.251 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log Server 버전 번호:  9.0.85.0
+28-Jan-2024 21:43:52.251 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 운영체제 이름:     Linux
+28-Jan-2024 21:43:52.251 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 운영체제 버전:     5.15.0-89-generic
+28-Jan-2024 21:43:52.251 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 아키텍처:          amd64
+28-Jan-2024 21:43:52.251 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 자바 홈:           /usr/lib/jvm/java-11-openjdk-amd64
+28-Jan-2024 21:43:52.252 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log JVM 버전:          11.0.20.1+1-post-Ubuntu-0ubuntu120.04
+28-Jan-2024 21:43:52.252 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log JVM 벤더:          Ubuntu
+28-Jan-2024 21:43:52.252 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:     /home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85
+28-Jan-2024 21:43:52.252 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:     /home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85
+28-Jan-2024 21:43:52.259 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  --add-opens=java.base/java.lang=ALL-UNNAMED
+28-Jan-2024 21:43:52.259 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  --add-opens=java.base/java.io=ALL-UNNAMED
+28-Jan-2024 21:43:52.259 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  --add-opens=java.base/java.util=ALL-UNNAMED
+28-Jan-2024 21:43:52.259 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+28-Jan-2024 21:43:52.259 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+28-Jan-2024 21:43:52.259 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djava.util.logging.config.file=/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/conf/logging.properties
+28-Jan-2024 21:43:52.259 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+28-Jan-2024 21:43:52.260 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djdk.tls.ephemeralDHKeySize=2048
+28-Jan-2024 21:43:52.260 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+28-Jan-2024 21:43:52.260 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+28-Jan-2024 21:43:52.260 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Dignore.endorsed.dirs=
+28-Jan-2024 21:43:52.260 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Dcatalina.base=/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85
+28-Jan-2024 21:43:52.260 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Dcatalina.home=/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85
+28-Jan-2024 21:43:52.260 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djava.io.tmpdir=/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/temp
+28-Jan-2024 21:43:52.261 정보 [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent 프로덕션 환경들에서 최적의 성능을 제공하는, APR 기반 Apache Tomcat Native 라이브러리가, 다음 java.library.path에서 발견되지 않습니다: [/usr/java/packages/lib:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib]
+28-Jan-2024 21:43:52.458 정보 [main] org.apache.coyote.AbstractProtocol.init 프로토콜 핸들러 ["http-nio-8090"]을(를) 초기화합니다.
+28-Jan-2024 21:43:52.472 정보 [main] org.apache.catalina.startup.Catalina.load [353] 밀리초 내에 서버가 초기화되었습니다.
+28-Jan-2024 21:43:52.505 정보 [main] org.apache.catalina.core.StandardService.startInternal 서비스 [Catalina]을(를) 시작합니다.
+28-Jan-2024 21:43:52.505 정보 [main] org.apache.catalina.core.StandardEngine.startInternal 서버 엔진을 시작합니다: [Apache Tomcat/9.0.85]
+28-Jan-2024 21:43:52.509 정보 [main] org.apache.catalina.startup.HostConfig.deployDescriptor 배치 descriptor [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/conf/Catalina/localhost/cju_stt.xml]을(를) 배치합니다.
+28-Jan-2024 21:43:52.517 경고 [main] org.apache.catalina.startup.HostConfig.deployDescriptor 배치 descriptor [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/conf/Catalina/localhost/cju_stt.xml] 내에서, [/cju_stt] 값을 가진 path 속성은 무시됩니다.
+28-Jan-2024 21:43:53.135 정보 [main] org.apache.jasper.servlet.TldScanner.scanJars 적어도 하나의 JAR가 TLD들을 찾기 위해 스캔되었으나 아무 것도 찾지 못했습니다. 스캔했으나 TLD가 없는 JAR들의 전체 목록을 보시려면, 로그 레벨을 디버그 레벨로 설정하십시오. 스캔 과정에서 불필요한 JAR들을 건너뛰면, 시스템 시작 시간과 JSP 컴파일 시간을 단축시킬 수 있습니다.
+28-Jan-2024 21:43:53.769 정보 [main] org.apache.catalina.startup.HostConfig.deployDescriptor 배치 descriptor [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/conf/Catalina/localhost/cju_stt.xml]의 배치가 [1,259] 밀리초 내에 완료되었습니다.
+28-Jan-2024 21:43:53.770 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/manager]을(를) 배치합니다.
+28-Jan-2024 21:43:53.788 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/manager]에 대한 배치가 [18] 밀리초에 완료되었습니다.
+28-Jan-2024 21:43:53.788 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/host-manager]을(를) 배치합니다.
+28-Jan-2024 21:43:53.799 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/host-manager]에 대한 배치가 [11] 밀리초에 완료되었습니다.
+28-Jan-2024 21:43:53.800 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/examples]을(를) 배치합니다.
+28-Jan-2024 21:43:53.883 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/examples]에 대한 배치가 [84] 밀리초에 완료되었습니다.
+28-Jan-2024 21:43:53.883 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/docs]을(를) 배치합니다.
+28-Jan-2024 21:43:53.893 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/docs]에 대한 배치가 [10] 밀리초에 완료되었습니다.
+28-Jan-2024 21:43:53.893 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/ROOT]을(를) 배치합니다.
+28-Jan-2024 21:43:53.902 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/ROOT]에 대한 배치가 [9] 밀리초에 완료되었습니다.
+28-Jan-2024 21:43:53.906 정보 [main] org.apache.coyote.AbstractProtocol.start 프로토콜 핸들러 ["http-nio-8090"]을(를) 시작합니다.
+28-Jan-2024 21:43:53.912 정보 [main] org.apache.catalina.startup.Catalina.start 서버가 [1440] 밀리초 내에 시작되었습니다.
+28-Jan-2024 21:44:48.460 정보 [main] org.apache.catalina.core.StandardServer.await 셧다운 포트를 통해 유효한 셧다운 명령을 받았습니다. 서버 인스턴스를 중지시킵니다.
+28-Jan-2024 21:44:48.460 정보 [main] org.apache.coyote.AbstractProtocol.pause 프로토콜 핸들러 ["http-nio-8090"]을(를) 일시 정지 중
+28-Jan-2024 21:44:48.461 정보 [main] org.apache.catalina.core.StandardService.stopInternal 서비스 [Catalina]을(를) 중지시킵니다.
+28-Jan-2024 21:44:48.477 정보 [main] org.apache.coyote.AbstractProtocol.stop 프로토콜 핸들러 ["http-nio-8090"]을(를) 중지시킵니다.
+28-Jan-2024 21:44:48.485 정보 [main] org.apache.coyote.AbstractProtocol.destroy 프로토콜 핸들러 ["http-nio-8090"]을(를) 소멸시킵니다.
+28-Jan-2024 21:46:18.106 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 서버 버전 이름:    Apache Tomcat/9.0.85
+28-Jan-2024 21:46:18.109 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log Server 빌드 시각:  Jan 5 2024 08:28:07 UTC
+28-Jan-2024 21:46:18.109 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log Server 버전 번호:  9.0.85.0
+28-Jan-2024 21:46:18.109 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 운영체제 이름:     Linux
+28-Jan-2024 21:46:18.109 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 운영체제 버전:     5.15.0-89-generic
+28-Jan-2024 21:46:18.110 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 아키텍처:          amd64
+28-Jan-2024 21:46:18.110 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 자바 홈:           /usr/lib/jvm/java-11-openjdk-amd64
+28-Jan-2024 21:46:18.110 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log JVM 버전:          11.0.20.1+1-post-Ubuntu-0ubuntu120.04
+28-Jan-2024 21:46:18.110 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log JVM 벤더:          Ubuntu
+28-Jan-2024 21:46:18.110 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:     /home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85
+28-Jan-2024 21:46:18.110 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:     /home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85
+28-Jan-2024 21:46:18.117 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  --add-opens=java.base/java.lang=ALL-UNNAMED
+28-Jan-2024 21:46:18.117 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  --add-opens=java.base/java.io=ALL-UNNAMED
+28-Jan-2024 21:46:18.118 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  --add-opens=java.base/java.util=ALL-UNNAMED
+28-Jan-2024 21:46:18.118 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+28-Jan-2024 21:46:18.118 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+28-Jan-2024 21:46:18.118 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djava.util.logging.config.file=/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/conf/logging.properties
+28-Jan-2024 21:46:18.118 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+28-Jan-2024 21:46:18.118 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djdk.tls.ephemeralDHKeySize=2048
+28-Jan-2024 21:46:18.118 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+28-Jan-2024 21:46:18.118 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+28-Jan-2024 21:46:18.118 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Dignore.endorsed.dirs=
+28-Jan-2024 21:46:18.118 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Dcatalina.base=/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85
+28-Jan-2024 21:46:18.118 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Dcatalina.home=/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85
+28-Jan-2024 21:46:18.118 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djava.io.tmpdir=/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/temp
+28-Jan-2024 21:46:18.119 정보 [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent 프로덕션 환경들에서 최적의 성능을 제공하는, APR 기반 Apache Tomcat Native 라이브러리가, 다음 java.library.path에서 발견되지 않습니다: [/usr/java/packages/lib:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib]
+28-Jan-2024 21:46:18.305 정보 [main] org.apache.coyote.AbstractProtocol.init 프로토콜 핸들러 ["http-nio-8090"]을(를) 초기화합니다.
+28-Jan-2024 21:46:18.318 정보 [main] org.apache.catalina.startup.Catalina.load [336] 밀리초 내에 서버가 초기화되었습니다.
+28-Jan-2024 21:46:18.350 정보 [main] org.apache.catalina.core.StandardService.startInternal 서비스 [Catalina]을(를) 시작합니다.
+28-Jan-2024 21:46:18.350 정보 [main] org.apache.catalina.core.StandardEngine.startInternal 서버 엔진을 시작합니다: [Apache Tomcat/9.0.85]
+28-Jan-2024 21:46:18.354 정보 [main] org.apache.catalina.startup.HostConfig.deployDescriptor 배치 descriptor [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/conf/Catalina/localhost/cju_stt.xml]을(를) 배치합니다.
+28-Jan-2024 21:46:18.362 경고 [main] org.apache.catalina.startup.HostConfig.deployDescriptor 배치 descriptor [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/conf/Catalina/localhost/cju_stt.xml] 내에서, [/cju_stt] 값을 가진 path 속성은 무시됩니다.
+28-Jan-2024 21:46:18.967 정보 [main] org.apache.jasper.servlet.TldScanner.scanJars 적어도 하나의 JAR가 TLD들을 찾기 위해 스캔되었으나 아무 것도 찾지 못했습니다. 스캔했으나 TLD가 없는 JAR들의 전체 목록을 보시려면, 로그 레벨을 디버그 레벨로 설정하십시오. 스캔 과정에서 불필요한 JAR들을 건너뛰면, 시스템 시작 시간과 JSP 컴파일 시간을 단축시킬 수 있습니다.
+28-Jan-2024 21:46:19.573 정보 [main] org.apache.catalina.startup.HostConfig.deployDescriptor 배치 descriptor [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/conf/Catalina/localhost/cju_stt.xml]의 배치가 [1,218] 밀리초 내에 완료되었습니다.
+28-Jan-2024 21:46:19.574 정보 [main] org.apache.catalina.startup.HostConfig.deployWAR 웹 애플리케이션 아카이브 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/cju_stt-1.0.0-BUILD-SNAPSHOT.war]을(를) 배치합니다.
+28-Jan-2024 21:46:19.919 정보 [main] org.apache.jasper.servlet.TldScanner.scanJars 적어도 하나의 JAR가 TLD들을 찾기 위해 스캔되었으나 아무 것도 찾지 못했습니다. 스캔했으나 TLD가 없는 JAR들의 전체 목록을 보시려면, 로그 레벨을 디버그 레벨로 설정하십시오. 스캔 과정에서 불필요한 JAR들을 건너뛰면, 시스템 시작 시간과 JSP 컴파일 시간을 단축시킬 수 있습니다.
+28-Jan-2024 21:46:20.384 정보 [main] org.apache.catalina.startup.HostConfig.deployWAR 웹 애플리케이션 아카이브 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/cju_stt-1.0.0-BUILD-SNAPSHOT.war]의 배치가 [810] 밀리초에 완료되었습니다.
+28-Jan-2024 21:46:20.385 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/manager]을(를) 배치합니다.
+28-Jan-2024 21:46:20.400 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/manager]에 대한 배치가 [15] 밀리초에 완료되었습니다.
+28-Jan-2024 21:46:20.401 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/host-manager]을(를) 배치합니다.
+28-Jan-2024 21:46:20.410 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/host-manager]에 대한 배치가 [9] 밀리초에 완료되었습니다.
+28-Jan-2024 21:46:20.410 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/examples]을(를) 배치합니다.
+28-Jan-2024 21:46:20.480 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/examples]에 대한 배치가 [70] 밀리초에 완료되었습니다.
+28-Jan-2024 21:46:20.480 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/docs]을(를) 배치합니다.
+28-Jan-2024 21:46:20.488 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/docs]에 대한 배치가 [8] 밀리초에 완료되었습니다.
+28-Jan-2024 21:46:20.488 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/ROOT]을(를) 배치합니다.
+28-Jan-2024 21:46:20.495 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/ROOT]에 대한 배치가 [7] 밀리초에 완료되었습니다.
+28-Jan-2024 21:46:20.498 정보 [main] org.apache.coyote.AbstractProtocol.start 프로토콜 핸들러 ["http-nio-8090"]을(를) 시작합니다.
+28-Jan-2024 21:46:20.504 정보 [main] org.apache.catalina.startup.Catalina.start 서버가 [2186] 밀리초 내에 시작되었습니다.
+28-Jan-2024 21:46:55.250 정보 [main] org.apache.catalina.core.StandardServer.await 셧다운 포트를 통해 유효한 셧다운 명령을 받았습니다. 서버 인스턴스를 중지시킵니다.
+28-Jan-2024 21:46:55.251 정보 [main] org.apache.coyote.AbstractProtocol.pause 프로토콜 핸들러 ["http-nio-8090"]을(를) 일시 정지 중
+28-Jan-2024 21:46:55.252 정보 [main] org.apache.catalina.core.StandardService.stopInternal 서비스 [Catalina]을(를) 중지시킵니다.
+28-Jan-2024 21:46:55.268 정보 [main] org.apache.coyote.AbstractProtocol.stop 프로토콜 핸들러 ["http-nio-8090"]을(를) 중지시킵니다.
+28-Jan-2024 21:46:55.276 정보 [main] org.apache.coyote.AbstractProtocol.destroy 프로토콜 핸들러 ["http-nio-8090"]을(를) 소멸시킵니다.
+28-Jan-2024 21:50:19.020 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 서버 버전 이름:    Apache Tomcat/9.0.85
+28-Jan-2024 21:50:19.022 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log Server 빌드 시각:  Jan 5 2024 08:28:07 UTC
+28-Jan-2024 21:50:19.022 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log Server 버전 번호:  9.0.85.0
+28-Jan-2024 21:50:19.023 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 운영체제 이름:     Linux
+28-Jan-2024 21:50:19.023 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 운영체제 버전:     5.15.0-89-generic
+28-Jan-2024 21:50:19.023 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 아키텍처:          amd64
+28-Jan-2024 21:50:19.023 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 자바 홈:           /usr/lib/jvm/java-11-openjdk-amd64
+28-Jan-2024 21:50:19.023 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log JVM 버전:          11.0.20.1+1-post-Ubuntu-0ubuntu120.04
+28-Jan-2024 21:50:19.023 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log JVM 벤더:          Ubuntu
+28-Jan-2024 21:50:19.023 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:     /home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85
+28-Jan-2024 21:50:19.023 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:     /home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85
+28-Jan-2024 21:50:19.030 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  --add-opens=java.base/java.lang=ALL-UNNAMED
+28-Jan-2024 21:50:19.030 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  --add-opens=java.base/java.io=ALL-UNNAMED
+28-Jan-2024 21:50:19.031 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  --add-opens=java.base/java.util=ALL-UNNAMED
+28-Jan-2024 21:50:19.031 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+28-Jan-2024 21:50:19.031 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+28-Jan-2024 21:50:19.031 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djava.util.logging.config.file=/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/conf/logging.properties
+28-Jan-2024 21:50:19.031 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+28-Jan-2024 21:50:19.031 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djdk.tls.ephemeralDHKeySize=2048
+28-Jan-2024 21:50:19.031 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+28-Jan-2024 21:50:19.031 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+28-Jan-2024 21:50:19.031 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Dignore.endorsed.dirs=
+28-Jan-2024 21:50:19.031 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Dcatalina.base=/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85
+28-Jan-2024 21:50:19.031 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Dcatalina.home=/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85
+28-Jan-2024 21:50:19.031 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djava.io.tmpdir=/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/temp
+28-Jan-2024 21:50:19.032 정보 [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent 프로덕션 환경들에서 최적의 성능을 제공하는, APR 기반 Apache Tomcat Native 라이브러리가, 다음 java.library.path에서 발견되지 않습니다: [/usr/java/packages/lib:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib]
+28-Jan-2024 21:50:19.248 정보 [main] org.apache.coyote.AbstractProtocol.init 프로토콜 핸들러 ["http-nio-8090"]을(를) 초기화합니다.
+28-Jan-2024 21:50:19.262 정보 [main] org.apache.catalina.startup.Catalina.load [365] 밀리초 내에 서버가 초기화되었습니다.
+28-Jan-2024 21:50:19.293 정보 [main] org.apache.catalina.core.StandardService.startInternal 서비스 [Catalina]을(를) 시작합니다.
+28-Jan-2024 21:50:19.293 정보 [main] org.apache.catalina.core.StandardEngine.startInternal 서버 엔진을 시작합니다: [Apache Tomcat/9.0.85]
+28-Jan-2024 21:50:19.298 정보 [main] org.apache.catalina.startup.HostConfig.deployDescriptor 배치 descriptor [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/conf/Catalina/localhost/cju_stt.xml]을(를) 배치합니다.
+28-Jan-2024 21:50:19.306 경고 [main] org.apache.catalina.startup.HostConfig.deployDescriptor 배치 descriptor [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/conf/Catalina/localhost/cju_stt.xml] 내에서, [/cju_stt] 값을 가진 path 속성은 무시됩니다.
+28-Jan-2024 21:50:19.879 정보 [main] org.apache.jasper.servlet.TldScanner.scanJars 적어도 하나의 JAR가 TLD들을 찾기 위해 스캔되었으나 아무 것도 찾지 못했습니다. 스캔했으나 TLD가 없는 JAR들의 전체 목록을 보시려면, 로그 레벨을 디버그 레벨로 설정하십시오. 스캔 과정에서 불필요한 JAR들을 건너뛰면, 시스템 시작 시간과 JSP 컴파일 시간을 단축시킬 수 있습니다.
+28-Jan-2024 21:50:20.486 정보 [main] org.apache.catalina.startup.HostConfig.deployDescriptor 배치 descriptor [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/conf/Catalina/localhost/cju_stt.xml]의 배치가 [1,187] 밀리초 내에 완료되었습니다.
+28-Jan-2024 21:50:20.487 정보 [main] org.apache.catalina.startup.HostConfig.deployWAR 웹 애플리케이션 아카이브 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/cju_stt-1.0.0-BUILD-SNAPSHOT.war]을(를) 배치합니다.
+28-Jan-2024 21:50:20.793 정보 [main] org.apache.jasper.servlet.TldScanner.scanJars 적어도 하나의 JAR가 TLD들을 찾기 위해 스캔되었으나 아무 것도 찾지 못했습니다. 스캔했으나 TLD가 없는 JAR들의 전체 목록을 보시려면, 로그 레벨을 디버그 레벨로 설정하십시오. 스캔 과정에서 불필요한 JAR들을 건너뛰면, 시스템 시작 시간과 JSP 컴파일 시간을 단축시킬 수 있습니다.
+28-Jan-2024 21:50:21.234 정보 [main] org.apache.catalina.startup.HostConfig.deployWAR 웹 애플리케이션 아카이브 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/cju_stt-1.0.0-BUILD-SNAPSHOT.war]의 배치가 [747] 밀리초에 완료되었습니다.
+28-Jan-2024 21:50:21.234 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/manager]을(를) 배치합니다.
+28-Jan-2024 21:50:21.252 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/manager]에 대한 배치가 [18] 밀리초에 완료되었습니다.
+28-Jan-2024 21:50:21.252 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/host-manager]을(를) 배치합니다.
+28-Jan-2024 21:50:21.262 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/host-manager]에 대한 배치가 [10] 밀리초에 완료되었습니다.
+28-Jan-2024 21:50:21.262 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/examples]을(를) 배치합니다.
+28-Jan-2024 21:50:21.330 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/examples]에 대한 배치가 [68] 밀리초에 완료되었습니다.
+28-Jan-2024 21:50:21.330 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/docs]을(를) 배치합니다.
+28-Jan-2024 21:50:21.338 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/docs]에 대한 배치가 [8] 밀리초에 완료되었습니다.
+28-Jan-2024 21:50:21.338 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/ROOT]을(를) 배치합니다.
+28-Jan-2024 21:50:21.346 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/ROOT]에 대한 배치가 [7] 밀리초에 완료되었습니다.
+28-Jan-2024 21:50:21.349 정보 [main] org.apache.coyote.AbstractProtocol.start 프로토콜 핸들러 ["http-nio-8090"]을(를) 시작합니다.
+28-Jan-2024 21:50:21.357 정보 [main] org.apache.catalina.startup.Catalina.start 서버가 [2095] 밀리초 내에 시작되었습니다.
+28-Jan-2024 21:51:46.573 정보 [main] org.apache.catalina.core.StandardServer.await 셧다운 포트를 통해 유효한 셧다운 명령을 받았습니다. 서버 인스턴스를 중지시킵니다.
+28-Jan-2024 21:51:46.573 정보 [main] org.apache.coyote.AbstractProtocol.pause 프로토콜 핸들러 ["http-nio-8090"]을(를) 일시 정지 중
+28-Jan-2024 21:51:46.575 정보 [main] org.apache.catalina.core.StandardService.stopInternal 서비스 [Catalina]을(를) 중지시킵니다.
+28-Jan-2024 21:51:46.594 정보 [main] org.apache.coyote.AbstractProtocol.stop 프로토콜 핸들러 ["http-nio-8090"]을(를) 중지시킵니다.
+28-Jan-2024 21:51:46.599 정보 [main] org.apache.coyote.AbstractProtocol.destroy 프로토콜 핸들러 ["http-nio-8090"]을(를) 소멸시킵니다.
+28-Jan-2024 21:51:48.995 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 서버 버전 이름:    Apache Tomcat/9.0.85
+28-Jan-2024 21:51:48.998 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log Server 빌드 시각:  Jan 5 2024 08:28:07 UTC
+28-Jan-2024 21:51:48.998 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log Server 버전 번호:  9.0.85.0
+28-Jan-2024 21:51:48.998 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 운영체제 이름:     Linux
+28-Jan-2024 21:51:48.998 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 운영체제 버전:     5.15.0-89-generic
+28-Jan-2024 21:51:48.998 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 아키텍처:          amd64
+28-Jan-2024 21:51:48.998 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 자바 홈:           /usr/lib/jvm/java-11-openjdk-amd64
+28-Jan-2024 21:51:48.998 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log JVM 버전:          11.0.20.1+1-post-Ubuntu-0ubuntu120.04
+28-Jan-2024 21:51:48.999 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log JVM 벤더:          Ubuntu
+28-Jan-2024 21:51:48.999 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:     /home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85
+28-Jan-2024 21:51:48.999 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:     /home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85
+28-Jan-2024 21:51:49.006 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  --add-opens=java.base/java.lang=ALL-UNNAMED
+28-Jan-2024 21:51:49.006 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  --add-opens=java.base/java.io=ALL-UNNAMED
+28-Jan-2024 21:51:49.007 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  --add-opens=java.base/java.util=ALL-UNNAMED
+28-Jan-2024 21:51:49.007 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+28-Jan-2024 21:51:49.007 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+28-Jan-2024 21:51:49.007 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djava.util.logging.config.file=/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/conf/logging.properties
+28-Jan-2024 21:51:49.007 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+28-Jan-2024 21:51:49.007 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djdk.tls.ephemeralDHKeySize=2048
+28-Jan-2024 21:51:49.007 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+28-Jan-2024 21:51:49.007 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+28-Jan-2024 21:51:49.007 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Dignore.endorsed.dirs=
+28-Jan-2024 21:51:49.007 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Dcatalina.base=/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85
+28-Jan-2024 21:51:49.007 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Dcatalina.home=/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85
+28-Jan-2024 21:51:49.007 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djava.io.tmpdir=/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/temp
+28-Jan-2024 21:51:49.008 정보 [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent 프로덕션 환경들에서 최적의 성능을 제공하는, APR 기반 Apache Tomcat Native 라이브러리가, 다음 java.library.path에서 발견되지 않습니다: [/usr/java/packages/lib:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib]
+28-Jan-2024 21:51:49.196 정보 [main] org.apache.coyote.AbstractProtocol.init 프로토콜 핸들러 ["http-nio-8090"]을(를) 초기화합니다.
+28-Jan-2024 21:51:49.209 정보 [main] org.apache.catalina.startup.Catalina.load [351] 밀리초 내에 서버가 초기화되었습니다.
+28-Jan-2024 21:51:49.241 정보 [main] org.apache.catalina.core.StandardService.startInternal 서비스 [Catalina]을(를) 시작합니다.
+28-Jan-2024 21:51:49.241 정보 [main] org.apache.catalina.core.StandardEngine.startInternal 서버 엔진을 시작합니다: [Apache Tomcat/9.0.85]
+28-Jan-2024 21:51:49.245 정보 [main] org.apache.catalina.startup.HostConfig.deployDescriptor 배치 descriptor [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/conf/Catalina/localhost/cju_stt.xml]을(를) 배치합니다.
+28-Jan-2024 21:51:49.253 경고 [main] org.apache.catalina.startup.HostConfig.deployDescriptor 배치 descriptor [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/conf/Catalina/localhost/cju_stt.xml] 내에서, [/cju_stt] 값을 가진 path 속성은 무시됩니다.
+28-Jan-2024 21:51:49.847 정보 [main] org.apache.jasper.servlet.TldScanner.scanJars 적어도 하나의 JAR가 TLD들을 찾기 위해 스캔되었으나 아무 것도 찾지 못했습니다. 스캔했으나 TLD가 없는 JAR들의 전체 목록을 보시려면, 로그 레벨을 디버그 레벨로 설정하십시오. 스캔 과정에서 불필요한 JAR들을 건너뛰면, 시스템 시작 시간과 JSP 컴파일 시간을 단축시킬 수 있습니다.
+28-Jan-2024 21:51:50.463 정보 [main] org.apache.catalina.startup.HostConfig.deployDescriptor 배치 descriptor [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/conf/Catalina/localhost/cju_stt.xml]의 배치가 [1,217] 밀리초 내에 완료되었습니다.
+28-Jan-2024 21:51:50.464 정보 [main] org.apache.catalina.startup.HostConfig.deployWAR 웹 애플리케이션 아카이브 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/cju_stt-1.0.0-BUILD-SNAPSHOT.war]을(를) 배치합니다.
+28-Jan-2024 21:51:50.807 정보 [main] org.apache.jasper.servlet.TldScanner.scanJars 적어도 하나의 JAR가 TLD들을 찾기 위해 스캔되었으나 아무 것도 찾지 못했습니다. 스캔했으나 TLD가 없는 JAR들의 전체 목록을 보시려면, 로그 레벨을 디버그 레벨로 설정하십시오. 스캔 과정에서 불필요한 JAR들을 건너뛰면, 시스템 시작 시간과 JSP 컴파일 시간을 단축시킬 수 있습니다.
+28-Jan-2024 21:51:51.304 정보 [main] org.apache.catalina.startup.HostConfig.deployWAR 웹 애플리케이션 아카이브 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/cju_stt-1.0.0-BUILD-SNAPSHOT.war]의 배치가 [840] 밀리초에 완료되었습니다.
+28-Jan-2024 21:51:51.305 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/manager]을(를) 배치합니다.
+28-Jan-2024 21:51:51.321 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/manager]에 대한 배치가 [16] 밀리초에 완료되었습니다.
+28-Jan-2024 21:51:51.321 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/host-manager]을(를) 배치합니다.
+28-Jan-2024 21:51:51.331 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/host-manager]에 대한 배치가 [10] 밀리초에 완료되었습니다.
+28-Jan-2024 21:51:51.331 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/examples]을(를) 배치합니다.
+28-Jan-2024 21:51:51.403 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/examples]에 대한 배치가 [72] 밀리초에 완료되었습니다.
+28-Jan-2024 21:51:51.403 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/docs]을(를) 배치합니다.
+28-Jan-2024 21:51:51.412 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/docs]에 대한 배치가 [9] 밀리초에 완료되었습니다.
+28-Jan-2024 21:51:51.413 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/ROOT]을(를) 배치합니다.
+28-Jan-2024 21:51:51.420 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/ROOT]에 대한 배치가 [7] 밀리초에 완료되었습니다.
+28-Jan-2024 21:51:51.423 정보 [main] org.apache.coyote.AbstractProtocol.start 프로토콜 핸들러 ["http-nio-8090"]을(를) 시작합니다.
+28-Jan-2024 21:51:51.430 정보 [main] org.apache.catalina.startup.Catalina.start 서버가 [2220] 밀리초 내에 시작되었습니다.
+28-Jan-2024 21:53:05.815 정보 [main] org.apache.catalina.core.StandardServer.await 셧다운 포트를 통해 유효한 셧다운 명령을 받았습니다. 서버 인스턴스를 중지시킵니다.
+28-Jan-2024 21:53:05.815 정보 [main] org.apache.coyote.AbstractProtocol.pause 프로토콜 핸들러 ["http-nio-8090"]을(를) 일시 정지 중
+28-Jan-2024 21:53:05.817 정보 [main] org.apache.catalina.core.StandardService.stopInternal 서비스 [Catalina]을(를) 중지시킵니다.
+28-Jan-2024 21:53:05.835 정보 [main] org.apache.coyote.AbstractProtocol.stop 프로토콜 핸들러 ["http-nio-8090"]을(를) 중지시킵니다.
+28-Jan-2024 21:53:05.840 정보 [main] org.apache.coyote.AbstractProtocol.destroy 프로토콜 핸들러 ["http-nio-8090"]을(를) 소멸시킵니다.
+28-Jan-2024 21:53:12.467 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 서버 버전 이름:    Apache Tomcat/9.0.85
+28-Jan-2024 21:53:12.471 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log Server 빌드 시각:  Jan 5 2024 08:28:07 UTC
+28-Jan-2024 21:53:12.471 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log Server 버전 번호:  9.0.85.0
+28-Jan-2024 21:53:12.471 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 운영체제 이름:     Linux
+28-Jan-2024 21:53:12.471 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 운영체제 버전:     5.15.0-89-generic
+28-Jan-2024 21:53:12.471 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 아키텍처:          amd64
+28-Jan-2024 21:53:12.471 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 자바 홈:           /usr/lib/jvm/java-11-openjdk-amd64
+28-Jan-2024 21:53:12.472 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log JVM 버전:          11.0.20.1+1-post-Ubuntu-0ubuntu120.04
+28-Jan-2024 21:53:12.472 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log JVM 벤더:          Ubuntu
+28-Jan-2024 21:53:12.472 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:     /home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85
+28-Jan-2024 21:53:12.472 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:     /home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85
+28-Jan-2024 21:53:12.478 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  --add-opens=java.base/java.lang=ALL-UNNAMED
+28-Jan-2024 21:53:12.479 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  --add-opens=java.base/java.io=ALL-UNNAMED
+28-Jan-2024 21:53:12.479 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  --add-opens=java.base/java.util=ALL-UNNAMED
+28-Jan-2024 21:53:12.479 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+28-Jan-2024 21:53:12.479 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+28-Jan-2024 21:53:12.479 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djava.util.logging.config.file=/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/conf/logging.properties
+28-Jan-2024 21:53:12.479 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+28-Jan-2024 21:53:12.479 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djdk.tls.ephemeralDHKeySize=2048
+28-Jan-2024 21:53:12.479 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+28-Jan-2024 21:53:12.480 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+28-Jan-2024 21:53:12.480 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Dignore.endorsed.dirs=
+28-Jan-2024 21:53:12.480 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Dcatalina.base=/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85
+28-Jan-2024 21:53:12.480 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Dcatalina.home=/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85
+28-Jan-2024 21:53:12.480 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djava.io.tmpdir=/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/temp
+28-Jan-2024 21:53:12.482 정보 [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent 프로덕션 환경들에서 최적의 성능을 제공하는, APR 기반 Apache Tomcat Native 라이브러리가, 다음 java.library.path에서 발견되지 않습니다: [/usr/java/packages/lib:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib]
+28-Jan-2024 21:53:12.694 정보 [main] org.apache.coyote.AbstractProtocol.init 프로토콜 핸들러 ["http-nio-8090"]을(를) 초기화합니다.
+28-Jan-2024 21:53:12.707 정보 [main] org.apache.catalina.startup.Catalina.load [366] 밀리초 내에 서버가 초기화되었습니다.
+28-Jan-2024 21:53:12.740 정보 [main] org.apache.catalina.core.StandardService.startInternal 서비스 [Catalina]을(를) 시작합니다.
+28-Jan-2024 21:53:12.740 정보 [main] org.apache.catalina.core.StandardEngine.startInternal 서버 엔진을 시작합니다: [Apache Tomcat/9.0.85]
+28-Jan-2024 21:53:12.744 정보 [main] org.apache.catalina.startup.HostConfig.deployDescriptor 배치 descriptor [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/conf/Catalina/localhost/cju_stt.xml]을(를) 배치합니다.
+28-Jan-2024 21:53:12.752 경고 [main] org.apache.catalina.startup.HostConfig.deployDescriptor 배치 descriptor [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/conf/Catalina/localhost/cju_stt.xml] 내에서, [/cju_stt] 값을 가진 path 속성은 무시됩니다.
+28-Jan-2024 21:53:13.329 정보 [main] org.apache.jasper.servlet.TldScanner.scanJars 적어도 하나의 JAR가 TLD들을 찾기 위해 스캔되었으나 아무 것도 찾지 못했습니다. 스캔했으나 TLD가 없는 JAR들의 전체 목록을 보시려면, 로그 레벨을 디버그 레벨로 설정하십시오. 스캔 과정에서 불필요한 JAR들을 건너뛰면, 시스템 시작 시간과 JSP 컴파일 시간을 단축시킬 수 있습니다.
+28-Jan-2024 21:53:13.960 정보 [main] org.apache.catalina.startup.HostConfig.deployDescriptor 배치 descriptor [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/conf/Catalina/localhost/cju_stt.xml]의 배치가 [1,215] 밀리초 내에 완료되었습니다.
+28-Jan-2024 21:53:13.960 정보 [main] org.apache.catalina.startup.HostConfig.deployWAR 웹 애플리케이션 아카이브 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/cju_stt-1.0.0-BUILD-SNAPSHOT.war]을(를) 배치합니다.
+28-Jan-2024 21:53:14.266 정보 [main] org.apache.jasper.servlet.TldScanner.scanJars 적어도 하나의 JAR가 TLD들을 찾기 위해 스캔되었으나 아무 것도 찾지 못했습니다. 스캔했으나 TLD가 없는 JAR들의 전체 목록을 보시려면, 로그 레벨을 디버그 레벨로 설정하십시오. 스캔 과정에서 불필요한 JAR들을 건너뛰면, 시스템 시작 시간과 JSP 컴파일 시간을 단축시킬 수 있습니다.
+28-Jan-2024 21:53:14.704 정보 [main] org.apache.catalina.startup.HostConfig.deployWAR 웹 애플리케이션 아카이브 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/cju_stt-1.0.0-BUILD-SNAPSHOT.war]의 배치가 [744] 밀리초에 완료되었습니다.
+28-Jan-2024 21:53:14.705 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/manager]을(를) 배치합니다.
+28-Jan-2024 21:53:14.721 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/manager]에 대한 배치가 [16] 밀리초에 완료되었습니다.
+28-Jan-2024 21:53:14.721 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/host-manager]을(를) 배치합니다.
+28-Jan-2024 21:53:14.731 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/host-manager]에 대한 배치가 [10] 밀리초에 완료되었습니다.
+28-Jan-2024 21:53:14.731 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/examples]을(를) 배치합니다.
+28-Jan-2024 21:53:14.799 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/examples]에 대한 배치가 [68] 밀리초에 완료되었습니다.
+28-Jan-2024 21:53:14.799 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/docs]을(를) 배치합니다.
+28-Jan-2024 21:53:14.807 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/docs]에 대한 배치가 [8] 밀리초에 완료되었습니다.
+28-Jan-2024 21:53:14.807 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/ROOT]을(를) 배치합니다.
+28-Jan-2024 21:53:14.815 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/ROOT]에 대한 배치가 [8] 밀리초에 완료되었습니다.
+28-Jan-2024 21:53:14.818 정보 [main] org.apache.coyote.AbstractProtocol.start 프로토콜 핸들러 ["http-nio-8090"]을(를) 시작합니다.
+28-Jan-2024 21:53:14.824 정보 [main] org.apache.catalina.startup.Catalina.start 서버가 [2116] 밀리초 내에 시작되었습니다.
+28-Jan-2024 21:55:41.189 정보 [main] org.apache.catalina.core.StandardServer.await 셧다운 포트를 통해 유효한 셧다운 명령을 받았습니다. 서버 인스턴스를 중지시킵니다.
+28-Jan-2024 21:55:41.189 정보 [main] org.apache.coyote.AbstractProtocol.pause 프로토콜 핸들러 ["http-nio-8090"]을(를) 일시 정지 중
+28-Jan-2024 21:55:41.191 정보 [main] org.apache.catalina.core.StandardService.stopInternal 서비스 [Catalina]을(를) 중지시킵니다.
+28-Jan-2024 21:55:41.208 정보 [main] org.apache.coyote.AbstractProtocol.stop 프로토콜 핸들러 ["http-nio-8090"]을(를) 중지시킵니다.
+28-Jan-2024 21:55:41.214 정보 [main] org.apache.coyote.AbstractProtocol.destroy 프로토콜 핸들러 ["http-nio-8090"]을(를) 소멸시킵니다.
+28-Jan-2024 21:57:49.396 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 서버 버전 이름:    Apache Tomcat/9.0.85
+28-Jan-2024 21:57:49.398 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log Server 빌드 시각:  Jan 5 2024 08:28:07 UTC
+28-Jan-2024 21:57:49.398 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log Server 버전 번호:  9.0.85.0
+28-Jan-2024 21:57:49.399 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 운영체제 이름:     Linux
+28-Jan-2024 21:57:49.399 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 운영체제 버전:     5.15.0-89-generic
+28-Jan-2024 21:57:49.399 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 아키텍처:          amd64
+28-Jan-2024 21:57:49.399 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 자바 홈:           /usr/lib/jvm/java-11-openjdk-amd64
+28-Jan-2024 21:57:49.399 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log JVM 버전:          11.0.20.1+1-post-Ubuntu-0ubuntu120.04
+28-Jan-2024 21:57:49.399 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log JVM 벤더:          Ubuntu
+28-Jan-2024 21:57:49.399 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:     /home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85
+28-Jan-2024 21:57:49.399 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:     /home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85
+28-Jan-2024 21:57:49.406 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  --add-opens=java.base/java.lang=ALL-UNNAMED
+28-Jan-2024 21:57:49.406 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  --add-opens=java.base/java.io=ALL-UNNAMED
+28-Jan-2024 21:57:49.406 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  --add-opens=java.base/java.util=ALL-UNNAMED
+28-Jan-2024 21:57:49.406 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+28-Jan-2024 21:57:49.407 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+28-Jan-2024 21:57:49.407 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djava.util.logging.config.file=/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/conf/logging.properties
+28-Jan-2024 21:57:49.407 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+28-Jan-2024 21:57:49.407 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djdk.tls.ephemeralDHKeySize=2048
+28-Jan-2024 21:57:49.408 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+28-Jan-2024 21:57:49.408 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+28-Jan-2024 21:57:49.408 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Dignore.endorsed.dirs=
+28-Jan-2024 21:57:49.408 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Dcatalina.base=/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85
+28-Jan-2024 21:57:49.408 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Dcatalina.home=/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85
+28-Jan-2024 21:57:49.409 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djava.io.tmpdir=/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/temp
+28-Jan-2024 21:57:49.410 정보 [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent 프로덕션 환경들에서 최적의 성능을 제공하는, APR 기반 Apache Tomcat Native 라이브러리가, 다음 java.library.path에서 발견되지 않습니다: [/usr/java/packages/lib:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib]
+28-Jan-2024 21:57:49.595 정보 [main] org.apache.coyote.AbstractProtocol.init 프로토콜 핸들러 ["http-nio-8090"]을(를) 초기화합니다.
+28-Jan-2024 21:57:49.611 정보 [main] org.apache.catalina.startup.Catalina.load [339] 밀리초 내에 서버가 초기화되었습니다.
+28-Jan-2024 21:57:49.644 정보 [main] org.apache.catalina.core.StandardService.startInternal 서비스 [Catalina]을(를) 시작합니다.
+28-Jan-2024 21:57:49.644 정보 [main] org.apache.catalina.core.StandardEngine.startInternal 서버 엔진을 시작합니다: [Apache Tomcat/9.0.85]
+28-Jan-2024 21:57:49.648 정보 [main] org.apache.catalina.startup.HostConfig.deployDescriptor 배치 descriptor [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/conf/Catalina/localhost/cju_stt.xml]을(를) 배치합니다.
+28-Jan-2024 21:57:49.656 경고 [main] org.apache.catalina.startup.HostConfig.deployDescriptor 배치 descriptor [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/conf/Catalina/localhost/cju_stt.xml] 내에서, [/cju_stt] 값을 가진 path 속성은 무시됩니다.
+28-Jan-2024 21:57:50.247 정보 [main] org.apache.jasper.servlet.TldScanner.scanJars 적어도 하나의 JAR가 TLD들을 찾기 위해 스캔되었으나 아무 것도 찾지 못했습니다. 스캔했으나 TLD가 없는 JAR들의 전체 목록을 보시려면, 로그 레벨을 디버그 레벨로 설정하십시오. 스캔 과정에서 불필요한 JAR들을 건너뛰면, 시스템 시작 시간과 JSP 컴파일 시간을 단축시킬 수 있습니다.
+28-Jan-2024 21:57:50.848 정보 [main] org.apache.catalina.startup.HostConfig.deployDescriptor 배치 descriptor [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/conf/Catalina/localhost/cju_stt.xml]의 배치가 [1,199] 밀리초 내에 완료되었습니다.
+28-Jan-2024 21:57:50.848 정보 [main] org.apache.catalina.startup.HostConfig.deployWAR 웹 애플리케이션 아카이브 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/cju_stt-1.0.0-BUILD-SNAPSHOT.war]을(를) 배치합니다.
+28-Jan-2024 21:57:51.153 정보 [main] org.apache.jasper.servlet.TldScanner.scanJars 적어도 하나의 JAR가 TLD들을 찾기 위해 스캔되었으나 아무 것도 찾지 못했습니다. 스캔했으나 TLD가 없는 JAR들의 전체 목록을 보시려면, 로그 레벨을 디버그 레벨로 설정하십시오. 스캔 과정에서 불필요한 JAR들을 건너뛰면, 시스템 시작 시간과 JSP 컴파일 시간을 단축시킬 수 있습니다.
+28-Jan-2024 21:57:51.589 정보 [main] org.apache.catalina.startup.HostConfig.deployWAR 웹 애플리케이션 아카이브 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/cju_stt-1.0.0-BUILD-SNAPSHOT.war]의 배치가 [741] 밀리초에 완료되었습니다.
+28-Jan-2024 21:57:51.589 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/manager]을(를) 배치합니다.
+28-Jan-2024 21:57:51.605 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/manager]에 대한 배치가 [15] 밀리초에 완료되었습니다.
+28-Jan-2024 21:57:51.605 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/host-manager]을(를) 배치합니다.
+28-Jan-2024 21:57:51.614 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/host-manager]에 대한 배치가 [9] 밀리초에 완료되었습니다.
+28-Jan-2024 21:57:51.614 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/examples]을(를) 배치합니다.
+28-Jan-2024 21:57:51.685 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/examples]에 대한 배치가 [71] 밀리초에 완료되었습니다.
+28-Jan-2024 21:57:51.685 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/docs]을(를) 배치합니다.
+28-Jan-2024 21:57:51.694 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/docs]에 대한 배치가 [9] 밀리초에 완료되었습니다.
+28-Jan-2024 21:57:51.694 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/ROOT]을(를) 배치합니다.
+28-Jan-2024 21:57:51.701 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/ROOT]에 대한 배치가 [7] 밀리초에 완료되었습니다.
+28-Jan-2024 21:57:51.704 정보 [main] org.apache.coyote.AbstractProtocol.start 프로토콜 핸들러 ["http-nio-8090"]을(를) 시작합니다.
+28-Jan-2024 21:57:51.712 정보 [main] org.apache.catalina.startup.Catalina.start 서버가 [2100] 밀리초 내에 시작되었습니다.
+28-Jan-2024 21:58:44.036 정보 [main] org.apache.catalina.core.StandardServer.await 셧다운 포트를 통해 유효한 셧다운 명령을 받았습니다. 서버 인스턴스를 중지시킵니다.
+28-Jan-2024 21:58:44.036 정보 [main] org.apache.coyote.AbstractProtocol.pause 프로토콜 핸들러 ["http-nio-8090"]을(를) 일시 정지 중
+28-Jan-2024 21:58:44.038 정보 [main] org.apache.catalina.core.StandardService.stopInternal 서비스 [Catalina]을(를) 중지시킵니다.
+28-Jan-2024 21:58:44.055 정보 [main] org.apache.coyote.AbstractProtocol.stop 프로토콜 핸들러 ["http-nio-8090"]을(를) 중지시킵니다.
+28-Jan-2024 21:58:44.072 정보 [main] org.apache.coyote.AbstractProtocol.destroy 프로토콜 핸들러 ["http-nio-8090"]을(를) 소멸시킵니다.
+28-Jan-2024 22:00:28.144 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 서버 버전 이름:    Apache Tomcat/9.0.85
+28-Jan-2024 22:00:28.147 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log Server 빌드 시각:  Jan 5 2024 08:28:07 UTC
+28-Jan-2024 22:00:28.147 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log Server 버전 번호:  9.0.85.0
+28-Jan-2024 22:00:28.147 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 운영체제 이름:     Linux
+28-Jan-2024 22:00:28.147 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 운영체제 버전:     5.15.0-89-generic
+28-Jan-2024 22:00:28.148 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 아키텍처:          amd64
+28-Jan-2024 22:00:28.148 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 자바 홈:           /usr/lib/jvm/java-11-openjdk-amd64
+28-Jan-2024 22:00:28.148 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log JVM 버전:          11.0.20.1+1-post-Ubuntu-0ubuntu120.04
+28-Jan-2024 22:00:28.148 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log JVM 벤더:          Ubuntu
+28-Jan-2024 22:00:28.148 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:     /home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85
+28-Jan-2024 22:00:28.148 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:     /home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85
+28-Jan-2024 22:00:28.155 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  --add-opens=java.base/java.lang=ALL-UNNAMED
+28-Jan-2024 22:00:28.155 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  --add-opens=java.base/java.io=ALL-UNNAMED
+28-Jan-2024 22:00:28.155 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  --add-opens=java.base/java.util=ALL-UNNAMED
+28-Jan-2024 22:00:28.156 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+28-Jan-2024 22:00:28.156 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+28-Jan-2024 22:00:28.156 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djava.util.logging.config.file=/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/conf/logging.properties
+28-Jan-2024 22:00:28.156 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+28-Jan-2024 22:00:28.156 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djdk.tls.ephemeralDHKeySize=2048
+28-Jan-2024 22:00:28.156 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+28-Jan-2024 22:00:28.156 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+28-Jan-2024 22:00:28.156 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Dignore.endorsed.dirs=
+28-Jan-2024 22:00:28.156 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Dcatalina.base=/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85
+28-Jan-2024 22:00:28.156 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Dcatalina.home=/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85
+28-Jan-2024 22:00:28.156 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djava.io.tmpdir=/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/temp
+28-Jan-2024 22:00:28.157 정보 [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent 프로덕션 환경들에서 최적의 성능을 제공하는, APR 기반 Apache Tomcat Native 라이브러리가, 다음 java.library.path에서 발견되지 않습니다: [/usr/java/packages/lib:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib]
+28-Jan-2024 22:00:28.339 정보 [main] org.apache.coyote.AbstractProtocol.init 프로토콜 핸들러 ["http-nio-8090"]을(를) 초기화합니다.
+28-Jan-2024 22:00:28.352 정보 [main] org.apache.catalina.startup.Catalina.load [328] 밀리초 내에 서버가 초기화되었습니다.
+28-Jan-2024 22:00:28.384 정보 [main] org.apache.catalina.core.StandardService.startInternal 서비스 [Catalina]을(를) 시작합니다.
+28-Jan-2024 22:00:28.385 정보 [main] org.apache.catalina.core.StandardEngine.startInternal 서버 엔진을 시작합니다: [Apache Tomcat/9.0.85]
+28-Jan-2024 22:00:28.389 정보 [main] org.apache.catalina.startup.HostConfig.deployDescriptor 배치 descriptor [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/conf/Catalina/localhost/cju_stt.xml]을(를) 배치합니다.
+28-Jan-2024 22:00:28.397 경고 [main] org.apache.catalina.startup.HostConfig.deployDescriptor 배치 descriptor [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/conf/Catalina/localhost/cju_stt.xml] 내에서, [/cju_stt] 값을 가진 path 속성은 무시됩니다.
+28-Jan-2024 22:00:29.022 정보 [main] org.apache.jasper.servlet.TldScanner.scanJars 적어도 하나의 JAR가 TLD들을 찾기 위해 스캔되었으나 아무 것도 찾지 못했습니다. 스캔했으나 TLD가 없는 JAR들의 전체 목록을 보시려면, 로그 레벨을 디버그 레벨로 설정하십시오. 스캔 과정에서 불필요한 JAR들을 건너뛰면, 시스템 시작 시간과 JSP 컴파일 시간을 단축시킬 수 있습니다.
+28-Jan-2024 22:00:29.581 정보 [main] org.apache.catalina.startup.HostConfig.deployDescriptor 배치 descriptor [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/conf/Catalina/localhost/cju_stt.xml]의 배치가 [1,191] 밀리초 내에 완료되었습니다.
+28-Jan-2024 22:00:29.581 정보 [main] org.apache.catalina.startup.HostConfig.deployWAR 웹 애플리케이션 아카이브 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/cju_stt-1.0.0-BUILD-SNAPSHOT.war]을(를) 배치합니다.
+28-Jan-2024 22:00:29.886 정보 [main] org.apache.jasper.servlet.TldScanner.scanJars 적어도 하나의 JAR가 TLD들을 찾기 위해 스캔되었으나 아무 것도 찾지 못했습니다. 스캔했으나 TLD가 없는 JAR들의 전체 목록을 보시려면, 로그 레벨을 디버그 레벨로 설정하십시오. 스캔 과정에서 불필요한 JAR들을 건너뛰면, 시스템 시작 시간과 JSP 컴파일 시간을 단축시킬 수 있습니다.
+28-Jan-2024 22:00:30.339 정보 [main] org.apache.catalina.startup.HostConfig.deployWAR 웹 애플리케이션 아카이브 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/cju_stt-1.0.0-BUILD-SNAPSHOT.war]의 배치가 [758] 밀리초에 완료되었습니다.
+28-Jan-2024 22:00:30.339 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/manager]을(를) 배치합니다.
+28-Jan-2024 22:00:30.355 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/manager]에 대한 배치가 [15] 밀리초에 완료되었습니다.
+28-Jan-2024 22:00:30.355 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/host-manager]을(를) 배치합니다.
+28-Jan-2024 22:00:30.365 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/host-manager]에 대한 배치가 [10] 밀리초에 완료되었습니다.
+28-Jan-2024 22:00:30.365 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/examples]을(를) 배치합니다.
+28-Jan-2024 22:00:30.435 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/examples]에 대한 배치가 [70] 밀리초에 완료되었습니다.
+28-Jan-2024 22:00:30.435 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/docs]을(를) 배치합니다.
+28-Jan-2024 22:00:30.443 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/docs]에 대한 배치가 [8] 밀리초에 완료되었습니다.
+28-Jan-2024 22:00:30.443 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/ROOT]을(를) 배치합니다.
+28-Jan-2024 22:00:30.450 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/ROOT]에 대한 배치가 [7] 밀리초에 완료되었습니다.
+28-Jan-2024 22:00:30.454 정보 [main] org.apache.coyote.AbstractProtocol.start 프로토콜 핸들러 ["http-nio-8090"]을(를) 시작합니다.
+28-Jan-2024 22:00:30.460 정보 [main] org.apache.catalina.startup.Catalina.start 서버가 [2107] 밀리초 내에 시작되었습니다.
+28-Jan-2024 22:00:36.683 정보 [main] org.apache.catalina.core.StandardServer.await 셧다운 포트를 통해 유효한 셧다운 명령을 받았습니다. 서버 인스턴스를 중지시킵니다.
+28-Jan-2024 22:00:36.684 정보 [main] org.apache.coyote.AbstractProtocol.pause 프로토콜 핸들러 ["http-nio-8090"]을(를) 일시 정지 중
+28-Jan-2024 22:00:36.685 정보 [main] org.apache.catalina.core.StandardService.stopInternal 서비스 [Catalina]을(를) 중지시킵니다.
+28-Jan-2024 22:00:36.704 정보 [main] org.apache.coyote.AbstractProtocol.stop 프로토콜 핸들러 ["http-nio-8090"]을(를) 중지시킵니다.
+28-Jan-2024 22:00:36.708 정보 [main] org.apache.coyote.AbstractProtocol.destroy 프로토콜 핸들러 ["http-nio-8090"]을(를) 소멸시킵니다.
+28-Jan-2024 22:03:11.491 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 서버 버전 이름:    Apache Tomcat/9.0.85
+28-Jan-2024 22:03:11.494 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log Server 빌드 시각:  Jan 5 2024 08:28:07 UTC
+28-Jan-2024 22:03:11.494 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log Server 버전 번호:  9.0.85.0
+28-Jan-2024 22:03:11.494 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 운영체제 이름:     Linux
+28-Jan-2024 22:03:11.494 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 운영체제 버전:     5.15.0-89-generic
+28-Jan-2024 22:03:11.494 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 아키텍처:          amd64
+28-Jan-2024 22:03:11.494 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 자바 홈:           /usr/lib/jvm/java-11-openjdk-amd64
+28-Jan-2024 22:03:11.494 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log JVM 버전:          11.0.20.1+1-post-Ubuntu-0ubuntu120.04
+28-Jan-2024 22:03:11.494 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log JVM 벤더:          Ubuntu
+28-Jan-2024 22:03:11.494 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:     /home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85
+28-Jan-2024 22:03:11.495 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:     /home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85
+28-Jan-2024 22:03:11.502 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  --add-opens=java.base/java.lang=ALL-UNNAMED
+28-Jan-2024 22:03:11.502 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  --add-opens=java.base/java.io=ALL-UNNAMED
+28-Jan-2024 22:03:11.502 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  --add-opens=java.base/java.util=ALL-UNNAMED
+28-Jan-2024 22:03:11.502 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+28-Jan-2024 22:03:11.502 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+28-Jan-2024 22:03:11.502 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djava.util.logging.config.file=/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/conf/logging.properties
+28-Jan-2024 22:03:11.502 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+28-Jan-2024 22:03:11.502 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djdk.tls.ephemeralDHKeySize=2048
+28-Jan-2024 22:03:11.503 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+28-Jan-2024 22:03:11.503 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+28-Jan-2024 22:03:11.503 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Dignore.endorsed.dirs=
+28-Jan-2024 22:03:11.503 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Dcatalina.base=/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85
+28-Jan-2024 22:03:11.503 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Dcatalina.home=/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85
+28-Jan-2024 22:03:11.503 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djava.io.tmpdir=/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/temp
+28-Jan-2024 22:03:11.504 정보 [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent 프로덕션 환경들에서 최적의 성능을 제공하는, APR 기반 Apache Tomcat Native 라이브러리가, 다음 java.library.path에서 발견되지 않습니다: [/usr/java/packages/lib:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib]
+28-Jan-2024 22:03:11.689 정보 [main] org.apache.coyote.AbstractProtocol.init 프로토콜 핸들러 ["http-nio-8090"]을(를) 초기화합니다.
+28-Jan-2024 22:03:11.702 정보 [main] org.apache.catalina.startup.Catalina.load [336] 밀리초 내에 서버가 초기화되었습니다.
+28-Jan-2024 22:03:11.734 정보 [main] org.apache.catalina.core.StandardService.startInternal 서비스 [Catalina]을(를) 시작합니다.
+28-Jan-2024 22:03:11.734 정보 [main] org.apache.catalina.core.StandardEngine.startInternal 서버 엔진을 시작합니다: [Apache Tomcat/9.0.85]
+28-Jan-2024 22:03:11.738 정보 [main] org.apache.catalina.startup.HostConfig.deployDescriptor 배치 descriptor [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/conf/Catalina/localhost/cju_stt.xml]을(를) 배치합니다.
+28-Jan-2024 22:03:11.746 경고 [main] org.apache.catalina.startup.HostConfig.deployDescriptor 배치 descriptor [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/conf/Catalina/localhost/cju_stt.xml] 내에서, [/cju_stt] 값을 가진 path 속성은 무시됩니다.
+28-Jan-2024 22:03:12.380 정보 [main] org.apache.jasper.servlet.TldScanner.scanJars 적어도 하나의 JAR가 TLD들을 찾기 위해 스캔되었으나 아무 것도 찾지 못했습니다. 스캔했으나 TLD가 없는 JAR들의 전체 목록을 보시려면, 로그 레벨을 디버그 레벨로 설정하십시오. 스캔 과정에서 불필요한 JAR들을 건너뛰면, 시스템 시작 시간과 JSP 컴파일 시간을 단축시킬 수 있습니다.
+28-Jan-2024 22:03:12.965 정보 [main] org.apache.catalina.startup.HostConfig.deployDescriptor 배치 descriptor [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/conf/Catalina/localhost/cju_stt.xml]의 배치가 [1,226] 밀리초 내에 완료되었습니다.
+28-Jan-2024 22:03:12.966 정보 [main] org.apache.catalina.startup.HostConfig.deployWAR 웹 애플리케이션 아카이브 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/cju_stt-1.0.0-BUILD-SNAPSHOT.war]을(를) 배치합니다.
+28-Jan-2024 22:03:13.282 정보 [main] org.apache.jasper.servlet.TldScanner.scanJars 적어도 하나의 JAR가 TLD들을 찾기 위해 스캔되었으나 아무 것도 찾지 못했습니다. 스캔했으나 TLD가 없는 JAR들의 전체 목록을 보시려면, 로그 레벨을 디버그 레벨로 설정하십시오. 스캔 과정에서 불필요한 JAR들을 건너뛰면, 시스템 시작 시간과 JSP 컴파일 시간을 단축시킬 수 있습니다.
+28-Jan-2024 22:03:13.745 정보 [main] org.apache.catalina.startup.HostConfig.deployWAR 웹 애플리케이션 아카이브 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/cju_stt-1.0.0-BUILD-SNAPSHOT.war]의 배치가 [779] 밀리초에 완료되었습니다.
+28-Jan-2024 22:03:13.745 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/manager]을(를) 배치합니다.
+28-Jan-2024 22:03:13.761 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/manager]에 대한 배치가 [16] 밀리초에 완료되었습니다.
+28-Jan-2024 22:03:13.761 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/host-manager]을(를) 배치합니다.
+28-Jan-2024 22:03:13.772 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/host-manager]에 대한 배치가 [11] 밀리초에 완료되었습니다.
+28-Jan-2024 22:03:13.772 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/examples]을(를) 배치합니다.
+28-Jan-2024 22:03:13.839 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/examples]에 대한 배치가 [67] 밀리초에 완료되었습니다.
+28-Jan-2024 22:03:13.839 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/docs]을(를) 배치합니다.
+28-Jan-2024 22:03:13.848 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/docs]에 대한 배치가 [8] 밀리초에 완료되었습니다.
+28-Jan-2024 22:03:13.848 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/ROOT]을(를) 배치합니다.
+28-Jan-2024 22:03:13.855 정보 [main] org.apache.catalina.startup.HostConfig.deployDirectory 웹 애플리케이션 디렉토리 [/home/jongho/Spring_project/CJU_STT/tomcat/apache-tomcat-9.0.85/webapps/ROOT]에 대한 배치가 [7] 밀리초에 완료되었습니다.
+28-Jan-2024 22:03:13.858 정보 [main] org.apache.coyote.AbstractProtocol.start 프로토콜 핸들러 ["http-nio-8090"]을(를) 시작합니다.
+28-Jan-2024 22:03:13.865 정보 [main] org.apache.catalina.startup.Catalina.start 서버가 [2162] 밀리초 내에 시작되었습니다.
+28-Jan-2024 22:06:56.384 정보 [main] org.apache.catalina.core.StandardServer.await 셧다운 포트를 통해 유효한 셧다운 명령을 받았습니다. 서버 인스턴스를 중지시킵니다.
+28-Jan-2024 22:06:56.384 정보 [main] org.apache.coyote.AbstractProtocol.pause 프로토콜 핸들러 ["http-nio-8090"]을(를) 일시 정지 중
+28-Jan-2024 22:06:56.387 정보 [main] org.apache.catalina.core.StandardService.stopInternal 서비스 [Catalina]을(를) 중지시킵니다.
+28-Jan-2024 22:06:56.407 정보 [main] org.apache.coyote.AbstractProtocol.stop 프로토콜 핸들러 ["http-nio-8090"]을(를) 중지시킵니다.
+28-Jan-2024 22:06:56.410 정보 [main] org.apache.coyote.AbstractProtocol.destroy 프로토콜 핸들러 ["http-nio-8090"]을(를) 소멸시킵니다.

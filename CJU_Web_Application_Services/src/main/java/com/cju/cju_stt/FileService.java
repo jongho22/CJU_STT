@@ -5,21 +5,29 @@ import java.io.File;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
+import javax.servlet.ServletContext;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.io.ResourceLoader;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
 @Service
 public class FileService {
+	
+	@Autowired
+	private ServletContext servletContext;
 
 	public String convertAudioToText(MultipartFile audioFile) {
 		System.out.println("[FileService] convertAudioToText()");
 		
 		String resultText;
 		String orgFileName = audioFile.getOriginalFilename();
-		String realPath = "/home/jongho/바탕화면/";
+		String realPath = servletContext.getRealPath("/resources/download/");
 		String filePath = realPath+File.separator;
-		String saveFileName = System.currentTimeMillis()+orgFileName;
-       
+		String saveFileName = System.currentTimeMillis()+orgFileName;		
+		String PYTHON_PATH = servletContext.getRealPath("/resources/python/main.py");
+
        try {
     	   	  audioFile.transferTo(new File(filePath+saveFileName));
 	         System.out.println("[FileService] (Save File SUCCESS) => " + filePath+saveFileName);
@@ -28,7 +36,7 @@ public class FileService {
 	         e.printStackTrace();
 	      }
         
-		ProcessBuilder processBuilder = new ProcessBuilder("python3", "/home/jongho/바탕화면/main.py", saveFileName);
+		ProcessBuilder processBuilder = new ProcessBuilder("python3", PYTHON_PATH , saveFileName, filePath);
 		Process process;
 		
 		try {
@@ -42,10 +50,10 @@ public class FileService {
 			    
 			    // Result data
 			    while ((resultText = br.readLine()) != null) {
-			    	System.out.println("[FileService] (SUCCESS)");
+			    	System.out.println("[FileService] (SUCCESS) => " + saveFileName);
 			    	return resultText;
 	     	    }
-			    System.out.println("[FileService] (** FAIL **)");
+			    System.out.println("[FileService] (** FAIL **) => " + saveFileName);
 			    return "문제가 발생하였습니다.";
 			       
 			} catch (InterruptedException e) {
