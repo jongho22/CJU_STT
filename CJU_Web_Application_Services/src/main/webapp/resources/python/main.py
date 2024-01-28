@@ -17,7 +17,7 @@ if __name__ == "__main__":
         #print(os.getcwd())
         print(result['text'])
     except :
-        #print("다른 작업으로 인해 서버가 과부하 되었습니다.")
-        print("check" + os.getcwd())
+        print(os.getcwd() +"다른 작업으로 인해 서버가 과부하 되었습니다.")
+        #print("check" + os.getcwd())
     
     

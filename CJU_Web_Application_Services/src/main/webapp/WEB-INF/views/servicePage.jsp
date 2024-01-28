@@ -71,7 +71,7 @@
 	            	  changePage();
 	                var result = JSON.parse(data);
 		            typeEffect(result.result, 50);
-		            console.log("변환 성공!!");
+		            console.log("변환 성공");
 	            },
 	            error: function (jqXHR, textStatus, errorThrown) {
 	            	  console.log("AJAX 호출 실패");
