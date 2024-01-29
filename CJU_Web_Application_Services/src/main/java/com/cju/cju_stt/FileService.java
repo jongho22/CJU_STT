@@ -27,55 +27,60 @@ public class FileService {
 		String filePath = realPath+File.separator;
 		String saveFileName = System.currentTimeMillis()+orgFileName;		
 		String PYTHON_PATH = servletContext.getRealPath("/resources/python/main.py");
-
-       try {
-    	   	  audioFile.transferTo(new File(filePath+saveFileName));
-	         System.out.println("[FileService] (Save File SUCCESS) => " + filePath+saveFileName);
-	      }catch(Exception e) {
-	    	  System.out.println("[FileService] (Save File FAIL!) => " + saveFileName);
-	         e.printStackTrace();
-	      }
-        
-		ProcessBuilder processBuilder = new ProcessBuilder("python3", PYTHON_PATH , saveFileName, filePath);
-		Process process;
 		
-		try {
-			process = processBuilder.start();
-			System.out.println("[FileService] (Start process) => " + saveFileName);
+		if (audioFile.isEmpty()) {
+			return "변환하실 음성파일을 선택해주세요.";
+			
+		} else {
+			try {
+	    	   	  audioFile.transferTo(new File(filePath+saveFileName));
+		         System.out.println("[FileService] (Save File SUCCESS) => " + filePath+saveFileName);
+		      }catch(Exception e) {
+		    	  System.out.println("[FileService] (Save File FAIL!) => " + saveFileName);
+		         e.printStackTrace();
+		      }
+	        
+			ProcessBuilder processBuilder = new ProcessBuilder("python3", PYTHON_PATH , saveFileName, filePath);
+			Process process;
 			
 			try {
-			    int exitval = process.waitFor();
-			    // InputStream inputStream = process.getInputStream();
-			    BufferedReader br = new BufferedReader(new InputStreamReader(process.getInputStream(),"UTF-8"));
-			    
-			    // Result data
-			    while ((resultText = br.readLine()) != null) {
-			    	System.out.println("[FileService] (SUCCESS) => " + saveFileName);
-			    	return resultText;
-	     	    }
-			    System.out.println("[FileService] (** FAIL **) => " + saveFileName);
-			    return "문제가 발생하였습니다.";
-			       
-			} catch (InterruptedException e) {
+				process = processBuilder.start();
+				System.out.println("[FileService] (Start process) => " + saveFileName);
+				
+				try {
+				    int exitval = process.waitFor();
+				    // InputStream inputStream = process.getInputStream();
+				    BufferedReader br = new BufferedReader(new InputStreamReader(process.getInputStream(),"UTF-8"));
+				    
+				    // Result data
+				    while ((resultText = br.readLine()) != null) {
+				    	System.out.println("[FileService] (SUCCESS) => " + saveFileName);
+				    	return resultText;
+		     	    }
+				    System.out.println("[FileService] (** FAIL **) => " + saveFileName);
+				    return "문제가 발생하였습니다.";
+				       
+				} catch (InterruptedException e) {
+					e.printStackTrace();
+					return null;
+				} 
+				
+			} catch (IOException e) {
+				System.out.println("[FileService] Fail processBuilder start.");
 				e.printStackTrace();
 				return null;
-			} 
-			
-		} catch (IOException e) {
-			System.out.println("[FileService] Fail processBuilder start.");
-			e.printStackTrace();
-			return null;
-			
-		} finally {
-			// Delete upload file
-		    File delFile = new File(filePath+saveFileName);
-		    
-		    if(delFile.exists()) {
-		    	delFile.delete();
-		    	System.out.println("[FileService] (파일삭제 성공) => " + saveFileName);
-		    } else {
-		    	System.out.println("[FileService] (파일이 존재하지 않습니다.)");
-		    }
+				
+			} finally {
+				// Delete upload file
+			    File delFile = new File(filePath+saveFileName);
+			    
+			    if(delFile.exists()) {
+			    	delFile.delete();
+			    	System.out.println("[FileService] (파일삭제 성공) => " + saveFileName);
+			    } else {
+			    	System.out.println("[FileService] (파일이 존재하지 않습니다.)");
+			    }
+			}
 		}
 	}
 }

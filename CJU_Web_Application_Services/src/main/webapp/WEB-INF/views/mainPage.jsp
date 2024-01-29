@@ -20,34 +20,33 @@
 	    </p>
   	</div>
   	<h3 id="guide_scroll" style="padding-top:100pt">사용 방법이 궁금하신가요?</h3>
-  	<img src="<c:url value='/resources/img/down.png'/>" width="30"/>
+  	<img class="down" src="<c:url value='/resources/img/down.png'/>" width="30"/>
   	
   	<div style="margin: 40% 0 5% 0;">
-	  	<h1>사용 방법</h1>
+	  	<h1>사용 방법 및 안내사항</h1>
 	  	<br>
 	  	<div id="guide_text" class="rounded" style="background-color: EEEDEB; padding:2px 30px 2px 30px">
 		    <div style="margin:40pt;">
+		    	<h3 style="color:black; text-align:left">사용 방법</h3>
 			    <hr style="color:black">
 		 	    <p style="color:black; text-align:left; padding-left:10pt;"><b>1. 텍스트 '변환 버튼'을 클릭해주세요.</b></p>
 		 	    <p style="color:black; text-align:left; padding-left:10pt;"><b>2. 변환할 음성 파일을 선택해주세요.</b></p>
 		 	    <p style="color:black; text-align:left; padding-left:10pt;"><b>3. '변환버튼'을 누르면 작업이 시작됩니다.</b></p>
+		 	    <br>
+		 	    <h3 style="color:black; text-align:left;">안내 사항</h3>
+		 	    <hr style="color:black">
+		 	    <div class="row">
+			 	    <div class="col-6">
+			 	    	<p style="color:black; text-align:left; padding-left:10pt;"><b>1. 현재 .mp3 확장자만 변환 가능합니다.</b></p>
+			 	    	<p style="color:black; text-align:left; padding-left:10pt;"><b>2. 업로드하는 음성 파일은 서버에 저장되지 않습니다.</b></p>
+			 	    	<p style="color:black; text-align:left; padding-left:10pt;"><b>3. 작업 속도 : (1시간 음성 파일 = 약 10분)</b></p>
+			 	    </div>
+			 	    <div class="col-6">
+			 	       <br>
+			 	    	<img id="nica_logo" src="<c:url value='/resources/img/nica.png'/>"  width="30%"/>
+			 	    </div>
+		 	    </div>
 		    </div>
-		    
-	 	    <div class="row" style="margin:40pt;">
-	 	    	<div class="col-6">
-		 	    	<h3 style="color:black;">안내사항</h3>
-				    <hr style="color:black; margin: 0px auto;">
-				    <br>
-				    <p style="color:black;">업로드하는 파일이 저장되지 않습니다.</p>
-				    <p style="color:black;">(1시간 음성 파일 = 약 10분.)</p>
-		 	    </div>
-		 	    <div class="col-6">
-		 	    	<h3 style="color:black;">문의사항</h3>
-		 	    	<hr style="color:black; margin: 0px auto;">
-		 	    	<br>
-		 	    	<img id="nica_logo" src="<c:url value='/resources/img/nica.png'/>"  width="30%"/>
-		 	    </div>
-	 	    </div>
 	  	</div>
 	  </div>
   </main>
