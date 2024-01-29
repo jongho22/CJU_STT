@@ -1,8 +1,10 @@
-<!-- 한글 적용 -->
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<header class="mb-auto">
+
+<header class="mb-auto" style="padding-right: 20px;">
     <div>
-      <h3 class="float-md-start mb-0">청주대학교 STT 서비스</h3>
+      <img class="float-md-start mb-0" src="<c:url value='/resources/img/logo.svg'/>" width="300"/>
+      <!-- h3 class="float-md-start mb-0">청주대학교 STT 서비스</h3> -->
+      <br>
       <nav class="nav nav-masthead justify-content-center float-md-end">
         <a class="nav-link fw-bold py-1 px-0 active" style="color:white" href="/cju_stt">Home</a>
         &nbsp; &nbsp;
