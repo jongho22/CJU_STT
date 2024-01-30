@@ -80,6 +80,4 @@
  	<mime-type>image/x-icon</mime-type>
  </mime-mapping>
  
- <mvc:resources mapping="/resources/**" location="/resources/" />
- 
 </web-app>

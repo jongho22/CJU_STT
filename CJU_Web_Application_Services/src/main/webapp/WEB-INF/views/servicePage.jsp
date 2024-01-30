@@ -1,14 +1,13 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ page session="false" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 
 <html>
-<!-- 한글 적용 -->
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ include file="head.jsp" %>
 
 <body class="d-flex h-100 text-center text-bg-dark">
 
-<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+<div class="cover-container d-flex w-100 h-100 mx-auto flex-column" style="margin:5pt">
   <%@ include file="header.jsp" %>
 
   <main class="px-3">
@@ -20,16 +19,14 @@
 		<input class="form-control" type="file" name="file">
 	  </div>
 	  </br>
-     <input id="submit_button" type="submit" class="btn btn-lg btn-light fw-bold border-light bg-white" value="변환 시작" />
-     <img id="loding_gif" src='<c:url value="/resources/img/loding.gif"/>' width="100"/ style="display: none;">
+     <input id="submit_button" type="submit" class="btn btn-lg btn-light fw-bold border-white" value="변환 시작" />
+     <img id="loding_gif" src='<c:url value="/resources/img/loding.gif"/>' width="100" style="display: none;">
     </form>
     
-    <textarea class="form-control" id="typed-text" rows="10" style="display: none;"></textarea>
+    <textarea class="form-control" id="typed-text" rows="10" readonly style="display: none;"></textarea>
   
   </main>
-
   <%@ include file="footer.jsp" %>
-  
 </div>
 
 <script>
@@ -40,7 +37,7 @@
 	  		 element.innerHTML += text.charAt(i);
 	  		 i++;
 	  		 
-	  		 if (i> text.lenght) {
+	  		 if (i> text.length) {
 	  			 clearInterval(typingInterval);
 	  		 }
 	  	 }, speed);
