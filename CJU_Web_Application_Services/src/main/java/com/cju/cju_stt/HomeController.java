@@ -58,8 +58,31 @@ public class HomeController {
 		System.out.println("[HomeController] fileUpload()");
 		
 		String result = fileService.convertAudioToText(file);
-		// System.out.println("[HomeController] " + result);
+		/* System.out.println("apiCheck 결과 : " + apiCheck); */
 		
 		return "{ \"result\": \" " + result + " \" }";	
 	}
+	
+	// API 파일 업로드 및 변환 작업
+	@RequestMapping(value = "/uploadToAPI", method = {RequestMethod.POST}, produces = "application/text; charset=utf8")
+	@ResponseBody
+	public String apiFileUpload(@RequestParam(value="file") MultipartFile file, RedirectAttributes redirectAttributes) {
+		System.out.println("[HomeController] apiFileUpload()");
+		
+		String result = fileService.convertAudioToText_API(file);
+		
+		return "{ \"result\": \" " + result + " \" }";	
+	}
+	
+	// API 사용 페이지 요청
+	/*
+	 * @GetMapping("/serviceAPI") public String serviceAPI() {
+	 * System.out.println("[HomeController] serviceAPI()");
+	 * 
+	 * String nextPage = "servicePageAPI";
+	 * 
+	 * return nextPage; }
+	 */
+	
+	
 }
