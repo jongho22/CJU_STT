@@ -202,7 +202,7 @@ public class FileService {
 	            int byteRead = is.read(buffer);
 	            responBody = new String(buffer);
 	            
-	            // Json 형식 받아오기
+	            // Json 형식 받아오
 	            Map<String, Object> responseMap = gson.fromJson(responBody, Map.class);
 	            Map<String, Object> returnObject = (Map<String, Object>) responseMap.get("return_object");
 	            String recognizedText = (String) returnObject.get("recognized");
