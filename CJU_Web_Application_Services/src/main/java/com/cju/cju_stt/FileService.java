@@ -8,6 +8,7 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
+import java.net.URI;
 import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -105,8 +106,8 @@ public class FileService {
 		
 		// API 설정
 		String openApiURL = "http://aiopen.etri.re.kr:8000/WiseASR/Recognition";
-		String accessKey = "b1d4eb07-44f8-42cc-899b-bc9ab42d76fe";    // 발급받은 API Key
-		String languageCode = "korean";     // 언어 코드
+		String accessKey = "b1d4eb07-44f8-42cc-899b-bc9ab42d76fe";   
+		String languageCode = "korean";     
 		
 		// 파일 설정 
 		String orgFileName = audioFile.getOriginalFilename();
@@ -127,6 +128,51 @@ public class FileService {
 			// PCM 형식 변환
 			try {
 	    	   	  audioFile.transferTo(new File(audioFilePath));
+	    	   	  try {
+	    	   	  		String ffprobeCommand = "ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1:nokey=1 " + audioFilePath;
+	    	   	  		ProcessBuilder processBuilder = new ProcessBuilder("bash", "-c", ffprobeCommand);
+	    	   	  		Process process = processBuilder.start();
+	    	   	  		
+	    	   	  		BufferedReader reader = new BufferedReader(new InputStreamReader(process.getInputStream()));
+	    	   	  		String output = reader.readLine();
+	    	   	  		if (output != null) {
+			                double durationInSeconds = Double.parseDouble(output);
+			                System.out.println(durationInSeconds);
+			                if(durationInSeconds>20) {
+	    	   	  					System.out.println("20초 이상");
+	    	   	  					String outputFormat = orgFileName+"_%03d.mp3";
+	    	   	  					String ffmpegCommand = String.format("ffmpeg -i %s -f segment -segment_time 19 -c copy %s", audioFilePath, audioFilePath+outputFormat);
+					    	   		try {
+					    	   			 System.out.println(ffmpegCommand);
+							            ProcessBuilder processBuilder2 = new ProcessBuilder("bash", "-c", ffmpegCommand);
+							            Process process2 = processBuilder2.start();
+							            process2.waitFor();
+							            
+							            int countFile= (int) Math.ceil(durationInSeconds / 19);
+							            FFmpeg ffmpeg = new FFmpeg("/usr/bin/ffmpeg");
+							            
+							            for(int i=0;i<=countFile;i++){
+							            	
+//							            	mp3ToPcm(ffmpeg, audioFilePath, filePath+orgFileName+"_"+i+".pcm");
+//							            	System.out.println(filePath+orgFileName+"_"+i+".pcm");
+//							            	convertText(filePath+orgFileName+"_"+i+".pcm", audioContents, audioFilePath, saveFileName, argument, languageCode, request, openApiURL, accessKey, gson);
+							         
+							             }
+							 			  
+							            System.out.println("Audio splitting completed.");
+							        } catch (IOException | InterruptedException e) {
+							            e.printStackTrace();
+							        }
+					    	   } 
+			                  
+			            } else {
+			                System.out.println("[FileService] 음성 길이 계산 실패");
+			            }
+			            
+			            
+	    	   	  } catch (Exception e) {
+            			e.printStackTrace();
+	    	   	  }
 	    	   	  
 	    	   	  FFmpeg ffmpeg = new FFmpeg("/usr/bin/ffmpeg");
 	    	   	  
@@ -202,7 +248,7 @@ public class FileService {
 	            int byteRead = is.read(buffer);
 	            responBody = new String(buffer);
 	            
-	            // Json 형식 받아오
+	            // Json 형식 
 	            Map<String, Object> responseMap = gson.fromJson(responBody, Map.class);
 	            Map<String, Object> returnObject = (Map<String, Object>) responseMap.get("return_object");
 	            String recognizedText = (String) returnObject.get("recognized");
@@ -214,8 +260,12 @@ public class FileService {
 	 
 	        } catch (MalformedURLException e) {
 	            e.printStackTrace();
+	            return "API 서버 연결에 문제가 있습니다.";
+	            
 	        } catch (IOException e) {
 	            e.printStackTrace();
+	            return "파일의 길이가 20초를 넘겼습니다.";
+	            
 	        } finally {
 			    File delFile = new File(audioFilePath);
 			    File delPcmFile = new File(savePcmFilePath);
@@ -235,6 +285,97 @@ public class FileService {
 			    }
 			}
 		}
-	    return null;
 	}
+	
+	public void mp3ToPcm (FFmpeg ffmpeg, String audioFilePath, String savePcmFilePath) {
+	    	   	  
+	   	try {
+            // FFmpeg 실행
+            FFmpegBuilder builder = new FFmpegBuilder()
+                    .setInput(audioFilePath) 
+                    .addOutput(savePcmFilePath) 
+                    .setAudioCodec("pcm_s16le")
+                    .setFormat("s16le")
+                        .setAudioChannels(1)
+                        .setAudioSampleRate(16000)
+                        .done();
+   
+                FFmpegExecutor executor = new FFmpegExecutor(ffmpeg);
+                executor.createJob(builder).run();
+       } catch (IOException e) {
+                e.printStackTrace();
+       	}
+ 		System.out.println("[FileService] (Make PCM File SUCCESS) => " + savePcmFilePath);
+	}
+	
+	public void convertText(String savePcmFilePath, String audioContents, String audioFilePath, String saveFileName, Map<String, String> argument, String languageCode, Map<String, Object> request, String openApiURL, String accessKey, Gson gson) {
+		// 음성파일 바이트 변환
+			try {
+				 System.out.println(savePcmFilePath);
+	            Path path = Paths.get(savePcmFilePath);
+	            byte[] audioBytes = Files.readAllBytes(path);
+	            audioContents = Base64.getEncoder().encodeToString(audioBytes);
+	            
+	        } catch (IOException e) {
+	            e.printStackTrace();
+	            File delFile = new File(audioFilePath);
+	            if(delFile.exists()) {
+				    	delFile.delete();
+				    	System.out.println("[FileService] (파일삭제 성공) => " + saveFileName);
+				    } else {
+				    	System.out.println("[FileService] (파일이 존재하지 않습니다.)");
+				    }
+	           
+	        }
+	        
+	        // API 요청값 입력
+			argument.put("language_code", languageCode);
+	       argument.put("audio", audioContents);
+	       request.put("argument", argument);
+	       
+	       URL url;
+	       Integer responseCode = null;
+	       String responBody = null;
+	       
+	       // API 요청 및 결과 리턴
+	       try {
+	            url = new URL(openApiURL);
+	            HttpURLConnection con = (HttpURLConnection)url.openConnection();
+	            con.setRequestMethod("POST");
+	            con.setDoOutput(true);
+	            con.setRequestProperty("Content-Type", "application/json; charset=UTF-8");
+	            con.setRequestProperty("Authorization", accessKey);
+	            
+	            DataOutputStream wr = new DataOutputStream(con.getOutputStream());
+	            wr.write(gson.toJson(request).getBytes("UTF-8"));
+	            wr.flush();
+	            wr.close();
+	            
+	            responseCode = con.getResponseCode();
+	            InputStream is = con.getInputStream();
+	            byte[] buffer = new byte[is.available()];
+	            int byteRead = is.read(buffer);
+	            responBody = new String(buffer);
+	            
+	            // Json 형식 
+	            Map<String, Object> responseMap = gson.fromJson(responBody, Map.class);
+	            Map<String, Object> returnObject = (Map<String, Object>) responseMap.get("return_object");
+	            String recognizedText = (String) returnObject.get("recognized");
+	            
+	            System.out.println("[FileService] [responseCode] " + responseCode);
+	            System.out.println("[FileService] [resultText] " + recognizedText);
+	    
+	           
+	 
+	        } catch (MalformedURLException e) {
+	           
+	            
+	            
+	        } catch (IOException e) {
+	       
+	            
+            
+	        }
+	}
+	
 }
