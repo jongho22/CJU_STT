@@ -111,8 +111,8 @@
 			            contentType: false,
 			            success: function (data) {
 			            	  changePage();
-			                var result = data;
-				            typeEffect(result, 50);
+			            	  var result = JSON.parse(data);
+				            typeEffect(result.result, 50);
 				            console.log(data);
 				            console.log("변환 성공");
 			            },
