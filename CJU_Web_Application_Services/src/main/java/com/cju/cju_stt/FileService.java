@@ -116,11 +116,11 @@ public class FileService {
 
 		// 파일 설정
 		String orgFileName 	  = audioFile.getOriginalFilename();
-		String baseName 		  = FilenameUtils.getBaseName(orgFileName);
+		String baseName 		  = System.currentTimeMillis() + FilenameUtils.getBaseName(orgFileName);
 		String realPath 		  = servletContext.getRealPath("/resources/download/");
 		String filePath 		  = realPath + File.separator;
 		String saveFileName 	  = System.currentTimeMillis() + orgFileName;
-		String savePcmFilePath = filePath + System.currentTimeMillis() + "output.pcm";
+		String savePcmFilePath = filePath + baseName + ".pcm";
 		String audioFilePath   = filePath + saveFileName;
 		String audioContents   = null;
 		
@@ -147,11 +147,12 @@ public class FileService {
 						double durationInSeconds = Double.parseDouble(output);
 						System.out.println("[FileService] 음성파일 길이 : " + durationInSeconds);
 						
+						// 20초가 넘어가는 음성파일
 						if (durationInSeconds > 20) {
 							System.out.println("[FileService] 20초 이상의 파일입니다. 분할을 시작합니다.");
-							String outputFormat = orgFileName + "_%03d.mp3";
+							String outputFormat = baseName  + "%03d.mp3";
 							String ffmpegCommand = String.format("ffmpeg -i %s -f segment -segment_time 18 -c copy %s",
-									audioFilePath, audioFilePath + outputFormat);
+									audioFilePath, filePath + outputFormat);
 							try {
 								System.out.println(ffmpegCommand);
 								ProcessBuilder processBuilder2 = new ProcessBuilder("bash", "-c", ffmpegCommand);
@@ -159,51 +160,47 @@ public class FileService {
 								process2.waitFor();
 
 								int countFile = (int) Math.ceil(durationInSeconds / 18);
-								for (int i = 0; i <= countFile; i++) {
+								String resultText = null;
+								FFmpeg ffmpeg = new FFmpeg("/usr/bin/ffmpeg");
 								
+								// 분할 개수 만큼 API 요청 실행
+								for (int i = 0; i <= countFile; i++) {
+									resultText = convertText(savePcmFilePath, audioContents, audioFilePath,
+									argument, languageCode, request, openApiURL, accessKey, gson, ffmpeg);
+									System.out.println(resultText);
 								}
 								System.out.println("Audio splitting completed.");
-								return null;
+								return resultText;
+								
 							} catch (IOException | InterruptedException e) {
 								e.printStackTrace();
 								return "음성파일을 분할하는 과정에서 문제가 발생하였습니다.";
 							}
-						} else {
+						} else { // 20초가 넘어가지 않는 음성파일
+							System.out.println("[FileService] 20초 미만의 파일입니다.");
+							
 							// API 요청 실행
 							try {
 								FFmpeg ffmpeg = new FFmpeg("/usr/bin/ffmpeg");
-								String resultText = convertText(savePcmFilePath, audioContents, audioFilePath, saveFileName,
+								String resultText = convertText(savePcmFilePath, audioContents, audioFilePath,
 								argument, languageCode, request, openApiURL, accessKey, gson, ffmpeg);
 								return resultText;
 								
 							} catch (IOException e) {
 								e.printStackTrace();
+								delFile(audioFilePath);
+								delFile(savePcmFilePath);
 								return "API 요청 과정에서 문제가 발생하였습니다.";
-							} finally {
-								File delFile = new File(audioFilePath);
-								File delPcmFile = new File(savePcmFilePath);
-					
-								if (delFile.exists()) {
-									delFile.delete();
-									System.out.println("[FileService] (원본 파일삭제 성공) => " + saveFileName);
-								} else {
-									System.out.println("[FileService] (원본 파일이 존재하지 않습니다.)");
-								}
-					
-								if (delPcmFile.exists()) {
-									delPcmFile.delete();
-									System.out.println("[FileService] (PCM 파일삭제 성공)");
-								} else {
-									System.out.println("[FileService] (PCM 파일이 존재하지 않습니다.)");
-								}
-							}
+							} 
 						}	
 					} else {
 						System.out.println("[FileService] 음성 길이 계산 실패");
+						delFile(audioFilePath);
 						return "음성파일의 길이를 계산하는데 문제가 발생하였습니다.";
 					}
 				} catch (Exception e) {
 					e.printStackTrace();
+					delFile(audioFilePath);
 					return "음성파일을 분석하는 과정에서 문제가 발생하였습니다.";
 				}
 			} catch (Exception e) {
@@ -223,9 +220,20 @@ public class FileService {
 		FFmpegExecutor executor = new FFmpegExecutor(ffmpeg);
 		executor.createJob(builder).run();
 	}
-
+	
+	// 파일 삭제
+	public void delFile(String audioFilePath) {
+		File delFile = new File(audioFilePath);
+		if (delFile.exists()) {
+			delFile.delete();
+			System.out.println("[FileService] (음성파일 파일삭제 성공)");
+		} else {
+			System.out.println("[FileService] (음성파일이 존재하지 않습니다.)");
+		}
+	}
+	
 	// API서버에 요청
-	public String convertText(String savePcmFilePath, String audioContents, String audioFilePath, String saveFileName,
+	public String convertText(String savePcmFilePath, String audioContents, String audioFilePath,
 			Map<String, String> argument, String languageCode, Map<String, Object> request, String openApiURL,
 			String accessKey, Gson gson, FFmpeg ffmpeg) throws MalformedURLException, ProtocolException, IOException{
 		
@@ -240,20 +248,14 @@ public class FileService {
 		
 		// 음성파일 바이트 변환
 		try {
-			System.out.println(savePcmFilePath);
 			Path path = Paths.get(savePcmFilePath);
 			byte[] audioBytes = Files.readAllBytes(path);
 			audioContents = Base64.getEncoder().encodeToString(audioBytes);
+			System.out.println("[FileService] (음성파일 바이트 변환 성공)");
 
 		} catch (IOException e) { // 음성파일 바이트 변환에 실패 했을 경우 음성파일 삭제
 			e.printStackTrace();
-			File delFile = new File(audioFilePath);
-			if (delFile.exists()) {
-				delFile.delete();
-				System.out.println("[FileService] (파일삭제 성공) => " + saveFileName);
-			} else {
-				System.out.println("[FileService] (파일이 존재하지 않습니다.)");
-			}
+			delFile(audioFilePath);
 		}
 
 		// API 요청값 입력
@@ -292,8 +294,10 @@ public class FileService {
 
 		System.out.println("[FileService] [responseCode] " + responseCode);
 		System.out.println("[FileService] [resultText] " + recognizedText);
-
+		
+		delFile(audioFilePath);
+		delFile(savePcmFilePath);
+	
 		return recognizedText;
 	}
-
 }
