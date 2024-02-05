@@ -23,6 +23,8 @@ import javax.servlet.ServletContext;
 import org.apache.commons.io.FilenameUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
 import com.google.gson.Gson;
@@ -150,11 +152,10 @@ public class FileService {
 						// 20초가 넘어가는 음성파일
 						if (durationInSeconds > 20) {
 							System.out.println("[FileService] 20초 이상의 파일입니다. 분할을 시작합니다.");
-							String outputFormat = baseName  + "%03d.mp3";
+							String outputFormat = baseName  + "%d.mp3";
 							String ffmpegCommand = String.format("ffmpeg -i %s -f segment -segment_time 18 -c copy %s",
 									audioFilePath, filePath + outputFormat);
 							try {
-								System.out.println(ffmpegCommand);
 								ProcessBuilder processBuilder2 = new ProcessBuilder("bash", "-c", ffmpegCommand);
 								Process process2 = processBuilder2.start();
 								process2.waitFor();
@@ -165,7 +166,7 @@ public class FileService {
 								
 								// 분할 개수 만큼 API 요청 실행
 								for (int i = 0; i <= countFile; i++) {
-									resultText = convertText(savePcmFilePath, audioContents, audioFilePath,
+									resultText = convertText(savePcmFilePath, audioContents, filePath + baseName + i + ".mp3" ,
 									argument, languageCode, request, openApiURL, accessKey, gson, ffmpeg);
 									System.out.println(resultText);
 								}
@@ -252,7 +253,7 @@ public class FileService {
 			byte[] audioBytes = Files.readAllBytes(path);
 			audioContents = Base64.getEncoder().encodeToString(audioBytes);
 			System.out.println("[FileService] (음성파일 바이트 변환 성공)");
-
+			
 		} catch (IOException e) { // 음성파일 바이트 변환에 실패 했을 경우 음성파일 삭제
 			e.printStackTrace();
 			delFile(audioFilePath);
@@ -299,5 +300,5 @@ public class FileService {
 		delFile(savePcmFilePath);
 	
 		return recognizedText;
-	}
+	}	
 }

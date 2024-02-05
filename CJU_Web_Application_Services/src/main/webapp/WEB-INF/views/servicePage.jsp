@@ -94,11 +94,8 @@
 				            typeEffect(result.result, 50);
 				            console.log("변환 성공");
 			            },
-			            error: function (jqXHR, textStatus, errorThrown) {
+			            error: function () {
 			            	  console.log("AJAX 호출 실패");
-			                console.log("상태 코드: " + jqXHR.status);
-			                console.log("에러 타입: " + textStatus);
-			                console.log("에러 내용: " + errorThrown);
 			            }
 			        });
 			 } else {
@@ -115,6 +112,8 @@
 				            typeEffect(result.result, 50);
 				            console.log(data);
 				            console.log("변환 성공");
+				            const eventSource = new EventSource('/cju_stt/uploadToAPI');
+				            
 			            },
 			            error: function (jqXHR, textStatus, errorThrown) {
 			            	  console.log("AJAX 호출 실패");
