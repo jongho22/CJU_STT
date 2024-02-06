@@ -43,10 +43,10 @@ public class HomeController {
 		System.out.println("[HomeController] fileUpload()");
 		
 		String result = fileService.convertAudioToText(file);
-		/* System.out.println("apiCheck 결과 : " + apiCheck); */
+		/*  System.out.println("apiCheck 결과 : " + apiCheck); */
 		
 		return "{ \"result\": \" " + result + " \" }";	
-	}
+	} 
 	
 	// API 파일 업로드 및 변환 작업
 	@RequestMapping(value = "/uploadToAPI", method = {RequestMethod.POST}, produces = "application/text; charset=utf8")
