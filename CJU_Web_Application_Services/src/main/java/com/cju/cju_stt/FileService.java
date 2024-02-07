@@ -168,7 +168,6 @@ public class FileService {
 								for (int i = 0; i <= countFile; i++) {
 									resultText = convertText(savePcmFilePath, audioContents, filePath + baseName + i + ".mp3" ,
 									argument, languageCode, request, openApiURL, accessKey, gson, ffmpeg);
-									System.out.println(resultText);
 								}
 								System.out.println("Audio splitting completed.");
 								return resultText;

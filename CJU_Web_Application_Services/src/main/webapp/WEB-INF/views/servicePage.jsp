@@ -58,73 +58,68 @@
 		$('#apiGuideText').hide();
 	}
 	
-	$(document).ready(function () {
-		
-		$('#apiCheck').click(function(){
-			const checkButton = $('#apiCheck').val();
-			if (checkButton == "false") {
-				$('#apiCheck').val("true");
-			} else {
-				$('#apiCheck').val("false");
-			}
-		});
-		
-		$("#uploadForm").submit(function (event) {
-			 event.preventDefault();
-			 $('#submit_button').remove();
-			 $('#service_title').text("작업 진행중");
-			 $('#explan_text').text("파일 용량이 크면 오래걸리니 기다려주세요.");
-			 $('#loding_gif').show();
-			 
-	        const formData = new FormData(this);
-	        const apiCheck = $('#apiCheck').val();
-			 console.log(apiCheck);
-			 
-			 if (apiCheck == "false") {
-				 console.log("서버 사용");
-				 $.ajax({
-			            url: "/cju_stt/upload",
-			            type: "POST",
-			            data: formData,
-			            processData: false,
-			            contentType: false,
-			            success: function (data) {
-			            	  changePage();
-			                var result = JSON.parse(data);
-				            typeEffect(result.result, 50);
-				            console.log("변환 성공");
-			            },
-			            error: function () {
-			            	  console.log("AJAX 호출 실패");
-			            }
-			        });
-			 } else {
-				 console.log("API 사용");
-				 $.ajax({
-			            url: "/cju_stt/uploadToAPI",
-			            type: "POST",
-			            data: formData,
-			            processData: false,
-			            contentType: false,
-			            success: function (data) {
-			            	  changePage();
-			            	  var result = JSON.parse(data);
-				            typeEffect(result.result, 50);
-				            console.log(data);
-				            console.log("변환 성공");
-				            const eventSource = new EventSource('/cju_stt/uploadToAPI');
-				            
-			            },
-			            error: function (jqXHR, textStatus, errorThrown) {
-			            	  console.log("AJAX 호출 실패");
-			                console.log("상태 코드: " + jqXHR.status);
-			                console.log("에러 타입: " + textStatus);
-			                console.log("에러 내용: " + errorThrown);
-			            }
-			        });
-			 }
-		});
-    });
+	$('#apiCheck').click(function(){
+		const checkButton = $('#apiCheck').val();
+		if (checkButton == "false") {
+			$('#apiCheck').val("true");
+		} else {
+			$('#apiCheck').val("false");
+		}
+	});
+	
+	$("#uploadForm").submit(function (event) {
+		 event.preventDefault();
+		 $('#submit_button').remove();
+		 $('#service_title').text("작업 진행중");
+		 $('#explan_text').text("파일 용량이 크면 오래걸리니 기다려주세요.");
+		 $('#loding_gif').show();
+		 
+        const formData = new FormData(this);
+        const apiCheck = $('#apiCheck').val();
+		 console.log(apiCheck);
+		 
+		 if (apiCheck == "false") {
+			 console.log("서버 사용");
+			 $.ajax({
+		            url: "/cju_stt/upload",
+		            type: "POST",
+		            data: formData,
+		            processData: false,
+		            contentType: false,
+		            success: function (data) {
+		            	  changePage();
+		                var result = JSON.parse(data);
+			            typeEffect(result.result, 50);
+			            console.log("변환 성공");
+		            },
+		            error: function () {
+		            	  console.log("AJAX 호출 실패");
+		            }
+		        });
+		 } else {
+			 console.log("API 사용");
+			 $.ajax({
+		            url: "/cju_stt/uploadToAPI",
+		            type: "POST",
+		            data: formData,
+		            processData: false,
+		            contentType: false,
+		            success: function (data) {
+		            	  changePage();
+		            	  var result = JSON.parse(data);
+			            typeEffect(result.result, 50);
+			            console.log("변환 성공");
+			       
+		            },
+		            error: function (jqXHR, textStatus, errorThrown) {
+		            	  console.log("AJAX 호출 실패");
+		                console.log("상태 코드: " + jqXHR.status);
+		                console.log("에러 타입: " + textStatus);
+		                console.log("에러 내용: " + errorThrown);
+		            }
+		        });
+		 }
+	});
 </script>
 
 </body>
