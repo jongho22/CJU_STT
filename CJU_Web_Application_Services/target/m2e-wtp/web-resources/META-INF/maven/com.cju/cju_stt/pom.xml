@@ -161,6 +161,27 @@
 		    <version>0.6.2</version>
 		</dependency>
 		
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-websocket</artifactId>
+			<version>5.0.7.RELEASE</version> 
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/javax.websocket/javax.websocket-api -->
+		<dependency>
+			<groupId>javax.websocket</groupId>
+			<artifactId>javax.websocket-api</artifactId>
+			<version>1.1</version>
+			<scope>provided</scope>
+		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/org.springframework.security/spring-security-web -->
+		<dependency>
+		    <groupId>org.springframework.security</groupId>
+		    <artifactId>spring-security-web</artifactId>
+		    <version>6.2.1</version>
+		</dependency>
+		
 	</dependencies>
     <build>
         <plugins>
@@ -196,6 +217,15 @@
                 <version>1.2.1</version>
                 <configuration>
                     <mainClass>org.test.int1.Main</mainClass>
+                </configuration>
+            </plugin>
+            
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>3.2.0</version>
+                <configuration>
+                    <failOnMissingWebXml>false</failOnMissingWebXml>
                 </configuration>
             </plugin>
         </plugins>

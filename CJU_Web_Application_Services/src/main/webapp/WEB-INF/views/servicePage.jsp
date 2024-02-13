@@ -16,7 +16,7 @@
     <form id="uploadForm" method="post" enctype="multipart/form-data">
      <div class="container" style="width:40%">
 		<label id="explan_text" for="formFile" class="form-label">변환하실 음성파일을 넣어주세요.</label>
-		<input class="form-control" type="file" name="file">
+		<input class="form-control" id="fileInput" type="file" name="file">
 	  </div>
 	  <br>
 	  <div style="width:20%; margin:0 auto;">
@@ -76,7 +76,6 @@
 		 
         const formData = new FormData(this);
         const apiCheck = $('#apiCheck').val();
-		 console.log(apiCheck);
 		 
 		 if (apiCheck == "false") {
 			 console.log("서버 사용");
@@ -97,28 +96,70 @@
 		            }
 		        });
 		 } else {
-			 console.log("API 사용");
-			 $.ajax({
-		            url: "/cju_stt/uploadToAPI",
-		            type: "POST",
-		            data: formData,
-		            processData: false,
-		            contentType: false,
-		            success: function (data) {
-		            	  changePage();
-		            	  var result = JSON.parse(data);
-			            typeEffect(result.result, 50);
-			            console.log("변환 성공");
-			       
-		            },
-		            error: function (jqXHR, textStatus, errorThrown) {
-		            	  console.log("AJAX 호출 실패");
-		                console.log("상태 코드: " + jqXHR.status);
-		                console.log("에러 타입: " + textStatus);
-		                console.log("에러 내용: " + errorThrown);
-		            }
-		        });
-		 }
+			 
+			console.log("API 사용");
+
+			// 웹소켓 서버의 주소
+			const serverUrl = 'ws://203.252.230.243:8090/cju_stt/my-websocket';
+
+			// 웹소켓 연결 생성
+			const socket = new WebSocket(serverUrl);
+
+			// 웹소켓 연결이 열린 경우 발생하는 이벤트 처리
+			socket.onopen = function(event) {
+				console.log('웹소켓 연결이 열렸습니다.');
+				
+				var fileInput = document.getElementById("fileInput");
+				var file = fileInput.files[0];
+
+				var reader = new FileReader();
+				reader.onload = function(event) {
+					var arrayBuffer = event.target.result;
+					var byteArray = new Uint8Array(arrayBuffer);
+					console.log('바이트 배열:', byteArray);
+					socket.send(byteArray); // 파일 내용을 웹소켓을 통해 서버로 전송합니다.
+				};
+				reader.readAsArrayBuffer(file);
+				console.log("실행 확인"); 
+			};
+			// 웹소켓으로부터 메시지를 받았을 때 발생하는 이벤트 처리
+			socket.onmessage = function(event) {
+				console.log('서버로부터 메시지를 받았습니다:', event.data);
+
+				// 받은 메시지를 처리하거나 화면에 표시할 수 있습니다.
+			};
+
+			// 웹소켓 연결이 닫힌 경우 발생하는 이벤트 처리
+			socket.onclose = function(event) {
+				console.log('웹소켓 연결이 닫혔습니다.');
+			};
+
+			// 웹소켓 연결 중 오류가 발생한 경우 발생하는 이벤트 처리
+			socket.onerror = function(error) {
+				console.error('웹소켓 연결 중 오류가 발생했습니다:', error);
+			};
+
+			/* $.ajax({
+			       url: "/cju_stt/uploadToAPI",
+			       type: "POST",
+			       data: formData,
+			       processData: false,
+			       contentType: false,
+			       success: function (data) {
+			       	  changePage();
+			       	  var result = JSON.parse(data);
+			           typeEffect(result.result, 50);
+			           console.log("변환 성공");
+			      
+			       },
+			       error: function (jqXHR, textStatus, errorThrown) {
+			       	  console.log("AJAX 호출 실패");
+			           console.log("상태 코드: " + jqXHR.status);
+			           console.log("에러 타입: " + textStatus);
+			           console.log("에러 내용: " + errorThrown);
+			       }
+			   }); */
+		}
 	});
 </script>
 
