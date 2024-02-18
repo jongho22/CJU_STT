@@ -37,7 +37,7 @@
 </div>
 
 <script>
-	var socket = new WebSocket("ws://203.252.230.243:8090/cju_stt/audio");
+	var socket = new WebSocket("ws://203.252.230.243:8090/cju_stt/uploadToAPI");
 	
 	function typeEffect(text, speed){
 		 const element = document.getElementById('typed-text');
@@ -78,43 +78,28 @@
 
 		const formData = new FormData(this);
 		const apiCheck = $('#apiCheck').val();
-
+		
+		var fileInput = document.getElementById("fileInput");
+		var file = fileInput.files[0];
+		var fileName = file.name;
+		
 		if (apiCheck == "false") {
 			console.log("서버 사용");
-			$.ajax({
-				url : "/cju_stt/upload",
-				type : "POST",
-				data : formData,
-				processData : false,
-				contentType : false,
-				success : function(data) {
-					changePage();
-					var result = JSON.parse(data);
-					typeEffect(result.result, 50);
-					console.log("변환 성공");
-				},
-				error : function() {
-					console.log("AJAX 호출 실패");
-				}
-			});
-		} else {
-
-			console.log("API 사용");
-			var fileInput = document.getElementById("fileInput");
-			var file = fileInput.files[0];
-			var fileName = file.name;
-			
 			changePage();
-
+			
+			// 서버를 사용 할 때 접속할 소켓 작성
+			
+		} else {
+			console.log("API 사용");
+			changePage();
+		
 			var reader = new FileReader();
 			reader.onload = function(event) {
 				var arrayBuffer = event.target.result;
-
 				socket.send(fileName);
 				socket.send(arrayBuffer);
 			};
 			reader.readAsArrayBuffer(file);
-
 		}
 	});
 
@@ -130,10 +115,6 @@
 		console.log('WebSocket 연결이 닫혔습니다.');
 		$('#service_title').text("음성파일 변환 완료");
 	}
-
-	/* socket.onerror = function(error) {
-		console.error("WebSocket 오류 발생: " + error.message);
-	}; */
 </script>
 
 </body>

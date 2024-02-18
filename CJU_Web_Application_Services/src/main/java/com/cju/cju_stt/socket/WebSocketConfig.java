@@ -25,12 +25,13 @@ public class WebSocketConfig implements WebSocketConfigurer {
 
     @Override
     public void registerWebSocketHandlers(WebSocketHandlerRegistry registry) {
-        registry.addHandler(new AudioWebSocketHandler(), "/audio");
+        registry.addHandler(new WebSocketHandlerForAPI(), "/uploadToAPI");
+        registry.addHandler(new WebSocketHandlerForSerevr(), "/uploadToServer");
     }
     
     @Bean
-    public AudioWebSocketHandler audioWebSocketHandler() {
-        return new AudioWebSocketHandler();
+    public WebSocketHandlerForAPI audioWebSocketHandler() {
+        return new WebSocketHandlerForAPI();
     }
     
     @Bean

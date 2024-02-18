@@ -49,22 +49,22 @@ public class HomeController {
 	} 
 	
 	// API 파일 업로드 및 변환 작업
-	@RequestMapping(value = "/uploadToAPI", method = {RequestMethod.POST}, produces = "application/text; charset=utf8")
-	@ResponseBody
-	public String apiFileUpload(@RequestParam(value="file") MultipartFile file, RedirectAttributes redirectAttributes) {
-		System.out.println("[HomeController] apiFileUpload()");
-		
-		String result = fileService.convertAudioToText_API(file);
-		
-		return "{ \"result\": \" " + result + " \" }";	
-	}
+//	@RequestMapping(value = "/uploadToAPI", method = {RequestMethod.POST}, produces = "application/text; charset=utf8")
+//	@ResponseBody
+//	public String apiFileUpload(@RequestParam(value="file") MultipartFile file, RedirectAttributes redirectAttributes) {
+//		System.out.println("[HomeController] apiFileUpload()");
+//		
+//		String result = fileService.convertAudioToText_API(file);
+//		
+//		return "{ \"result\": \" " + result + " \" }";	
+//	}
 	
-	@GetMapping("/socket")
-	public String socketTest() {
-		System.out.println("[HomeController] socketTest()");
-		
-		String nextPage = "socketPage";
-		
-		return nextPage;
-	}
+//	@GetMapping("/socket")
+//	public String socketTest() {
+//		System.out.println("[HomeController] socketTest()");
+//		
+//		String nextPage = "socketPage";
+//		
+//		return nextPage;
+//	}
 }

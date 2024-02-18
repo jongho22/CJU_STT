@@ -1,6 +1,5 @@
 package com.cju.cju_stt.socket;
 
-
 import java.io.BufferedReader;
 import java.io.DataOutputStream;
 import java.io.File;
@@ -37,10 +36,10 @@ import net.bramp.ffmpeg.FFmpeg;
 import net.bramp.ffmpeg.FFmpegExecutor;
 import net.bramp.ffmpeg.builder.FFmpegBuilder;
 
-public class AudioWebSocketHandler extends BinaryWebSocketHandler {
+public class WebSocketHandlerForAPI extends BinaryWebSocketHandler {
 	
 	protected String fileName;
-	
+
 	protected String openApiURL   = "http://aiopen.etri.re.kr:8000/WiseASR/Recognition";
 	protected String accessKey    = "b1d4eb07-44f8-42cc-899b-bc9ab42d76fe";
 	protected String languageCode = "korean";
@@ -63,7 +62,7 @@ public class AudioWebSocketHandler extends BinaryWebSocketHandler {
 	private void saveAudioToFile(byte[] audioData, String filePath, String fileName) {
 		try (FileOutputStream fos = new FileOutputStream(filePath+fileName)) {
 			fos.write(audioData);
-			System.out.println("[AudioWebSocketHandler] 음성 파일이 저장 위치 : " + filePath);
+			System.out.println("[WebSocketHandlerForAPI] 음성 파일이 저장 위치 : " + filePath);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -77,7 +76,7 @@ public class AudioWebSocketHandler extends BinaryWebSocketHandler {
 	
 	// 음성파일 텍스트 변환
 	private void convertAudioToText(String fileName, String receiveFilePath, WebSocketSession session) {
-		System.out.println("[AudioWebSocketHandler] convertAudioToText()");
+		System.out.println("[WebSocketHandlerForAPI] convertAudioToText()");
 		
 		// 파일 설정
 		String orgFileName 	  = fileName;
@@ -102,11 +101,11 @@ public class AudioWebSocketHandler extends BinaryWebSocketHandler {
 			
 			if (output != null) {	// 음성 파일 길이가 산출되었을 경우
 				double durationInSeconds = Double.parseDouble(output);
-				System.out.println("[AudioWebSocketHandler] 음성파일 길이 : " + durationInSeconds);
+				System.out.println("[WebSocketHandlerForAPI] 음성파일 길이 : " + durationInSeconds);
 				
 				// 20초가 넘어가는 음성파일
 				if (durationInSeconds > 20) {
-					System.out.println("[AudioWebSocketHandler] 20초 이상의 파일입니다. 분할을 시작합니다.");
+					System.out.println("[WebSocketHandlerForAPI] 20초 이상의 파일입니다. 분할을 시작합니다.");
 					String outputFormat = baseName  + "%d.mp3";
 					String ffmpegCommand = String.format("ffmpeg -i %s -f segment -segment_time 18 -c copy %s",
 							audioFilePath, filePath + outputFormat);
@@ -125,7 +124,7 @@ public class AudioWebSocketHandler extends BinaryWebSocketHandler {
 							argument, languageCode, request, openApiURL, accessKey, gson, ffmpeg);
 							sendTextMessage(session, resultText);
 						}
-						System.out.println("[AudioWebSocketHandler] Audio splitting completed.");
+						System.out.println("[WebSocketHandlerForAPI] Audio splitting completed.");
 						session.close();
 						
 					} catch (IOException | InterruptedException e) {
@@ -134,7 +133,7 @@ public class AudioWebSocketHandler extends BinaryWebSocketHandler {
 						session.close();
 					}
 				} else { // 20초가 넘어가지 않는 음성파일
-					System.out.println("[AudioWebSocketHandler] 20초 미만의 파일입니다.");
+					System.out.println("[WebSocketHandlerForAPI] 20초 미만의 파일입니다.");
 					
 					// API 요청 실행
 					try {
@@ -153,7 +152,7 @@ public class AudioWebSocketHandler extends BinaryWebSocketHandler {
 					} 
 				}	
 			} else {
-				System.out.println("[AudioWebSocketHandler] 음성 길이 계산 실패");
+				System.out.println("[WebSocketHandlerForAPI] 음성 길이 계산 실패");
 				delFile(audioFilePath);
 				sendTextMessage(session, "음성파일의 길이를 계산하는데 문제가 발생하였습니다.");
 				session.close();
@@ -170,9 +169,9 @@ public class AudioWebSocketHandler extends BinaryWebSocketHandler {
 		File delFile = new File(audioFilePath);
 		if (delFile.exists()) {
 			delFile.delete();
-			System.out.println("[AudioWebSocketHandler] (음성파일 파일삭제 성공)");
+			System.out.println("[WebSocketHandlerForAPI] (음성파일 파일삭제 성공)");
 		} else {
-			System.out.println("[AudioWebSocketHandler] (음성파일이 존재하지 않습니다.)");
+			System.out.println("[WebSocketHandlerForAPI] (음성파일이 존재하지 않습니다.)");
 		}
 	}
 	
@@ -184,7 +183,7 @@ public class AudioWebSocketHandler extends BinaryWebSocketHandler {
 		// mp3파일을 PCM형식으로 변환
 		try {
 			mp3ToPcm(ffmpeg, audioFilePath, savePcmFilePath);
-			System.out.println("[AudioWebSocketHandler] (Make PCM File SUCCESS)");
+			System.out.println("[WebSocketHandlerForAPI] (Make PCM File SUCCESS)");
 		} catch (IOException e) {
 			e.printStackTrace();
 			return "파일 PCM 변환 과정에서 문제가 발생하였습니다.";
@@ -195,7 +194,7 @@ public class AudioWebSocketHandler extends BinaryWebSocketHandler {
 			Path path = Paths.get(savePcmFilePath);
 			byte[] audioBytes = Files.readAllBytes(path);
 			audioContents = Base64.getEncoder().encodeToString(audioBytes);
-			System.out.println("[AudioWebSocketHandler] (음성파일 바이트 변환 성공)");
+			System.out.println("[WebSocketHandlerForAPI] (음성파일 바이트 변환 성공)");
 			
 		} catch (IOException e) { // 음성파일 바이트 변환에 실패 했을 경우 음성파일 삭제
 			e.printStackTrace();
@@ -236,8 +235,8 @@ public class AudioWebSocketHandler extends BinaryWebSocketHandler {
 		Map<String, Object> returnObject = (Map<String, Object>) responseMap.get("return_object");
 		String recognizedText = (String) returnObject.get("recognized");
 
-		System.out.println("[AudioWebSocketHandler] [responseCode] " + responseCode);
-		System.out.println("[AudioWebSocketHandler] [resultText] " + recognizedText);
+		System.out.println("[WebSocketHandlerForAPI] [responseCode] " + responseCode);
+		System.out.println("[WebSocketHandlerForAPI] [resultText] " + recognizedText);
 		
 		delFile(audioFilePath);
 		delFile(savePcmFilePath);
@@ -247,8 +246,6 @@ public class AudioWebSocketHandler extends BinaryWebSocketHandler {
 	
 	// mp3 파일을 PCM 형식으로 변환
 	private void mp3ToPcm(FFmpeg ffmpeg, String audioFilePath, String savePcmFilePath) throws IOException {
-//		System.out.println(ffmpeg);
-//		System.out.println(audioFilePath);
 		
 		// FFmpeg 실행
 		FFmpegBuilder builder = new FFmpegBuilder().setInput(audioFilePath).addOutput(savePcmFilePath)

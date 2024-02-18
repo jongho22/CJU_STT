@@ -56,9 +56,13 @@
 		 	    <hr style="color:black">
 		 	    <div class="row">
 			 	    <div class="col-6">
+			 	    	<p id="guideText"><b>- 공통</b></p>
 			 	    	<p id="guideText"><b>1. 현재 .mp3 확장자만 변환 가능합니다.</b></p>
-			 	    	<p id="guideText"><b>2. 업로드하는 음성 파일은 서버에 저장되지 않습니다.</b></p>
-			 	    	<p id="guideText"><b>3. 작업 속도 : (1시간 음성 파일 = 약 10분)</b></p>
+			 	    	<p id="guideText"><b>2. 업로드하는 음성 파일은 서버에 저장되지 않습니다. (변환 즉시 삭제)</b></p>
+			 	    	<p id="guideText"><b>3. 작업 속도 : (서버 : 1시간 음성 파일 = 약 10분)</b></p>
+			 	    	<br>
+			 	    	<p id="guideText"><b>- API 사용시</b></p>
+			 	    	<p id="guideText"><b>1. 하루 사용량에 제한이 있어, 많은 변환 요청시 서비스가 종료될 수 있습니다.</b></p>
 			 	    </div>
 		 	    </div>
 		    </div>
