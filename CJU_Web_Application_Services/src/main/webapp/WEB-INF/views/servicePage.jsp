@@ -16,7 +16,7 @@
     <form id="uploadForm" method="post" enctype="multipart/form-data">
      <div class="container" style="width:40%">
 		<label id="explan_text" for="formFile" class="form-label">변환하실 음성파일을 넣어주세요.</label>
-		<input class="form-control" id="fileInput" type="file" name="file">
+		<input class="form-control" id="fileInput" name="fileInput" type="file">
 	  </div>
 	  <br>
 	  <div style="width:20%; margin:0 auto;">
@@ -37,6 +37,8 @@
 </div>
 
 <script>
+	var socket = new WebSocket("ws://203.252.230.243:8090/cju_stt/audio");
+	
 	function typeEffect(text, speed){
 		 const element = document.getElementById('typed-text');
 	  	 let i = 0;
@@ -51,7 +53,7 @@
 	 }
 	
 	function changePage() {
-		$('#service_title').text("음성파일 변환 결과");
+		$('#service_title').text("음성파일 실시간 변환중...");
 		$('#uploadForm').remove();
 		$('#typed-text').show();
 		$('#loding_gif').hide();
@@ -66,61 +68,72 @@
 			$('#apiCheck').val("false");
 		}
 	});
-	
-	$("#uploadForm").submit(function (event) {
-		 event.preventDefault();
-		 $('#submit_button').remove();
-		 $('#service_title').text("작업 진행중");
-		 $('#explan_text').text("파일 용량이 크면 오래걸리니 기다려주세요.");
-		 $('#loding_gif').show();
-		 
-        const formData = new FormData(this);
-        const apiCheck = $('#apiCheck').val();
-		 
-		 if (apiCheck == "false") {
-			 console.log("서버 사용");
-			 $.ajax({
-		            url: "/cju_stt/upload",
-		            type: "POST",
-		            data: formData,
-		            processData: false,
-		            contentType: false,
-		            success: function (data) {
-		            	  changePage();
-		                var result = JSON.parse(data);
-			            typeEffect(result.result, 50);
-			            console.log("변환 성공");
-		            },
-		            error: function () {
-		            	  console.log("AJAX 호출 실패");
-		            }
-		        });
-		 } else {
-			 
-			console.log("API 사용");
-			
+
+	$("#uploadForm").submit(function(event) {
+		event.preventDefault();
+		$('#submit_button').remove();
+		$('#service_title').text("작업 진행중");
+		$('#explan_text').text("파일 용량이 크면 오래걸리니 기다려주세요.");
+		$('#loding_gif').show();
+
+		const formData = new FormData(this);
+		const apiCheck = $('#apiCheck').val();
+
+		if (apiCheck == "false") {
+			console.log("서버 사용");
 			$.ajax({
-		       url: "/cju_stt/uploadToAPI",
-		       type: "POST",
-		       data: formData,
-		       processData: false,
-		       contentType: false,
-		       success: function (data) {
-		       	  changePage();
-		       	  var result = JSON.parse(data);
-		           typeEffect(result.result, 50);
-		           console.log("변환 성공");
-		      
-		       },
-		       error: function (jqXHR, textStatus, errorThrown) {
-		       	  console.log("AJAX 호출 실패");
-		           console.log("상태 코드: " + jqXHR.status);
-		           console.log("에러 타입: " + textStatus);
-		           console.log("에러 내용: " + errorThrown);
-		       }
-		   });
+				url : "/cju_stt/upload",
+				type : "POST",
+				data : formData,
+				processData : false,
+				contentType : false,
+				success : function(data) {
+					changePage();
+					var result = JSON.parse(data);
+					typeEffect(result.result, 50);
+					console.log("변환 성공");
+				},
+				error : function() {
+					console.log("AJAX 호출 실패");
+				}
+			});
+		} else {
+
+			console.log("API 사용");
+			var fileInput = document.getElementById("fileInput");
+			var file = fileInput.files[0];
+			var fileName = file.name;
+			
+			changePage();
+
+			var reader = new FileReader();
+			reader.onload = function(event) {
+				var arrayBuffer = event.target.result;
+
+				socket.send(fileName);
+				socket.send(arrayBuffer);
+			};
+			reader.readAsArrayBuffer(file);
+
 		}
 	});
+
+	socket.onopen = function(event) {
+		console.log("WebSocket 연결 되었습니다!")
+	}
+
+	socket.onmessage = function(event) {
+		typeEffect(event.data, 50);
+	};
+
+	socket.onclose = function(event) {
+		console.log('WebSocket 연결이 닫혔습니다.');
+		$('#service_title').text("음성파일 변환 완료");
+	}
+
+	/* socket.onerror = function(error) {
+		console.error("WebSocket 오류 발생: " + error.message);
+	}; */
 </script>
 
 </body>

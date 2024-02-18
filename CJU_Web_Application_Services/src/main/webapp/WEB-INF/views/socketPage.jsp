@@ -11,6 +11,8 @@
         <input type="file" id="audioFile" name="audioFile">
         <button type="button" onclick="uploadAudio()">전송</button>
     </form>
+    
+    <textarea class="form-control" id="typed-text" rows="10" readonly></textarea>
 </body>
 <script>
 	var socket = new WebSocket("ws://203.252.230.243:8090/cju_stt/audio");
@@ -27,7 +29,7 @@
             reader.onload = function(event) {
                 var arrayBuffer = event.target.result;
                 
-                // ArrayBuffer를 WebSocket을 통해 전송\
+                // ArrayBuffer를 WebSocket을 통해 전송
                 socket.send(fileName);
                 socket.send(arrayBuffer);
                 console.log("전송 완료.");
@@ -40,7 +42,8 @@
 	}
 	
 	socket.onmessage = function(event) {
-	    console.log("서버로부터 메시지를 수신했습니다: " + event.data);
+	    typeEffect( event.data, 50);
+	    
 	};
 	
 	socket.onclose = function(event) {
@@ -50,5 +53,18 @@
 	socket.onerror = function(error) {
 	    console.error("WebSocket 오류 발생: " + error.message);
 	};
+	
+	function typeEffect(text, speed){
+		 const element = document.getElementById('typed-text');
+	  	 let i = 0;
+	  	 const typingInterval = setInterval(function() {
+	  		 element.innerHTML += text.charAt(i);
+	  		 i++;
+	  		 
+	  		 if (i> text.length) {
+	  			 clearInterval(typingInterval);
+	  		 }
+	  	 }, speed);
+	 }
 </script>
 </html>

@@ -138,6 +138,7 @@ public class FileService {
 				audioFile.transferTo(new File(audioFilePath));
 				try {
 					// 음성파일 길이 확인
+					System.out.println(audioFilePath);
 					String ffprobeCommand = "ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1:nokey=1 "
 							+ audioFilePath;
 					ProcessBuilder processBuilder = new ProcessBuilder("bash", "-c", ffprobeCommand);
