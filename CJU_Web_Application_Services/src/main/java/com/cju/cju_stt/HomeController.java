@@ -57,5 +57,14 @@ public class HomeController {
 		String result = fileService.convertAudioToText_API(file);
 		
 		return "{ \"result\": \" " + result + " \" }";	
-	}		
+	}
+	
+	@GetMapping("/socket")
+	public String socketTest() {
+		System.out.println("[HomeController] socketTest()");
+		
+		String nextPage = "socketPage";
+		
+		return nextPage;
+	}
 }
