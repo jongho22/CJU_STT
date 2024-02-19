@@ -38,6 +38,7 @@
 
 <script>
 	var socket = new WebSocket("ws://203.252.230.243:8090/cju_stt/uploadToAPI");
+	var socketToServer = new WebSocket("ws://203.252.230.243:8090/cju_stt/uploadToServer");
 	
 	function typeEffect(text, speed){
 		 const element = document.getElementById('typed-text');
@@ -88,6 +89,13 @@
 			changePage();
 			
 			// 서버를 사용 할 때 접속할 소켓 작성
+			var reader = new FileReader();
+			reader.onload = function(event) {
+				var arrayBuffer = event.target.result;
+				socketToServer.send(fileName);
+				socketToServer.send(arrayBuffer);
+			};
+			reader.readAsArrayBuffer(file);
 			
 		} else {
 			console.log("API 사용");
@@ -104,7 +112,7 @@
 	});
 
 	socket.onopen = function(event) {
-		console.log("WebSocket 연결 되었습니다!")
+		console.log("WebSocketToAPI 연결 되었습니다!")
 	}
 
 	socket.onmessage = function(event) {
@@ -112,7 +120,20 @@
 	};
 
 	socket.onclose = function(event) {
-		console.log('WebSocket 연결이 닫혔습니다.');
+		console.log('WebSocketToAPI 연결이 닫혔습니다.');
+		$('#service_title').text("음성파일 변환 완료");
+	}
+	
+	socketToServer.onopen = function(event) {
+		console.log("WebSocketToserver 연결 되었습니다!")
+	}
+
+	socketToServer.onmessage = function(event) {
+		typeEffect(event.data, 50);
+	};
+
+	socketToServer.onclose = function(event) {
+		console.log('WebSocketToserver 연결이 닫혔습니다.');
 		$('#service_title').text("음성파일 변환 완료");
 	}
 </script>
