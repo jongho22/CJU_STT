@@ -11,8 +11,9 @@
   <%@ include file="header.jsp" %>
 
   <main class="px-3">
-    <h1 id="service_title">변환을 시작합니다!</h1>
-  
+  	 
+	 <h1 id="service_title">변환을 시작합니다!</h1>
+  	 
     <form id="uploadForm" method="post" enctype="multipart/form-data">
      <div class="container" style="width:40%">
 		<label id="explan_text" for="formFile" class="form-label">변환하실 음성파일을 넣어주세요.</label>
@@ -26,13 +27,13 @@
 	 </div>
 	 <br>
      <input id="submit_button" type="submit" class="btn btn-lg btn-light fw-bold border-white" value="변환 시작" />
-     <img id="loding_gif" src='<c:url value="/resources/img/loding.gif"/>' width="100" style="display: none;">
     </form>
     <br>
     <p id="apiGuideText" style="color:DBE7C9">API 사용시 연구실 서버를 사용하지 않아 더 빠른 변환을 할 수 있습니다.</p>
-    
+     
     <textarea class="form-control" id="typed-text" rows="10" readonly style="display: none;"></textarea>
   </main>
+  <%-- <img id="loding_gif" src='<c:url value="/resources/img/loding.gif"/>' width="100" style="display:none;"/> --%>
   <%@ include file="footer.jsp" %>
 </div>
 
@@ -46,7 +47,6 @@
 	  	 const typingInterval = setInterval(function() {
 	  		 element.innerHTML += text.charAt(i);
 	  		 i++;
-	  		 
 	  		 if (i> text.length) {
 	  			 clearInterval(typingInterval);
 	  		 }
@@ -57,8 +57,8 @@
 		$('#service_title').text("음성파일 실시간 변환중...");
 		$('#uploadForm').remove();
 		$('#typed-text').show();
-		$('#loding_gif').hide();
 		$('#apiGuideText').hide();
+		$('#loding_gif').show();
 	}
 	
 	$('#apiCheck').click(function(){
@@ -73,9 +73,6 @@
 	$("#uploadForm").submit(function(event) {
 		event.preventDefault();
 		$('#submit_button').remove();
-		$('#service_title').text("작업 진행중");
-		$('#explan_text').text("파일 용량이 크면 오래걸리니 기다려주세요.");
-		$('#loding_gif').show();
 
 		const formData = new FormData(this);
 		const apiCheck = $('#apiCheck').val();
@@ -122,10 +119,12 @@
 	socket.onclose = function(event) {
 		console.log('WebSocketToAPI 연결이 닫혔습니다.');
 		$('#service_title').text("음성파일 변환 완료");
+		$('#loding_gif').hide();
+		socketToServer.close();
 	}
 	
 	socketToServer.onopen = function(event) {
-		console.log("WebSocketToserver 연결 되었습니다!")
+		console.log("WebSocketToServer 연결 되었습니다!")
 	}
 
 	socketToServer.onmessage = function(event) {
@@ -133,8 +132,10 @@
 	};
 
 	socketToServer.onclose = function(event) {
-		console.log('WebSocketToserver 연결이 닫혔습니다.');
+		console.log('WebSocketToServer 연결이 닫혔습니다.');
 		$('#service_title').text("음성파일 변환 완료");
+		$('#loding_gif').hide();
+		socket.close();
 	}
 </script>
 

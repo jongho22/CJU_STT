@@ -75,7 +75,7 @@ public class WebSocketHandlerForAPI extends BinaryWebSocketHandler {
 	}
 	
 	// 음성파일 텍스트 변환
-	private void convertAudioToText(String fileName, String receiveFilePath, WebSocketSession session) {
+	private void convertAudioToText(String fileName, String receiveFilePath, WebSocketSession session) throws IOException {
 		System.out.println("[WebSocketHandlerForAPI] convertAudioToText()");
 		
 		// 파일 설정
@@ -160,6 +160,8 @@ public class WebSocketHandlerForAPI extends BinaryWebSocketHandler {
 			
 		} catch (Exception e) {
 			e.printStackTrace();
+			sendTextMessage(session, "음성파일 변환과정에서 문제가 발생하였습니다.");
+			session.close();
 			delFile(audioFilePath);
 		}
 	}
