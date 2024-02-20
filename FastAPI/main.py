@@ -21,6 +21,7 @@ async def upload_to_fastapi(request_body: RequestBody):
     # HTTP POST 요청 본문에서 전송된 데이터 추출
     file_path = request_body.argument.filePath
     
-    resultText = MODEL.transcribe(f"{file_path}", fp16=False)
-    print(resultText)
+    resultText = MODEL.transcribe(f"{file_path}", fp16=False, verbose=False)
+    #진행도를 표시
+    
     return resultText
