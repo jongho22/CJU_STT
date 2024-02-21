@@ -120,11 +120,13 @@ public class WebSocketHandlerForAPI extends BinaryWebSocketHandler {
 						
 						// 분할 개수 만큼 API 요청 실행
 						for (int i = 0; i <= countFile; i++) {
-							resultText = convertText(savePcmFilePath, audioContents, filePath + baseName + i + ".mp3" ,
+							resultText = convert(savePcmFilePath, audioContents, filePath + baseName + i + ".mp3" ,
 							argument, languageCode, request, openApiURL, accessKey, gson, ffmpeg);
-							sendTextMessage(session, resultText);
+							String json = "{\"resultText\" : \"" + resultText+ "\", \"percent\" : \"" + (int) Math.ceil(((double) i / countFile) * 100) + "\"}";
+							sendTextMessage(session, json);
 						}
-						System.out.println("[WebSocketHandlerForAPI] Audio splitting completed.");
+						delFile(audioFilePath);
+						System.out.println("[WebSocketHandlerForAPI] 작업이 완료되었습니다.");
 						session.close();
 						
 					} catch (IOException | InterruptedException e) {
@@ -138,9 +140,10 @@ public class WebSocketHandlerForAPI extends BinaryWebSocketHandler {
 					// API 요청 실행
 					try {
 						FFmpeg ffmpeg = new FFmpeg("/usr/bin/ffmpeg");
-						String resultText = convertText(savePcmFilePath, audioContents, audioFilePath,
+						String resultText = convert(savePcmFilePath, audioContents, audioFilePath,
 						argument, languageCode, request, openApiURL, accessKey, gson, ffmpeg);
-						sendTextMessage(session, resultText);
+						String json = "{\"resultText\" : \"" + resultText+ "\", \"percent\" : \"100\"}";
+						sendTextMessage(session, json);
 						session.close();
 						
 					} catch (IOException e) {
@@ -178,7 +181,7 @@ public class WebSocketHandlerForAPI extends BinaryWebSocketHandler {
 	}
 	
 	// API서버에 요청
-	private String convertText(String savePcmFilePath, String audioContents, String audioFilePath,
+	private String convert(String savePcmFilePath, String audioContents, String audioFilePath,
 			Map<String, String> argument, String languageCode, Map<String, Object> request, String openApiURL,
 			String accessKey, Gson gson, FFmpeg ffmpeg) throws MalformedURLException, ProtocolException, IOException{
 		
@@ -188,6 +191,7 @@ public class WebSocketHandlerForAPI extends BinaryWebSocketHandler {
 			System.out.println("[WebSocketHandlerForAPI] (Make PCM File SUCCESS)");
 		} catch (IOException e) {
 			e.printStackTrace();
+			delFile(audioFilePath);
 			return "파일 PCM 변환 과정에서 문제가 발생하였습니다.";
 		}
 		
@@ -201,6 +205,7 @@ public class WebSocketHandlerForAPI extends BinaryWebSocketHandler {
 		} catch (IOException e) { // 음성파일 바이트 변환에 실패 했을 경우 음성파일 삭제
 			e.printStackTrace();
 			delFile(audioFilePath);
+			return "파일 바이트 변환 과정에서 문제가 발생하였습니다.";
 		}
 
 		// API 요청값 입력
@@ -213,37 +218,42 @@ public class WebSocketHandlerForAPI extends BinaryWebSocketHandler {
 		String responBody = null;
 
 		// API 요청 및 결과 리턴
+		try {
+			url = new URL(openApiURL);
+			HttpURLConnection con = (HttpURLConnection) url.openConnection();
+			con.setRequestMethod("POST");
+			con.setDoOutput(true);
+			con.setRequestProperty("Content-Type", "application/json; charset=UTF-8");
+			con.setRequestProperty("Authorization", accessKey);
+
+			DataOutputStream wr = new DataOutputStream(con.getOutputStream());
+			wr.write(gson.toJson(request).getBytes("UTF-8"));
+			wr.flush();
+			wr.close();
+
+			responseCode = con.getResponseCode();
+			InputStream is = con.getInputStream();
+			byte[] buffer = new byte[is.available()];
+			int byteRead = is.read(buffer);
+			responBody = new String(buffer);
+
+			// 결과 값
+			Map<String, Object> responseMap = gson.fromJson(responBody, Map.class);
+			Map<String, Object> returnObject = (Map<String, Object>) responseMap.get("return_object");
+			String recognizedText = (String) returnObject.get("recognized");
+
+			System.out.println("[WebSocketHandlerForAPI] [responseCode] " + responseCode);
+			//System.out.println("[WebSocketHandlerForAPI] [resultText] " + recognizedText);
+			
+			delFile(audioFilePath);
+			delFile(savePcmFilePath);
 		
-		url = new URL(openApiURL);
-		HttpURLConnection con = (HttpURLConnection) url.openConnection();
-		con.setRequestMethod("POST");
-		con.setDoOutput(true);
-		con.setRequestProperty("Content-Type", "application/json; charset=UTF-8");
-		con.setRequestProperty("Authorization", accessKey);
-
-		DataOutputStream wr = new DataOutputStream(con.getOutputStream());
-		wr.write(gson.toJson(request).getBytes("UTF-8"));
-		wr.flush();
-		wr.close();
-
-		responseCode = con.getResponseCode();
-		InputStream is = con.getInputStream();
-		byte[] buffer = new byte[is.available()];
-		int byteRead = is.read(buffer);
-		responBody = new String(buffer);
-
-		// 결과 값
-		Map<String, Object> responseMap = gson.fromJson(responBody, Map.class);
-		Map<String, Object> returnObject = (Map<String, Object>) responseMap.get("return_object");
-		String recognizedText = (String) returnObject.get("recognized");
-
-		System.out.println("[WebSocketHandlerForAPI] [responseCode] " + responseCode);
-		System.out.println("[WebSocketHandlerForAPI] [resultText] " + recognizedText);
-		
-		delFile(audioFilePath);
-		delFile(savePcmFilePath);
-	
-		return recognizedText;
+			return recognizedText;
+		} catch (Exception e) {
+			delFile(audioFilePath);
+			delFile(savePcmFilePath);
+			return "음성파일 변환과정에서 문제가 발생하였습니다.";
+		}
 	}
 	
 	// mp3 파일을 PCM 형식으로 변환

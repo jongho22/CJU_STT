@@ -13,6 +13,10 @@
   <main class="px-3">
   	 
 	 <h1 id="service_title">변환을 시작합니다!</h1>
+	 <br>
+  	 <div class="progress" id="progress" style="display: none;">
+	  <div class="progress-bar" id="progressbar" role="progressbar" style="width: 0%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">0%</div>
+	 </div>
   	 
     <form id="uploadForm" method="post" enctype="multipart/form-data">
      <div class="container" style="width:40%">
@@ -29,7 +33,7 @@
      <input id="submit_button" type="submit" class="btn btn-lg btn-light fw-bold border-white" value="변환 시작" />
     </form>
     <br>
-    <p id="apiGuideText" style="color:DBE7C9">API 사용시 연구실 서버를 사용하지 않아 더 빠른 변환을 할 수 있습니다.</p>
+    <p id="apiGuideText" style="color:DBE7C9">API 변환 방식은 사용횟수가 제한되어있습니다. </p>
      
     <textarea class="form-control" id="typed-text" rows="10" readonly style="display: none;"></textarea>
   </main>
@@ -59,6 +63,7 @@
 		$('#typed-text').show();
 		$('#apiGuideText').hide();
 		$('#loding_gif').show();
+		$('#progress').show();
 	}
 	
 	$('#apiCheck').click(function(){
@@ -82,7 +87,7 @@
 		var fileName = file.name;
 		
 		if (apiCheck == "false") {
-			console.log("서버 사용");
+			//console.log("서버 사용");
 			changePage();
 			
 			// 서버를 사용 할 때 접속할 소켓 작성
@@ -95,7 +100,7 @@
 			reader.readAsArrayBuffer(file);
 			
 		} else {
-			console.log("API 사용");
+			//console.log("API 사용");
 			changePage();
 		
 			var reader = new FileReader();
@@ -109,30 +114,48 @@
 	});
 
 	socket.onopen = function(event) {
-		console.log("WebSocketToAPI 연결 되었습니다!")
+		//console.log("WebSocketToAPI 연결 되었습니다!")
 	}
 
 	socket.onmessage = function(event) {
-		typeEffect(event.data, 50);
+		try {
+			var jsonData = JSON.parse(event.data); 
+		    var percent = jsonData.percent;
+		    var resultText = jsonData.resultText;
+		    	
+		    typeEffect(resultText, 20);
+		    $("#progressbar").css("width", percent + "%").text(percent + "%");
+		} catch {
+			typeEffect(event.data, 5);
+		}
 	};
 
 	socket.onclose = function(event) {
-		console.log('WebSocketToAPI 연결이 닫혔습니다.');
+		//console.log('WebSocketToAPI 연결이 닫혔습니다.');
 		$('#service_title').text("음성파일 변환 완료");
 		$('#loding_gif').hide();
 		socketToServer.close();
 	}
 	
 	socketToServer.onopen = function(event) {
-		console.log("WebSocketToServer 연결 되었습니다!")
+		//console.log("WebSocketToServer 연결 되었습니다!")
 	}
 
 	socketToServer.onmessage = function(event) {
-		typeEffect(event.data, 50);
+		try {
+			var jsonData = JSON.parse(event.data); 
+		    var percent = jsonData.percent;
+		    var resultText = jsonData.resultText;
+		    	
+		    typeEffect(resultText, 5);
+		    $("#progressbar").css("width", percent + "%").text(percent + "%");
+		} catch {
+			typeEffect(event.data, 5);
+		}
 	};
 
 	socketToServer.onclose = function(event) {
-		console.log('WebSocketToServer 연결이 닫혔습니다.');
+		//console.log('WebSocketToServer 연결이 닫혔습니다.');
 		$('#service_title').text("음성파일 변환 완료");
 		$('#loding_gif').hide();
 		socket.close();

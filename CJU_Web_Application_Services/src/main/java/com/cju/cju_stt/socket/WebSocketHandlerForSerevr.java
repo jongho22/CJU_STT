@@ -12,6 +12,7 @@ import java.net.URL;
 import java.util.HashMap;
 import java.util.Map;
 
+import org.apache.commons.io.FilenameUtils;
 import org.springframework.web.socket.BinaryMessage;
 import org.springframework.web.socket.CloseStatus;
 import org.springframework.web.socket.TextMessage;
@@ -22,6 +23,8 @@ import org.springframework.web.socket.handler.BinaryWebSocketHandler;
 
 import com.google.gson.Gson;
 
+import net.bramp.ffmpeg.FFmpeg;
+
 public class WebSocketHandlerForSerevr extends BinaryWebSocketHandler {
 	
 	protected String fileName;
@@ -30,7 +33,7 @@ public class WebSocketHandlerForSerevr extends BinaryWebSocketHandler {
 	protected void handleBinaryMessage(WebSocketSession session, BinaryMessage message) throws Exception {
 		byte[] audioData = message.getPayload().array();
 		fileName = System.currentTimeMillis()+fileName;
-		String filePath = "/home/jongho/Spring_project/CJU_STT/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/CJU_Web_Application_Services/resources/"; // 파일 저장 위치 (절대 경로로 지정해야함)
+		String filePath = "/home/jongho/Spring_project/CJU_STT/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/CJU_Web_Application_Services/resources/download/"; // 파일 저장 위치 (절대 경로로 지정해야함)
 		saveAudioToFile(audioData, filePath, fileName);
 		convertAudioToText(fileName, filePath, session);
 	}
@@ -60,10 +63,82 @@ public class WebSocketHandlerForSerevr extends BinaryWebSocketHandler {
 	private void convertAudioToText(String fileName, String filePath, WebSocketSession session) throws IOException {
 		System.out.println("[WebSocketHandlerForSerevr] convertAudioToText()");
 		
+		String resultText = null;		
+		String orgFileName = FilenameUtils.getBaseName(fileName);
+		String audioFilePath = filePath + fileName;
+		String ffprobeCommand = "ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1:nokey=1 "
+				+ filePath + fileName;
+		
 		Map<String, Object> request = new HashMap<>();
 		Map<String, String> argument = new HashMap<>();
 		
-		argument.put("filePath", filePath+fileName);
+		ProcessBuilder processBuilder = new ProcessBuilder("bash", "-c", ffprobeCommand);
+		Process process = processBuilder.start();
+		BufferedReader reader = new BufferedReader(new InputStreamReader(process.getInputStream()));
+		String output = reader.readLine();
+		
+		if (output != null) {
+			double durationInSeconds = Double.parseDouble(output);
+			System.out.println("[WebSocketHandlerForServer] 음성파일 길이 : " + durationInSeconds);
+			
+			if (durationInSeconds > 60) {
+				System.out.println("[WebSocketHandlerForServer] 60초 이상의 파일입니다. 분할을 시작합니다.");
+				String outputFormat = orgFileName  + "%d.mp3";
+				String ffmpegCommand = String.format("ffmpeg -i %s -f segment -segment_time 60 -c copy %s",
+						audioFilePath, filePath + outputFormat);
+				try {
+					ProcessBuilder processBuilder2 = new ProcessBuilder("bash", "-c", ffmpegCommand);
+					Process process2 = processBuilder2.start();
+					process2.waitFor();
+					
+					int countFile = (int) Math.ceil(durationInSeconds / 60);
+					
+					delFile(audioFilePath);
+					
+					for (int i = 0; i <= countFile; i++) {
+						resultText = convert(argument, request, filePath + orgFileName +i+".mp3");
+						String json = "{\"resultText\" : \"" + resultText+ "\", \"percent\" : \"" + (int) Math.ceil(((double) i / countFile) * 100) + "\"}";
+						sendTextMessage(session, json);
+					}
+					System.out.println("[WebSocketHandlerForServer] 작업이 완료되었습니다.");
+					session.close();
+					
+				} catch (IOException | InterruptedException e) {
+					delFile(audioFilePath);
+					sendTextMessage(session, "음성파일을 분할하는 과정에서 문제가 발생하였습니다.");
+					session.close();
+				}
+				
+			} else {
+				System.out.println("[WebSocketHandlerForServer] 60초 미만의 파일입니다.");
+				resultText = convert(argument, request, audioFilePath);
+				String json = "{\"resultText\" : \"" + resultText+ "\", \"percent\" : \"100\"}";
+				
+				sendTextMessage(session, json);
+				session.close();
+			}
+			
+		} else { 
+			System.out.println("[WebSocketHandlerForServer] 음성 길이 계산 실패");
+			delFile(audioFilePath);
+			sendTextMessage(session, "음성파일의 길이를 계산하는데 문제가 발생하였습니다.");
+			session.close();
+		}
+	}
+	
+	// 파일 삭제
+	private void delFile(String audioFilePath) {
+		File delFile = new File(audioFilePath);
+		if (delFile.exists()) {
+			delFile.delete();
+			System.out.println("[WebSocketHandlerForSerevr] (음성파일 파일삭제 성공)");
+		} else {
+			System.out.println("[WebSocketHandlerForSerevr] (음성파일이 존재하지 않습니다.)");
+		}
+	}
+	
+	private String convert(Map<String, String> argument, Map<String, Object> request, String filePath) {
+		argument.put("filePath", filePath);
 		request.put("argument", argument);
 		
 		URL url;
@@ -93,28 +168,15 @@ public class WebSocketHandlerForSerevr extends BinaryWebSocketHandler {
 			String recognizedText = (String) responseMap.get("text");
 			
 			System.out.println("[WebSocketHandlerForSerevr] [responseCode] " + responseCode);
-			System.out.println("[WebSocketHandlerForSerevr] [resultText] " + recognizedText);
+			//System.out.println("[WebSocketHandlerForSerevr] [resultText] " + recognizedText);
 			
 			// 변환 결과 출력
 			delFile(filePath);
-			sendTextMessage(session, recognizedText);
-			session.close();
+			return recognizedText;
 			
 		} catch (Exception e) {
 			delFile(filePath);
-			sendTextMessage(session, "음성파일 변환과정에서 문제가 발생하였습니다.");
-			session.close();
-		}
-	}
-	
-	// 파일 삭제
-	private void delFile(String audioFilePath) {
-		File delFile = new File(audioFilePath);
-		if (delFile.exists()) {
-			delFile.delete();
-			System.out.println("[WebSocketHandlerForSerevr] (음성파일 파일삭제 성공)");
-		} else {
-			System.out.println("[WebSocketHandlerForSerevr] (음성파일이 존재하지 않습니다.)");
+			return "음성파일 변환과정에서 문제가 발생하였습니다.";
 		}
 	}
 }
