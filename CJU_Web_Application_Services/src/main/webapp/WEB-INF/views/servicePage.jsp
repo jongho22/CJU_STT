@@ -25,15 +25,16 @@
 	  </div>
 	  <br>
 	  <div style="width:20%; margin:0 auto;">
-   		<label class="form-check-label">API 서버 사용 여부</label>
-   		&nbsp;
-   		<input id="apiCheck" class="form-check-input" type="checkbox" value="false">
+	    <br>
+   		<!-- <label class="form-check-label">API 서버 사용 여부</label> -->
+   		<!-- &nbsp; -->
+   		<input id="apiCheck" class="form-check-input" type="checkbox" value="false" style="display: none;">
 	 </div>
 	 <br>
      <input id="submit_button" type="submit" class="btn btn-lg btn-light fw-bold border-white" value="변환 시작" />
     </form>
     <br>
-    <p id="apiGuideText" style="color:DBE7C9">API 변환 방식은 사용횟수가 제한되어있습니다. </p>
+    <!-- <p id="apiGuideText" style="color:DBE7C9">API 변환 방식은 사용횟수가 제한되어있습니다. </p> -->
      
     <textarea class="form-control" id="typed-text" rows="10" readonly style="display: none;"></textarea>
   </main>
@@ -42,7 +43,7 @@
 </div>
 
 <script>
-	var socket = new WebSocket("ws://203.252.230.243:8090/cju_stt/uploadToAPI");
+	// var socket = new WebSocket("ws://203.252.230.243:8090/cju_stt/uploadToAPI");
 	var socketToServer = new WebSocket("ws://203.252.230.243:8090/cju_stt/uploadToServer");
 	
 	function typeEffect(text, speed){
@@ -99,7 +100,8 @@
 			};
 			reader.readAsArrayBuffer(file);
 			
-		} else {
+		} /* else {
+			
 			//console.log("API 사용");
 			changePage();
 		
@@ -109,15 +111,15 @@
 				socket.send(fileName);
 				socket.send(arrayBuffer);
 			};
-			reader.readAsArrayBuffer(file);
-		}
+			reader.readAsArrayBuffer(file); 
+		} */
 	});
 
-	socket.onopen = function(event) {
+	/* socket.onopen = function(event) {
 		//console.log("WebSocketToAPI 연결 되었습니다!")
-	}
+	} */
 
-	socket.onmessage = function(event) {
+	/* socket.onmessage = function(event) {
 		try {
 			var jsonData = JSON.parse(event.data); 
 		    var percent = jsonData.percent;
@@ -128,14 +130,14 @@
 		} catch {
 			typeEffect(event.data, 5);
 		}
-	};
+	}; */
 
-	socket.onclose = function(event) {
+	/* socket.onclose = function(event) {
 		//console.log('WebSocketToAPI 연결이 닫혔습니다.');
 		$('#service_title').text("음성파일 변환 완료");
 		$('#loding_gif').hide();
 		socketToServer.close();
-	}
+	} */
 	
 	socketToServer.onopen = function(event) {
 		//console.log("WebSocketToServer 연결 되었습니다!")
@@ -158,7 +160,7 @@
 		//console.log('WebSocketToServer 연결이 닫혔습니다.');
 		$('#service_title').text("음성파일 변환 완료");
 		$('#loding_gif').hide();
-		socket.close();
+		/* socket.close(); */
 	}
 </script>
 
