@@ -21,9 +21,6 @@ def STT_module(audio_with_header,model) :
 
     return result['text']
 
-# os.environ['CUDA_LAUNCH_BLOCKING'] = "|1"
-# os.environ["CUDA_VISIBLE_DEVICES"] = "0"
-
 # FastAPI
 app = FastAPI()
 
